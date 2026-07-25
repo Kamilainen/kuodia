@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useTranslation } from '../../context/LanguageContext';
 import { useLayout } from '../../layouts/MainLayout';
 import Button from '../Button';
+import resortBg from '../../assets/resort-backgound.png';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000"
+          src={resortBg}
           alt="Luxury Resort Background"
           className="w-full h-full object-cover object-center"
         />

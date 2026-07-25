@@ -12,6 +12,8 @@ import {
 import { useTranslation } from "../../context/LanguageContext";
 import Container from "../Container";
 import Button from "../Button";
+// // import solarSystemImg from "../../assets/solarsystem.png";
+import pipelineVideo from "../../assets/video-pipeline.mp4";
 
 interface HotspotProps {
   id: string;
@@ -22,6 +24,7 @@ interface HotspotProps {
   icon: React.ReactNode;
   isActive: boolean;
   onHover: (active: boolean) => void;
+  tooltipDirection?: "up" | "down";
 }
 
 const Hotspot: React.FC<HotspotProps> = ({
@@ -33,6 +36,7 @@ const Hotspot: React.FC<HotspotProps> = ({
   icon,
   isActive,
   onHover,
+  tooltipDirection = "up",
 }) => {
   return (
     <div
@@ -52,11 +56,13 @@ const Hotspot: React.FC<HotspotProps> = ({
       <AnimatePresence>
         {isActive && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            initial={{ opacity: 0, scale: 0.9, y: tooltipDirection === "down" ? -10 : 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 10 }}
+            exit={{ opacity: 0, scale: 0.9, y: tooltipDirection === "down" ? -10 : 10 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-900/95 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-white/10 text-left"
+            className={`absolute left-1/2 -translate-x-1/2 w-64 bg-slate-900/95 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-white/10 text-left ${
+              tooltipDirection === "down" ? "top-6" : "bottom-6"
+            }`}
           >
             <div className="flex items-center space-x-2 mb-1.5 text-brand-green-light">
               {icon}
@@ -88,8 +94,8 @@ export const WhyKuodia: React.FC = () => {
   const hotspots = [
     {
       id: "solar",
-      top: "15%",
-      left: "60%",
+      top: "12%",
+      left: "32%",
       title: t("hotspot_solar"),
       description: t("hotspot_solar_desc"),
       icon: <Sun className="h-4 w-4" />,
@@ -97,23 +103,23 @@ export const WhyKuodia: React.FC = () => {
     {
       id: "recovery",
       top: "40%",
-      left: "42%",
+      left: "18%",
       title: t("hotspot_recovery"),
       description: t("hotspot_recovery_desc"),
       icon: <RefreshCw className="h-4 w-4" />,
     },
     {
       id: "pump",
-      top: "72%",
-      left: "30%",
+      top: "74%",
+      left: "68%",
       title: t("hotspot_pump"),
       description: t("hotspot_pump_desc"),
       icon: <Fan className="h-4 w-4" />,
     },
     {
       id: "mgmt",
-      top: "55%",
-      left: "80%",
+      top: "74%",
+      left: "90%",
       title: t("hotspot_mgmt"),
       description: t("hotspot_mgmt_desc"),
       icon: <Cpu className="h-4 w-4" />,
@@ -175,17 +181,130 @@ export const WhyKuodia: React.FC = () => {
 
           {/* Right Visual Side - Interactive Hotspots */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-50 aspect-video lg:aspect-square flex items-center justify-center">
-              {/* Architectural Image */}
-              <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
-                alt="Modern Villa Cutaway Visual"
-                className="w-full h-full object-cover select-none"
+            <div className="relative rounded-2xl shadow-2xl border border-slate-100 bg-slate-50 aspect-[4/3] w-full flex items-center justify-center">
+              {/* Pre-rendered 3D Pipeline Video Loop */}
+              <video
+                src={pipelineVideo}
+                className="w-full h-full object-cover select-none rounded-2xl animate-fade-in"
+                autoPlay
+                loop
+                muted
+                playsInline
               />
+
+              {/* Architectural Image (Commented out)
+              <img
+                src={solarSystemImg}
+                alt="Kuodia Solar System Cutaway Visual"
+                className="w-full h-full object-cover select-none rounded-2xl"
+              />
+              */}
+
+              {/* Animated Flow Overlay (Commented out)
+              <svg
+                viewBox="0 0 1000 667"
+                className="absolute inset-0 w-full h-full pointer-events-none z-10"
+              >
+                <defs>
+                  <filter id="glow-blur" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" />
+                  </filter>
+                </defs>
+
+                {/* --- RED PIPES (Heating Loops) --- }
+                {/* Red Riser 1 (Leftmost vertical) }
+                <path d="M 148 560 L 148 120" stroke="#7f1d1d" strokeWidth="5.5" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 148 560 L 148 120" stroke="#ef4444" strokeWidth="4.5" fill="none" filter="url(#glow-blur)" className="flow-glow animate-red-flow" opacity="0.8" />
+                <path d="M 148 560 L 148 120" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-red-flow" />
+
+                {/* Red Riser 2 (Right-middle vertical) }
+                <path d="M 224 560 L 224 120" stroke="#7f1d1d" strokeWidth="5.5" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 224 560 L 224 120" stroke="#ef4444" strokeWidth="4.5" fill="none" filter="url(#glow-blur)" className="flow-glow animate-red-flow" opacity="0.8" />
+                <path d="M 224 560 L 224 120" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-red-flow" />
+
+                {/* Floor 3 Ceiling Red Branch }
+                <path d="M 148 205 L 850 205" stroke="#7f1d1d" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 148 205 L 850 205" stroke="#ef4444" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-red-flow" opacity="0.8" />
+                <path d="M 148 205 L 850 205" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-red-flow" />
+
+                {/* Floor 2 Ceiling Red Branch }
+                <path d="M 224 395 L 850 395" stroke="#7f1d1d" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 224 395 L 850 395" stroke="#ef4444" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-red-flow" opacity="0.8" />
+                <path d="M 224 395 L 850 395" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-red-flow" />
+
+                {/* Basement Red Loop }
+                <path d="M 520 580 L 30 580" stroke="#7f1d1d" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 520 580 L 30 580" stroke="#ef4444" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-red-flow" opacity="0.8" />
+                <path d="M 520 580 L 30 580" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-red-flow" />
+
+
+                {/* --- BLUE PIPES (Cooling Loops) --- }
+                {/* Blue Riser 1 (Left-middle vertical) }
+                <path d="M 172 120 L 172 560" stroke="#1e3a8a" strokeWidth="5.5" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 172 120 L 172 560" stroke="#3b82f6" strokeWidth="4.5" fill="none" filter="url(#glow-blur)" className="flow-glow animate-blue-flow" opacity="0.8" />
+                <path d="M 172 120 L 172 560" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-blue-flow" />
+
+                {/* Blue Riser 2 (Rightmost vertical) }
+                <path d="M 248 120 L 248 560" stroke="#1e3a8a" strokeWidth="5.5" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 248 120 L 248 560" stroke="#3b82f6" strokeWidth="4.5" fill="none" filter="url(#glow-blur)" className="flow-glow animate-blue-flow" opacity="0.8" />
+                <path d="M 248 120 L 248 560" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-blue-flow" />
+
+                {/* Floor 3 Ceiling Blue Branch }
+                <path d="M 850 220 L 172 220" stroke="#1e3a8a" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 850 220 L 172 220" stroke="#3b82f6" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-blue-flow" opacity="0.8" />
+                <path d="M 850 220 L 172 220" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-blue-flow" />
+
+                {/* Floor 2 Ceiling Blue Branch }
+                <path d="M 850 410 L 248 410" stroke="#1e3a8a" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 850 410 L 248 410" stroke="#3b82f6" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-blue-flow" opacity="0.8" />
+                <path d="M 850 410 L 248 410" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-blue-flow" />
+
+                {/* Basement Blue Loop }
+                <path d="M 30 560 L 520 560" stroke="#1e3a8a" strokeWidth="5.0" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 30 560 L 520 560" stroke="#3b82f6" strokeWidth="4.0" fill="none" filter="url(#glow-blur)" className="flow-glow animate-blue-flow" opacity="0.8" />
+                <path d="M 30 560 L 520 560" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-blue-flow" />
+
+
+                {/* --- YELLOW PIPES (Solar Thermal/Electrical) --- }
+                <path d="M 520 95 L 320 100 L 224 120" stroke="#854d0e" strokeWidth="4.5" fill="none" opacity="0.45" className="flow-bg" />
+                <path d="M 520 95 L 320 100 L 224 120" stroke="#eab308" strokeWidth="3.5" fill="none" filter="url(#glow-blur)" className="flow-glow animate-yellow-flow" opacity="0.85" />
+                <path d="M 520 95 L 320 100 L 224 120" stroke="#ffffff" strokeWidth="1.5" fill="none" className="flow-core animate-yellow-flow" />
+              </svg>
+
+              <style>{`
+                @keyframes flow-forward {
+                  from { stroke-dashoffset: 120; }
+                  to { stroke-dashoffset: 0; }
+                }
+                .flow-bg {
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                }
+                .flow-glow {
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-dasharray: 45 75;
+                }
+                .flow-core {
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-dasharray: 45 75;
+                }
+                .animate-red-flow {
+                  animation: flow-forward 2.2s linear infinite;
+                }
+                .animate-blue-flow {
+                  animation: flow-forward 2.2s linear infinite;
+                }
+                .animate-yellow-flow {
+                  animation: flow-forward 1.5s linear infinite;
+                }
+              `}</style>
+              */}
 
               {/* Blur Overlay when Hotspot Active */}
               <div
-                className={`absolute inset-0 bg-slate-900/10 transition-opacity duration-300 pointer-events-none ${activeHotspot ? "opacity-100" : "opacity-0"}`}
+                className={`absolute inset-0 bg-slate-900/10 transition-opacity duration-300 pointer-events-none rounded-2xl ${activeHotspot ? "opacity-100" : "opacity-0"}`}
               />
 
               {/* Hotspots */}
@@ -199,6 +318,7 @@ export const WhyKuodia: React.FC = () => {
                   description={spot.description}
                   icon={spot.icon}
                   isActive={activeHotspot === spot.id}
+                  tooltipDirection={spot.id === "solar" ? "down" : "up"}
                   onHover={(active) =>
                     setActiveHotspot(active ? spot.id : null)
                   }

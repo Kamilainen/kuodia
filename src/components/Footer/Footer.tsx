@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from '../../context/LanguageContext';
 import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import logoFooterImg from '../../assets/logo-footer.png';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -80,22 +81,8 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Logo & Socials */}
           <div className="lg:col-span-1.5 space-y-5">
-            <a href="#home" className="flex items-center space-x-2.5">
-              <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="#ffffff" strokeWidth="6" strokeDasharray="6 6" opacity="0.3"/>
-                <path d="M50 15C30.67 15 15 30.67 15 50C15 69.33 30.67 85 50 85C69.33 85 85 69.33 85 50" stroke="#4caf50" strokeWidth="8" strokeLinecap="round"/>
-                <circle cx="50" cy="50" r="18" fill="#4caf50" />
-                <path d="M45 42C48 38 52 38 55 42" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M38 50C38 56.63 43.37 62 50 62C56.63 62 62 56.63 62 50" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-              </svg>
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-2xl tracking-wider text-white leading-none">
-                  KUODIA
-                </span>
-                <span className="font-sans font-bold text-[10px] tracking-[0.25em] text-brand-green-light leading-none uppercase mt-0.5">
-                  RENOVABLES
-                </span>
-              </div>
+            <a href="#home" className="flex items-center group">
+              <img src={logoFooterImg} alt="Kuodia Renovables Logo" className="h-14 w-auto object-contain" />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
               {t('footer_desc')}

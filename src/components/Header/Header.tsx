@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../../context/LanguageContext';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
-import logoImg from '../../assets/logo.jpg';
+import logoImg from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
   const { t, language, setLanguage } = useTranslation();
@@ -47,7 +47,13 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center group">
-          <img src={logoImg} alt="Kuodia Renovables Logo" className="h-12 w-auto object-contain" />
+          <img
+            src={logoImg}
+            alt="Kuodia Renovables Logo"
+            className={`w-auto object-contain transition-all duration-300 ${
+              isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+            }`}
+          />
         </a>
 
         {/* Desktop Navigation */}
