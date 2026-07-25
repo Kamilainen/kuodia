@@ -15,7 +15,7 @@ export const ProjectCarousel: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="py-24 bg-slate-50/50 border-b border-slate-100">
+    <section id="projects" className="py-12 bg-slate-50/50 border-b border-slate-100">
       <Container>
         {/* Section Header Centered */}
         <div className="text-center max-w-xl mx-auto mb-14 space-y-3">
