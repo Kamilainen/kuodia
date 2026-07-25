@@ -82,6 +82,9 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
   const formatCurrency = (val: number) => {
     if (language === 'vi') {
       return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND', maximumFractionDigits: 0 }).format(val);
+    } else if (language === 'es') {
+      const eurVal = val / 27000;
+      return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(eurVal);
     } else {
       // Approx USD
       const usdVal = val / 25000;
@@ -180,6 +183,8 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
                     <p className="text-xs text-slate-400">
                       {language === 'vi' 
                         ? 'Ví dụ: 150,000,000 đ/tháng' 
+                        : language === 'es'
+                        ? 'Ejemplo: 150.000.000 VND/mes'
                         : 'Example: 150,000,000 VND/month'}
                     </p>
                   </div>
@@ -232,7 +237,7 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
                         {formatCurrency(results.annualSavings)}
                       </h5>
                       <span className="text-[10px] text-brand-green font-bold bg-brand-green-bg px-2 py-0.5 rounded-full mt-1.5 inline-block">
-                        -{results.savingsPercent}% {language === 'vi' ? 'Tiêu thụ' : 'Consumption'}
+                        -{results.savingsPercent}% {language === 'vi' ? 'Tiêu thụ' : language === 'es' ? 'Consumo' : 'Consumption'}
                       </span>
                     </div>
 
@@ -262,7 +267,7 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
                         {results.co2Savings} {t('project_tons')}
                       </h5>
                       <span className="text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full mt-1.5 inline-block">
-                        {language === 'vi' ? 'Bảo vệ khí hậu' : 'Climate Protected'}
+                        {language === 'vi' ? 'Bảo vệ khí hậu' : language === 'es' ? 'Protección Climática' : 'Climate Protected'}
                       </span>
                     </div>
                   </div>
@@ -289,7 +294,7 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
                             <input
                               type="text"
                               required
-                              placeholder={language === 'vi' ? 'Họ và tên *' : 'Full Name *'}
+                              placeholder={language === 'vi' ? 'Họ và tên *' : language === 'es' ? 'Nombre y Apellidos *' : 'Full Name *'}
                               value={name}
                               onChange={(e) => setName(e.target.value)}
                               className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all"
@@ -301,7 +306,7 @@ export const CalculatorModal: React.FC<CalculatorModalProps> = ({ isOpen, onClos
                             <input
                               type="tel"
                               required
-                              placeholder={language === 'vi' ? 'Số điện thoại *' : 'Phone Number *'}
+                              placeholder={language === 'vi' ? 'Số điện thoại *' : language === 'es' ? 'Número de Teléfono *' : 'Phone Number *'}
                               value={phone}
                               onChange={(e) => setPhone(e.target.value)}
                               className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all"

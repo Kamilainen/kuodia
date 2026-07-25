@@ -120,7 +120,7 @@ export interface TranslationType {
   footer_terms: string;
 }
 
-export const translations: Record<'vi' | 'en', TranslationType> = {
+export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   vi: {
     nav_home: "TRANG CHỦ",
     nav_about: "GIỚI THIỆU",
@@ -344,5 +344,126 @@ export const translations: Record<'vi' | 'en', TranslationType> = {
     footer_copyright: "© 2026 Kuodia Renovables. All rights reserved.",
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms of Use"
-  }
+  },
+  es: {
+  nav_home: "INICIO",
+  nav_about: "SOBRE NOSOTROS",
+  nav_solutions: "SOLUCIONES",
+  nav_projects: "PROYECTOS",
+  nav_blog: "BLOG",
+  nav_contact: "CONTACTO",
+  nav_cta: "CONTÁCTANOS",
+
+  hero_title: "DISEÑANDO EL FUTURO DE LA EFICIENCIA ENERGÉTICA",
+  hero_subtitle: "Diseñamos e implementamos soluciones avanzadas para reducir el consumo de energía y agua en hoteles, resorts y edificios comerciales en Vietnam.",
+  hero_cta_consult: "SOLICITAR ASESORÍA",
+  hero_cta_calc: "CALCULAR AHORRO",
+
+  solutions_title: "SOLUCIONES DE AHORRO ENERGÉTICO",
+  solutions_subtitle: "Ofrecemos tecnologías avanzadas e integradas para optimizar la eficiencia energética de sus operaciones.",
+  solution_learn_more: "MÁS INFORMACIÓN",
+  solution_1_title: "BOMBAS DE CALOR AEROTÉRMICAS",
+  solution_1_desc: "Sistemas de alta eficiencia para calefacción, refrigeración y producción de agua caliente sanitaria.",
+  solution_2_title: "ENERGÍA\nSOLAR",
+  solution_2_desc: "Maximice la generación de energía limpia con soluciones solares inteligentes e integradas.",
+  solution_3_title: "SISTEMAS DE RECUPERACIÓN DE CALOR",
+  solution_3_desc: "Recupere el calor residual del agua, sistemas VRF y procesos para producir agua caliente.",
+  solution_4_title: "SOLUCIONES ENERGÉTICAS PARA HOTELES",
+  solution_4_desc: "Gestión energética integral para hoteles y resorts que reduce significativamente los costos operativos.",
+
+  stat_1_top: "HASTA",
+  stat_1_value: "70%",
+  stat_1_sub: "AHORRO DE ENERGÍA",
+  stat_2_top: "",
+  stat_2_value: "3-7 AÑOS",
+  stat_2_sub: "RETORNO DE INVERSIÓN",
+  stat_3_top: "HASTA",
+  stat_3_value: "60%",
+  stat_3_sub: "REDUCCIÓN DE CO₂",
+  stat_4_top: "INGENIERÍA",
+  stat_4_value: "A MEDIDA",
+  stat_4_sub: "SOLUCIONES PERSONALIZADAS",
+  stat_5_top: "SOPORTE",
+  stat_5_value: "EN VIETNAM",
+  stat_5_sub: "ASISTENCIA TÉCNICA LOCAL",
+
+  why_title: "¿POR QUÉ KUODIA?",
+  why_p1: "Kuodia Renovables es una empresa de ingeniería especializada en el diseño e implementación de soluciones integrales de eficiencia energética.",
+  why_p2: "No solo suministramos equipos; optimizamos todo el sistema para garantizar el máximo rendimiento y el período de recuperación más rápido.",
+  why_check_1: "Diseño de ingeniería personalizado para cada proyecto.",
+  why_check_2: "Tecnología de vanguardia con equipos de alta eficiencia.",
+  why_check_3: "Reducción de los costos operativos a largo plazo.",
+  why_check_4: "Acompañamiento durante todo el ciclo de vida del sistema.",
+  why_cta: "CONOZCA MÁS SOBRE NOSOTROS",
+
+  hotspot_solar: "ENERGÍA SOLAR",
+  hotspot_solar_desc: "Sistemas fotovoltaicos en cubierta que optimizan la conversión solar y suministran electricidad limpia directamente a la instalación.",
+  hotspot_recovery: "RECUPERACIÓN DE CALOR",
+  hotspot_recovery_desc: "Aproveche el calor residual de los sistemas VRF y de las aguas grises para producir agua caliente de forma gratuita.",
+  hotspot_pump: "BOMBA DE CALOR AEROTÉRMICA",
+  hotspot_pump_desc: "Bombas de calor aire-agua ecológicas que proporcionan agua caliente estable las 24 horas del día, en cualquier condición climática.",
+  hotspot_mgmt: "GESTIÓN ENERGÉTICA",
+  hotspot_mgmt_desc: "Sistema inteligente de monitoreo de cargas que detecta desperdicios energéticos y optimiza las operaciones en tiempo real.",
+
+  projects_title: "PROYECTOS DESTACADOS",
+  projects_subtitle: "Proyectos de referencia desarrollados con éxito por Kuodia en Vietnam, generando beneficios económicos y ambientales.",
+  project_savings: "Ahorro energético",
+  project_payback: "Período de retorno",
+  project_co2: "Reducción de CO₂",
+  project_years: "Años",
+  project_tons: "toneladas/año",
+
+  proj_1_title: "Resort de Lujo en Da Nang",
+  proj_1_desc: "Soluciones integrales de eficiencia energética para un resort de cinco estrellas de gran escala.",
+  proj_2_title: "Hotel en Nha Trang",
+  proj_2_desc: "Sistema central de agua caliente solar integrado con recuperación de calor de sistemas VRF.",
+  proj_3_title: "Resort en Phu Quoc",
+  proj_3_desc: "Bombas de calor aerotérmicas integradas y control inteligente para calefacción de piscinas.",
+  proj_4_title: "Edificio de Oficinas en Hanói",
+  proj_4_desc: "Modernización del sistema HVAC y gestión inteligente del consumo de iluminación.",
+
+  calc_banner_title: "CALCULE EL AHORRO DE SU PROYECTO",
+  calc_banner_subtitle: "Ingrese los datos básicos para recibir una estimación del ahorro energético, económico y del período de retorno.",
+  calc_banner_cta: "INICIAR CÁLCULO GRATUITO",
+
+  calc_modal_title: "Calculadora de Ahorro Energético",
+  calc_modal_subtitle: "Ingrese los parámetros de su edificio para obtener una estimación rápida del ahorro anual de energía, agua y la reducción de emisiones de CO₂.",
+  calc_label_type: "Tipo de edificio",
+  calc_label_bill: "Factura mensual promedio de energía (VND)",
+  calc_label_area: "Superficie útil total (m²)",
+
+  calc_type_hotel: "Hotel",
+  calc_type_resort: "Resort",
+  calc_type_office: "Edificio de Oficinas",
+  calc_type_commercial: "Centro Comercial / Otro",
+
+  calc_btn_calculate: "Calcular",
+  calc_btn_recalculate: "Recalcular",
+
+  calc_results_title: "Ahorro Potencial Estimado",
+  calc_res_savings: "Ahorro anual estimado",
+  calc_res_payback: "Período estimado de retorno",
+  calc_res_co2: "Emisiones anuales de CO₂ evitadas",
+
+  calc_contact_prompt: "Solicite un informe técnico detallado y una inspección gratuita realizada por nuestros ingenieros:",
+  calc_btn_submit: "Solicitar Asesoría Detallada",
+  calc_btn_close: "Cerrar",
+
+  calc_success_msg: "¡Gracias! Su solicitud ha sido registrada. Un ingeniero de Kuodia se pondrá en contacto con usted en un plazo de 24 horas.",
+
+  footer_desc: "Ingeniería para la eficiencia energética y un futuro sostenible.",
+  footer_col_solutions: "SOLUCIONES",
+  footer_col_about: "SOBRE NOSOTROS",
+  footer_col_resources: "RECURSOS",
+  footer_col_contact: "CONTACTO",
+
+  footer_contact_address: "Piso 12, Edificio F.Home, 16 Ly Thuong Kiet, Hai Chau, Da Nang, Vietnam",
+  footer_contact_phone: "+84 90 123 4567",
+  footer_contact_email: "info@kuodia.vn",
+  footer_contact_web: "www.kuodia.vn",
+
+  footer_copyright: "© 2026 Kuodia Renovables. Todos los derechos reservados.",
+  footer_privacy: "Política de Privacidad",
+  footer_terms: "Términos de Uso"
+}
 };

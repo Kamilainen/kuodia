@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLanguage = (lang: 'vi' | 'en') => {
+  const toggleLanguage = (lang: 'vi' | 'en' | 'es') => {
     setLanguage(lang);
     setIsLangDropdownOpen(false);
   };
@@ -79,18 +79,31 @@ export const Header: React.FC = () => {
             >
               {language === 'vi' ? (
                 <>
-                  <span className="inline-block w-4 h-3 bg-red-600 relative overflow-hidden rounded-sm">
-                    <span className="absolute inset-0 flex items-center justify-center text-[7px] text-yellow-400">★</span>
-                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="w-4.5 h-3 rounded-sm flex-shrink-0">
+                    <rect width="30" height="20" fill="#da291c"/>
+                    <polygon points="15,4 16.2,8.2 20.6,8.2 17.1,10.8 18.4,15 15,12.4 11.6,15 12.9,10.8 9.4,8.2 13.8,8.2" fill="#ffcd00"/>
+                  </svg>
                   <span>VI</span>
+                </>
+              ) : language === 'en' ? (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="w-4.5 h-3 rounded-sm border border-slate-100 flex-shrink-0">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#da291c" strokeWidth="4"/>
+                    <path d="M30,0 L30,30 M0,15 L60,15" stroke="#fff" strokeWidth="10"/>
+                    <path d="M30,0 L30,30 M0,15 L60,15" stroke="#da291c" strokeWidth="6"/>
+                  </svg>
+                  <span>EN</span>
                 </>
               ) : (
                 <>
-                  <span className="inline-block w-4 h-3 bg-blue-800 relative overflow-hidden rounded-sm border border-slate-100">
-                    <span className="absolute inset-0 bg-red-600 transform rotate-45 scale-x-150"></span>
-                    <span className="absolute inset-0 bg-red-600 transform -rotate-45 scale-x-150"></span>
-                  </span>
-                  <span>EN</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="w-4.5 h-3 rounded-sm border border-slate-100 flex-shrink-0">
+                    <rect width="30" height="20" fill="#c60b1e"/>
+                    <rect y="5" width="30" height="10" fill="#ffc400"/>
+                    <circle cx="8" cy="10" r="2" fill="#c60b1e" opacity="0.75"/>
+                  </svg>
+                  <span>ES</span>
                 </>
               )}
               <ChevronDown className={`h-3 w-3 text-slate-500 transition-transform ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
@@ -102,20 +115,35 @@ export const Header: React.FC = () => {
                   onClick={() => toggleLanguage('vi')}
                   className="w-full flex items-center space-x-2 px-3 py-2 text-xs font-medium hover:bg-slate-50 text-slate-700 transition-colors text-left cursor-pointer"
                 >
-                  <span className="inline-block w-4.5 h-3 bg-red-600 relative overflow-hidden rounded-sm">
-                    <span className="absolute inset-0 flex items-center justify-center text-[7px] text-yellow-400">★</span>
-                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="w-4.5 h-3 rounded-sm flex-shrink-0">
+                    <rect width="30" height="20" fill="#da291c"/>
+                    <polygon points="15,4 16.2,8.2 20.6,8.2 17.1,10.8 18.4,15 15,12.4 11.6,15 12.9,10.8 9.4,8.2 13.8,8.2" fill="#ffcd00"/>
+                  </svg>
                   <span>Tiếng Việt</span>
                 </button>
                 <button
                   onClick={() => toggleLanguage('en')}
                   className="w-full flex items-center space-x-2 px-3 py-2 text-xs font-medium hover:bg-slate-50 text-slate-700 transition-colors text-left cursor-pointer"
                 >
-                  <span className="inline-block w-4.5 h-3 bg-blue-800 relative overflow-hidden rounded-sm border border-slate-100">
-                    <span className="absolute inset-0 bg-red-600 transform rotate-45 scale-x-150"></span>
-                    <span className="absolute inset-0 bg-red-600 transform -rotate-45 scale-x-150"></span>
-                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="w-4.5 h-3 rounded-sm border border-slate-100 flex-shrink-0">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#da291c" strokeWidth="4"/>
+                    <path d="M30,0 L30,30 M0,15 L60,15" stroke="#fff" strokeWidth="10"/>
+                    <path d="M30,0 L30,30 M0,15 L60,15" stroke="#da291c" strokeWidth="6"/>
+                  </svg>
                   <span>English</span>
+                </button>
+                <button
+                  onClick={() => toggleLanguage('es')}
+                  className="w-full flex items-center space-x-2 px-3 py-2 text-xs font-medium hover:bg-slate-50 text-slate-700 transition-colors text-left cursor-pointer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="w-4.5 h-3 rounded-sm border border-slate-100 flex-shrink-0">
+                    <rect width="30" height="20" fill="#c60b1e"/>
+                    <rect y="5" width="30" height="10" fill="#ffc400"/>
+                    <circle cx="8" cy="10" r="2" fill="#c60b1e" opacity="0.75"/>
+                  </svg>
+                  <span>Español</span>
                 </button>
               </div>
             )}
@@ -134,11 +162,11 @@ export const Header: React.FC = () => {
         <div className="flex md:hidden items-center space-x-3">
           {/* Mobile Lang Button */}
           <button
-            onClick={() => setLanguage(language === 'vi' ? 'en' : 'vi')}
-            className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700"
+            onClick={() => setLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
+            className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 cursor-pointer"
           >
             <Globe className="h-3.5 w-3.5 text-slate-500" />
-            <span className="uppercase">{language === 'vi' ? 'VI' : 'EN'}</span>
+            <span className="uppercase">{language}</span>
           </button>
 
           <button

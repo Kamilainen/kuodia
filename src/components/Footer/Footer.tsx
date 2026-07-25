@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 import logoFooterImg from '../../assets/logo-footer.png';
 
 export const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   const socialLinks = [
     {
@@ -61,16 +61,16 @@ export const Footer: React.FC = () => {
   ];
 
   const aboutLinks = [
-    { labelVi: 'Giới thiệu', labelEn: 'Introduction' },
-    { labelVi: 'Sứ mệnh & Giá trị', labelEn: 'Mission & Values' },
-    { labelVi: 'Đội ngũ', labelEn: 'Our Team' },
-    { labelVi: 'Đối tác', labelEn: 'Partners' }
+    { labelVi: 'Giới thiệu', labelEn: 'Introduction', labelEs: 'Introducción' },
+    { labelVi: 'Sứ mệnh & Giá trị', labelEn: 'Mission & Values', labelEs: 'Misión y Valores' },
+    { labelVi: 'Đội ngũ', labelEn: 'Our Team', labelEs: 'Nuestro Equipo' },
+    { labelVi: 'Đối tác', labelEn: 'Partners', labelEs: 'Socios' }
   ];
 
   const resourcesLinks = [
-    { labelVi: 'Blog', labelEn: 'Blog' },
-    { labelVi: 'Tài liệu kỹ thuật', labelEn: 'Technical Documents' },
-    { labelVi: 'FAQ', labelEn: 'FAQ' }
+    { labelVi: 'Blog', labelEn: 'Blog', labelEs: 'Blog' },
+    { labelVi: 'Tài liệu kỹ thuật', labelEn: 'Technical Documents', labelEs: 'Documentos Técnicos' },
+    { labelVi: 'FAQ', labelEn: 'FAQ', labelEs: 'FAQ' }
   ];
 
   return (
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
               {aboutLinks.map((item, idx) => (
                 <li key={idx}>
                   <a href="#about" className="hover:text-white transition-colors">
-                    {t('language' as any) === 'vi' ? item.labelVi : item.labelEn}
+                    {language === 'vi' ? item.labelVi : language === 'es' ? item.labelEs : item.labelEn}
                   </a>
                 </li>
               ))}
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
               {resourcesLinks.map((item, idx) => (
                 <li key={idx}>
                   <a href="#blog" className="hover:text-white transition-colors">
-                    {t('language' as any) === 'vi' ? item.labelVi : item.labelEn}
+                    {language === 'vi' ? item.labelVi : language === 'es' ? item.labelEs : item.labelEn}
                   </a>
                 </li>
               ))}
