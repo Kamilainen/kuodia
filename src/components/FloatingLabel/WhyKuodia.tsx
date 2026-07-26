@@ -89,7 +89,7 @@ const Hotspot: React.FC<HotspotProps> = ({
 };
 
 export const WhyKuodia: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
   const checklist = [
@@ -364,9 +364,9 @@ export const WhyKuodia: React.FC = () => {
             <div className="bg-white px-4 py-3.5 flex items-center space-x-2.5">
               <Info className="h-4.5 w-4.5 text-brand-green flex-shrink-0" />
               <p className="text-xs text-slate-600 leading-normal font-semibold">
-                {t("language" as any) === "vi"
+                {language === "vi"
                   ? "Di chuột vào các điểm nhấp nháy để xem sơ đồ giải pháp năng lượng."
-                  : t("language" as any) === "es"
+                  : language === "es"
                   ? "Pase el cursor sobre los puntos parpadeantes para ver nuestras soluciones de energía para edificios."
                   : "Hover over the pulsing spots to view our building energy solutions."}
               </p>
