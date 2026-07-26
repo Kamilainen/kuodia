@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+        (isScrolled || isDarkPage)
           ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100 py-3'
           : 'bg-transparent py-5'
       }`}
@@ -56,24 +56,18 @@ export const Header: React.FC = () => {
             src={logoImg}
             alt="Kuodia Renovables Logo"
             className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-24'
+              (isScrolled || isDarkPage) ? 'h-16 md:h-20' : 'h-20 md:h-24'
             }`}
           />
         </Link>
-
+ 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-7">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
-              className={`text-xs lg:text-sm font-display font-bold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-green after:transition-all hover:after:w-full ${
-                isScrolled
-                  ? 'text-brand-navy/85 hover:text-brand-green'
-                  : isDarkPage
-                  ? 'text-white hover:text-brand-green'
-                  : 'text-brand-navy/85 hover:text-brand-green'
-              }`}
+              className="text-xs lg:text-sm font-display font-bold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-green after:transition-all hover:after:w-full text-brand-navy/85 hover:text-brand-green"
             >
               {t(item.labelKey)}
             </Link>

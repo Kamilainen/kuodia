@@ -2,44 +2,7 @@ import React from "react";
 import { useTranslation } from "../context/LanguageContext";
 import { MapPin, ArrowRight, MessageSquare, Phone, Mail } from "lucide-react";
 import shrimImg from "../assets/shrim.png";
-
-// Vector Mock QR Code for Zalo chat
-const MockQRCode: React.FC = () => (
-  <svg width="100" height="100" viewBox="0 0 120 120" className="mx-auto select-none pointer-events-none">
-    <rect width="120" height="120" fill="white" rx="8" />
-    
-    {/* QR code corners */}
-    <rect x="10" y="10" width="30" height="30" fill="#091E36" rx="4" />
-    <rect x="15" y="15" width="20" height="20" fill="white" rx="2" />
-    <rect x="18" y="18" width="14" height="14" fill="#091E36" rx="1" />
-
-    <rect x="80" y="10" width="30" height="30" fill="#091E36" rx="4" />
-    <rect x="85" y="15" width="20" height="20" fill="white" rx="2" />
-    <rect x="88" y="18" width="14" height="14" fill="#091E36" rx="1" />
-
-    <rect x="10" y="80" width="30" height="30" fill="#091E36" rx="4" />
-    <rect x="15" y="85" width="20" height="20" fill="white" rx="2" />
-    <rect x="18" y="88" width="14" height="14" fill="#091E36" rx="1" />
-    
-    {/* Random bits inside */}
-    <rect x="50" y="10" width="10" height="20" fill="#091E36" />
-    <rect x="65" y="20" width="10" height="10" fill="#091E36" />
-    <rect x="50" y="35" width="25" height="10" fill="#091E36" />
-    
-    <rect x="10" y="50" width="20" height="10" fill="#091E36" />
-    <rect x="35" y="50" width="15" height="15" fill="#091E36" />
-    <rect x="55" y="55" width="10" height="25" fill="#091E36" />
-    
-    <rect x="80" y="50" width="20" height="10" fill="#091E36" />
-    <rect x="75" y="65" width="15" height="15" fill="#091E36" />
-    <rect x="95" y="85" width="15" height="15" fill="#091E36" />
-    <rect x="80" y="105" width="15" height="5" fill="#091E36" />
-    
-    {/* Zalo badge text or logo in center */}
-    <rect x="42" y="42" width="36" height="36" fill="#1B5FBF" rx="8" />
-    <text x="60" y="64" fill="white" fontSize="10" fontWeight="900" textAnchor="middle" fontFamily="system-ui">Zalo</text>
-  </svg>
-);
+import zaloQrImg from "../assets/zalo_qr.jpg";
 
 export const ContactFeatured: React.FC = () => {
   const { t } = useTranslation();
@@ -166,8 +129,12 @@ export const ContactFeatured: React.FC = () => {
 
           {/* Right panel: QR Code container */}
           <div className="flex-shrink-0 flex flex-col items-center p-3 bg-white/5 border border-white/10 rounded-2xl w-[124px] mx-auto md:mx-0">
-            <div className="bg-white p-1 rounded-xl shadow-md">
-              <MockQRCode />
+            <div className="bg-white p-1 rounded-xl shadow-md overflow-hidden">
+              <img
+                src={zaloQrImg}
+                alt="Zalo QR"
+                className="w-24 h-24 object-cover select-none pointer-events-none rounded-lg"
+              />
             </div>
             <span className="text-[10px] font-sans font-bold text-slate-300 mt-2 tracking-wide uppercase">
               {t("cta_card_scan_to_chat")}
