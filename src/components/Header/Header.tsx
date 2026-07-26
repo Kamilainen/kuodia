@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
             src={logoImg}
             alt="Kuodia Renovables Logo"
             className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+              isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-24'
             }`}
           />
         </a>

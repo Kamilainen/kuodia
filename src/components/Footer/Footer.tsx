@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Logo & Socials */}
           <div className="lg:col-span-1.5 space-y-5">
             <a href="#home" className="flex items-center group">
-              <img src={logoFooterImg} alt="Kuodia Renovables Logo" className="h-14 w-auto object-contain" />
+              <img src={logoFooterImg} alt="Kuodia Renovables Logo" className="h-14 w-auto object-contain -ml-5" />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
               {t('footer_desc')}

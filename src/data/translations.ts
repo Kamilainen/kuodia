@@ -65,6 +65,12 @@ export interface TranslationType {
   // Projects
   projects_title: string;
   projects_subtitle: string;
+  projects_note: string;
+  projects_bottom_note_title: string;
+  projects_bottom_note_desc: string;
+  projects_bottom_coming_title: string;
+  projects_bottom_coming_desc: string;
+  projects_bottom_coming_highlight: string;
   project_savings: string;
   project_payback: string;
   project_co2: string;
@@ -180,8 +186,14 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     hotspot_mgmt: "QUẢN LÝ NĂNG LƯỢNG",
     hotspot_mgmt_desc: "Hệ thống giám sát thông minh tối ưu hóa phụ tải, phát hiện lãng phí điện năng theo thời gian thực.",
 
-    projects_title: "DỰ ÁN TIÊU BIỂU",
-    projects_subtitle: "Những dự án tiêu biểu đã được Kuodia triển khai thành công tại Việt Nam, mang lại giá trị kinh tế và môi trường bền vững.",
+    projects_title: "GIẢI PHÁP THAM KHẢO",
+    projects_subtitle: "Khám phá các ví dụ về cách các giải pháp của Kuodia có thể được áp dụng trong nhiều lĩnh vực nhằm nâng cao hiệu quả năng lượng và giảm chi phí vận hành.",
+    projects_note: "Các trường hợp dưới đây chỉ mang tính minh họa và không đại diện cho các dự án đã được Kuodia thực hiện.",
+    projects_bottom_note_title: "LƯU Ý",
+    projects_bottom_note_desc: "Các giải pháp trên là những ví dụ mang tính khái niệm, được xây dựng dựa trên công nghệ và phương pháp mà Kuodia áp dụng. Mỗi dự án đều được thiết kế riêng theo nhu cầu cụ thể của từng khách hàng.",
+    projects_bottom_coming_title: "SẮP RA MẮT: CÁC DỰ ÁN THỰC TẾ",
+    projects_bottom_coming_desc: "Chúng tôi đang triển khai các dự án thực tế và sẽ sớm chia sẻ cùng bạn.",
+    projects_bottom_coming_highlight: "Giải pháp thực tế. Kết quả đo lường được. Tác động bền vững.",
     project_savings: "Tiết kiệm năng lượng",
     project_payback: "Thời gian hoàn vốn",
     project_co2: "Tấn CO₂ giảm thiểu",
@@ -292,8 +304,14 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     hotspot_mgmt: "ENERGY MANAGEMENT",
     hotspot_mgmt_desc: "Smart load monitoring system that detects power waste and optimizes operations in real-time.",
 
-    projects_title: "FEATURED PROJECTS",
-    projects_subtitle: "Selected reference projects successfully implemented by Kuodia in Vietnam, delivering economic and environmental values.",
+    projects_title: "REFERENCE SOLUTIONS",
+    projects_subtitle: "Explore examples of how Kuodia's solutions can be applied in various sectors to improve energy efficiency and reduce operational costs.",
+    projects_note: "The cases below are for illustrative purposes only and do not represent projects implemented by Kuodia.",
+    projects_bottom_note_title: "NOTE",
+    projects_bottom_note_desc: "The solutions above are conceptual examples built based on the technologies and methodologies applied by Kuodia. Each project is customized according to the specific needs of each client.",
+    projects_bottom_coming_title: "COMING SOON: REAL PROJECTS",
+    projects_bottom_coming_desc: "We are currently deploying real-world projects and will share them with you soon.",
+    projects_bottom_coming_highlight: "Real solutions. Measurable results. Sustainable impact.",
     project_savings: "Energy savings",
     project_payback: "Payback period",
     project_co2: "CO₂ reduction",
@@ -405,8 +423,14 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   hotspot_mgmt: "GESTIÓN ENERGÉTICA",
   hotspot_mgmt_desc: "Sistema inteligente de monitoreo de cargas que detecta desperdicios energéticos y optimiza las operaciones en tiempo real.",
 
-  projects_title: "PROYECTOS DESTACADOS",
-  projects_subtitle: "Proyectos de referencia desarrollados con éxito por Kuodia en Vietnam, generando beneficios económicos y ambientales.",
+  projects_title: "SOLUCIONES DE REFERENCIA",
+  projects_subtitle: "Explore ejemplos de cómo se pueden aplicar las soluciones de Kuodia en diversos sectores para mejorar la eficiencia energética y reducir los costos operativos.",
+  projects_note: "Los casos a continuación son solo con fines ilustrativos y no representan proyectos implementados por Kuodia.",
+  projects_bottom_note_title: "NOTA",
+  projects_bottom_note_desc: "Las soluciones anteriores son ejemplos conceptuales creados a partir de las tecnologías y metodologías aplicadas por Kuodia. Cada proyecto se personaliza según las necesidades específicas de cada cliente.",
+  projects_bottom_coming_title: "PRÓXIMAMENTE: PROYECTOS REALES",
+  projects_bottom_coming_desc: "Actualmente estamos implementando proyectos del mundo real y los compartiremos con usted pronto.",
+  projects_bottom_coming_highlight: "Soluciones reales. Resultados medibles. Impacto sostenible.",
   project_savings: "Ahorro energético",
   project_payback: "Período de retorno",
   project_co2: "Reducción de CO₂",
