@@ -21,14 +21,14 @@ import heatRecoveryImg from "../assets/heat_recovery.png";
 
 // ---- Design tokens ----
 const COLORS = {
-  green: "#22883E",
-  greenSoft: "#8FD19E",
-  blue: "#1B5FBF",
-  blueSoft: "#8FC4F0",
-  ink: "#0F172A",
-  sub: "#475569",
-  line: "#E2E8F0",
-  arrow: "#1B4CA6",
+  green: "var(--color-brand-green)",
+  greenSoft: "var(--color-brand-green-bg)",
+  blue: "var(--color-brand-blue)",
+  blueSoft: "var(--color-brand-blue-light)",
+  ink: "var(--color-brand-navy)",
+  sub: "var(--color-slate-500)",
+  line: "var(--color-slate-200)",
+  arrow: "var(--color-brand-navy)",
 };
 
 // Which bottom items receive a water-flow drop-down from the top row

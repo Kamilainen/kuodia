@@ -10,15 +10,15 @@ export const ContactFeatured: React.FC = () => {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full">
       {/* 1. Left Card: Featured Project */}
-      <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 transition-all duration-300 min-h-[340px] w-full border border-slate-150">
+      <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 transition-all duration-300 min-h-[340px] w-full">
         {/* Left content block */}
         <div className="w-full md:w-[55%] p-6 flex flex-col justify-between z-10 bg-white">
           <div className="space-y-4">
             <div className="space-y-1">
-              <h3 className="font-display font-black text-xs sm:text-sm tracking-wider uppercase text-emerald-700">
+              <h3 className="font-display font-black text-xs sm:text-sm tracking-wider uppercase text-brand-green">
                 {t("featured_project_title")}
               </h3>
-              <p className="font-display font-black text-lg text-slate-800 tracking-tight leading-snug">
+              <p className="font-display font-black text-lg text-brand-navy tracking-tight leading-snug">
                 {t("featured_project_name")}
               </p>
               <div className="flex items-center space-x-1.5 text-xs text-slate-500 font-semibold font-sans pt-0.5">
@@ -30,34 +30,34 @@ export const ContactFeatured: React.FC = () => {
             {/* Project statistics */}
             <div className="grid grid-cols-2 gap-x-4 gap-y-3.5 pt-2">
               <div>
-                <span className="block text-base sm:text-lg font-display font-black text-emerald-700 leading-tight">
+                <span className="block text-base sm:text-lg font-display font-black text-brand-navy leading-tight">
                   {t("featured_stat_1_val")}
                 </span>
-                <span className="block text-[10px] font-sans font-bold text-slate-500 leading-normal">
+                <span className="block text-[10px] font-sans font-bold text-slate-600 leading-normal">
                   {t("featured_stat_1_lbl")}
                 </span>
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-display font-black text-emerald-700 leading-tight">
+                <span className="block text-base sm:text-lg font-display font-black text-brand-navy leading-tight">
                   {t("featured_stat_2_val")}
                 </span>
-                <span className="block text-[10px] font-sans font-bold text-slate-500 leading-normal">
+                <span className="block text-[10px] font-sans font-bold text-slate-600 leading-normal">
                   {t("featured_stat_2_lbl")}
                 </span>
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-display font-black text-slate-800 leading-tight">
+                <span className="block text-base sm:text-lg font-display font-black text-brand-navy leading-tight">
                   {t("featured_stat_3_val")}
                 </span>
-                <span className="block text-[10px] font-sans font-bold text-slate-500 leading-normal">
+                <span className="block text-[10px] font-sans font-bold text-slate-600 leading-normal">
                   {t("featured_stat_3_lbl")}
                 </span>
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-display font-black text-emerald-700 leading-tight">
+                <span className="block text-base sm:text-lg font-display font-black text-brand-navy leading-tight">
                   {t("featured_stat_4_val")}
                 </span>
-                <span className="block text-[10px] font-sans font-bold text-slate-500 leading-normal">
+                <span className="block text-[10px] font-sans font-bold text-slate-600 leading-normal">
                   {t("featured_stat_4_lbl")}
                 </span>
               </div>
@@ -68,7 +68,7 @@ export const ContactFeatured: React.FC = () => {
           <div className="pt-4">
             <a
               href="#ninh-thuan"
-              className="inline-flex items-center space-x-1.5 font-display font-black text-[10px] sm:text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-emerald-600 hover:text-emerald-700 hover:translate-x-1"
+              className="inline-flex items-center space-x-1.5 font-display font-black text-[10px] sm:text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-brand-green hover:text-brand-green-light hover:translate-x-1"
             >
               <span>{t("featured_view_case_study")}</span>
               <ArrowRight className="h-4 w-4" />
@@ -91,13 +91,13 @@ export const ContactFeatured: React.FC = () => {
       {/* 2. Right Card: Ready to Build Your Farm? (CTA & Zalo Scan) */}
       <div className="bg-[#091E36] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-slate-900/10 border border-slate-800 text-white min-h-[340px] w-full relative overflow-hidden">
         {/* Decorative backdrop glow */}
-        <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-48 h-48 bg-brand-green/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 z-10">
           {/* Left panel: Info & CTAs */}
           <div className="flex-1 space-y-4">
             <div className="space-y-1">
-              <h3 className="font-display font-black text-sm tracking-wider uppercase text-emerald-400">
+              <h3 className="font-display font-black text-sm tracking-wider uppercase text-brand-green">
                 {t("cta_card_title")}
               </h3>
               <p className="font-sans font-semibold text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -109,7 +109,7 @@ export const ContactFeatured: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-display font-bold text-xs uppercase px-4 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-emerald-950/20"
+                className="inline-flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green-light active:bg-brand-green text-white font-display font-bold text-xs uppercase px-4 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-brand-green/20"
               >
                 <span>{t("cta_card_feasibility")}</span>
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -148,8 +148,8 @@ export const ContactFeatured: React.FC = () => {
             href="tel:0886017923"
             className="flex items-center space-x-2.5 group text-slate-300 hover:text-white transition-colors"
           >
-            <div className="h-8 w-8 rounded-full border border-slate-800 bg-slate-900/50 flex items-center justify-center group-hover:border-emerald-500/30 transition-colors">
-              <Phone className="h-3.5 w-3.5 text-emerald-400" />
+            <div className="h-8 w-8 rounded-full border border-slate-800 bg-slate-900/50 flex items-center justify-center group-hover:border-brand-green/30 transition-colors">
+              <Phone className="h-3.5 w-3.5 text-brand-green" />
             </div>
             <span className="text-xs font-sans font-bold tracking-wide">
               +84 886 017 923
@@ -160,8 +160,8 @@ export const ContactFeatured: React.FC = () => {
             href="mailto:info@kuodia.vn"
             className="flex items-center space-x-2.5 group text-slate-300 hover:text-white transition-colors"
           >
-            <div className="h-8 w-8 rounded-full border border-slate-800 bg-slate-900/50 flex items-center justify-center group-hover:border-emerald-500/30 transition-colors">
-              <Mail className="h-3.5 w-3.5 text-emerald-400" />
+            <div className="h-8 w-8 rounded-full border border-slate-800 bg-slate-900/50 flex items-center justify-center group-hover:border-brand-green/30 transition-colors">
+              <Mail className="h-3.5 w-3.5 text-brand-green" />
             </div>
             <span className="text-xs font-sans font-bold tracking-wide">
               info@kuodia.vn

@@ -33,25 +33,25 @@ export const NurseryCard: React.FC<NurseryCardProps> = ({
   specs,
 }) => {
   const specList = [
-    { icon: <Thermometer className="h-4.5 w-4.5 text-blue-500" />, label: specs.waterTempLabel, value: specs.waterTempValue },
-    { icon: <Droplet className="h-4.5 w-4.5 text-blue-500" />, label: specs.oxygenLabel, value: specs.oxygenValue },
-    { icon: <Activity className="h-4.5 w-4.5 text-blue-500" />, label: specs.phLabel, value: specs.phValue },
-    { icon: <Sliders className="h-4.5 w-4.5 text-blue-500" />, label: specs.salinityLabel, value: specs.salinityValue },
-    { icon: <ShieldCheck className="h-4.5 w-4.5 text-blue-500" />, label: specs.uvLabel, value: specs.uvValue },
-    { icon: <BatteryCharging className="h-4.5 w-4.5 text-blue-500" />, label: specs.powerLabel, value: specs.powerValue },
+    { icon: <Thermometer className="h-4.5 w-4.5 text-brand-green" />, label: specs.waterTempLabel, value: specs.waterTempValue },
+    { icon: <Droplet className="h-4.5 w-4.5 text-brand-green" />, label: specs.oxygenLabel, value: specs.oxygenValue },
+    { icon: <Activity className="h-4.5 w-4.5 text-brand-green" />, label: specs.phLabel, value: specs.phValue },
+    { icon: <Sliders className="h-4.5 w-4.5 text-brand-green" />, label: specs.salinityLabel, value: specs.salinityValue },
+    { icon: <ShieldCheck className="h-4.5 w-4.5 text-brand-green" />, label: specs.uvLabel, value: specs.uvValue },
+    { icon: <BatteryCharging className="h-4.5 w-4.5 text-brand-green" />, label: specs.powerLabel, value: specs.powerValue },
   ];
 
   return (
-    <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 transition-all duration-300 min-h-[460px] w-full border border-slate-150">
+    <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 transition-all duration-300 min-h-[460px] w-full">
       {/* Left Column: Content */}
       <div className="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between z-10 bg-white">
         <div className="space-y-4">
           {/* Header */}
           <div className="space-y-1">
-            <h3 className="font-display font-black text-lg tracking-wider uppercase text-blue-900">
+            <h3 className="font-display font-black text-lg tracking-wider uppercase text-brand-navy">
               {title}
             </h3>
-            <p className="font-display font-bold text-sm text-slate-800 tracking-tight">
+            <p className="font-display font-bold text-sm text-brand-navy tracking-tight">
               {subtitle}
             </p>
           </div>
@@ -86,7 +86,7 @@ export const NurseryCard: React.FC<NurseryCardProps> = ({
         <div className="pt-6">
           <a
             href={href}
-            className="inline-flex items-center space-x-1.5 font-display font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-blue-600 hover:text-blue-700 hover:translate-x-1"
+            className="inline-flex items-center space-x-1.5 font-display font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer text-brand-navy hover:text-brand-green hover:translate-x-1"
           >
             <span>LEARN MORE</span>
             <ArrowRight className="h-4 w-4" />

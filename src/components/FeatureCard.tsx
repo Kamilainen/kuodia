@@ -23,11 +23,11 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   const isGreen = themeColor === "green";
 
   // Color theme selectors
-  const titleClass = isGreen ? "text-emerald-700" : "text-indigo-900";
-  const iconBgClass = isGreen ? "bg-emerald-50 text-emerald-500 border-emerald-100" : "bg-blue-50 text-blue-500 border-blue-100";
+  const titleClass = isGreen ? "text-brand-green" : "text-brand-navy";
+  const iconBgClass = isGreen ? "bg-brand-green-bg text-brand-green border-brand-green/20" : "bg-slate-100 text-brand-navy border-slate-200";
   const linkClass = isGreen
-    ? "text-emerald-600 hover:text-emerald-700 hover:translate-x-1"
-    : "text-blue-600 hover:text-blue-700 hover:translate-x-1";
+    ? "text-brand-green hover:text-brand-green-light hover:translate-x-1"
+    : "text-brand-navy hover:text-brand-green hover:translate-x-1";
 
   return (
     <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-900/5 transition-all duration-300 min-h-[460px] w-full">
@@ -39,7 +39,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
             <h3 className={`font-display font-black text-lg tracking-wider uppercase ${titleClass}`}>
               {title}
             </h3>
-            <p className="font-display font-bold text-sm text-slate-800 tracking-tight">
+            <p className="font-display font-bold text-sm text-brand-navy tracking-tight">
               {subtitle}
             </p>
           </div>
