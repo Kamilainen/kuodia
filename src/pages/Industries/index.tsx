@@ -273,24 +273,6 @@ export const Industries: React.FC = () => {
           <ContactFeatured />
         </Container>
       </section>
-
-      {/* Mock Solutions Section below Hero for exploration anchor */}
-      <section
-        id="solutions-detail"
-        className="py-20 bg-white text-brand-navy border-t border-slate-100"
-      >
-        <Container>
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="font-display font-extrabold text-3xl text-brand-navy uppercase tracking-tight">
-              {t("solutions_title")}
-            </h2>
-            <div className="w-12 h-0.5 bg-brand-green mx-auto"></div>
-            <p className="text-slate-600 leading-relaxed font-sans text-sm sm:text-base">
-              {t("solutions_subtitle")}
-            </p>
-          </div>
-        </Container>
-      </section>
     </div>
   );
 };
