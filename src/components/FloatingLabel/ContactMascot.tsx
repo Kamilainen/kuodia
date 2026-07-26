@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { useTranslation } from "../../context/LanguageContext";
 import kubiImg from "../../assets/kubi.png";
 import SpeechBubble from "./SpeechBubble";
 import ContactMenu from "./ContactMenu";
 import useRandomSpeech from "../../hooks/useRandomSpeech";
-import {
-  entranceVariants,
-  eyeBlinkVariants,
-} from "./MascotAnimations";
+import { entranceVariants, eyeBlinkVariants } from "./MascotAnimations";
 
 export const ContactMascot: React.FC = () => {
-  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isBlinking, setIsBlinking] = useState(false);
@@ -52,7 +47,7 @@ export const ContactMascot: React.FC = () => {
   useEffect(() => {
     if (prefersReducedMotion) return;
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const runBlinkCycle = () => {
       const nextDelay = Math.random() * 2000 + 6000;
@@ -97,28 +92,28 @@ export const ContactMascot: React.FC = () => {
       };
 
   const idleTransition = prefersReducedMotion
-    ? {}
+    ? undefined
     : isHovered || menuOpen
     ? {
         rotate: {
           duration: 1.2,
-          ease: "easeInOut",
+          ease: "easeInOut" as const,
         },
         scale: {
-          type: "spring",
+          type: "spring" as const,
           stiffness: 300,
           damping: 20,
         },
         y: {
-          type: "spring",
+          type: "spring" as const,
           stiffness: 300,
           damping: 20,
-        }
+        },
       }
     : {
         duration: 3.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       };
 
   return (
@@ -201,7 +196,7 @@ export const ContactMascot: React.FC = () => {
             transition={{
               duration: 1.8,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           >
             <path d="M6,0 L0,11 L4,11 L3,20 L10,9 L5,9 Z" stroke="#10B981" strokeWidth="0.5" />
