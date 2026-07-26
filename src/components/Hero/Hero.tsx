@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center pt-24 pb-36 lg:pb-40 overflow-hidden">
+    <section id="home" className="relative min-h-[92vh] flex items-center pt-36 sm:pt-40 pb-48 lg:pb-40 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
             </h1>
             
             <div className="space-y-2.5">
-              <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl text-brand-navy tracking-tight">
+              <h3 className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-navy tracking-tight">
                 {t('hero_tagline' as any)}
               </h3>
               
