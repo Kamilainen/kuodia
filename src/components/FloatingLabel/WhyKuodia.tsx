@@ -56,9 +56,17 @@ const Hotspot: React.FC<HotspotProps> = ({
       <AnimatePresence>
         {isActive && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: tooltipDirection === "down" ? -10 : 10 }}
+            initial={{
+              opacity: 0,
+              scale: 0.9,
+              y: tooltipDirection === "down" ? -10 : 10,
+            }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: tooltipDirection === "down" ? -10 : 10 }}
+            exit={{
+              opacity: 0,
+              scale: 0.9,
+              y: tooltipDirection === "down" ? -10 : 10,
+            }}
             transition={{ duration: 0.2 }}
             className={`absolute left-1/2 -translate-x-1/2 w-64 bg-slate-900/95 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-white/10 text-left ${
               tooltipDirection === "down" ? "top-6" : "bottom-6"
@@ -179,18 +187,18 @@ export const WhyKuodia: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Visual Side - Interactive Hotspots */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl shadow-2xl border border-slate-100 bg-slate-50 aspect-[4/3] w-full flex items-center justify-center">
-              {/* Pre-rendered 3D Pipeline Video Loop */}
-              <video
-                src={pipelineVideo}
-                className="w-full h-full object-cover select-none rounded-2xl animate-fade-in"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
+            <div className="rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 bg-white">
+              <div className="relative bg-slate-50 aspect-[16/11] w-full flex items-center justify-center border-b border-slate-200/60">
+                {/* Pre-rendered 3D Pipeline Video Loop */}
+                <video
+                  src={pipelineVideo}
+                  className="w-full h-full object-cover select-none animate-fade-in"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
 
               {/* Architectural Image (Commented out)
               <img
@@ -325,15 +333,7 @@ export const WhyKuodia: React.FC = () => {
                 />
               ))}
 
-              {/* Instruction Banner inside visual */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-slate-100 shadow-lg flex items-center space-x-2.5 z-10">
-                <Info className="h-4 w-4 text-brand-green flex-shrink-0" />
-                <p className="text-[10px] text-slate-500 font-medium leading-normal">
-                  {t("language" as any) === "vi"
-                    ? "Di chuột vào các điểm nhấp nháy để xem sơ đồ giải pháp năng lượng."
-                    : "Hover over the pulsing spots to view our building energy solutions."}
-                </p>
-              </div>
+
 
               {/* Overlay labels (matching design static texts) */}
               <div className="absolute top-4 right-4 z-10 flex flex-col items-end space-y-1.5 pointer-events-none hidden sm:flex">
@@ -359,9 +359,22 @@ export const WhyKuodia: React.FC = () => {
                 </span>
               </div>
             </div>
+
+            {/* Instruction Banner below visual */}
+            <div className="bg-white px-4 py-3.5 flex items-center space-x-2.5">
+              <Info className="h-4.5 w-4.5 text-brand-green flex-shrink-0" />
+              <p className="text-xs text-slate-600 leading-normal font-semibold">
+                {t("language" as any) === "vi"
+                  ? "Di chuột vào các điểm nhấp nháy để xem sơ đồ giải pháp năng lượng."
+                  : t("language" as any) === "es"
+                  ? "Pase el cursor sobre los puntos parpadeantes para ver nuestras soluciones de energía para edificios."
+                  : "Hover over the pulsing spots to view our building energy solutions."}
+              </p>
+            </div>
           </div>
         </div>
-      </Container>
+      </div>
+    </Container>
     </section>
   );
 };

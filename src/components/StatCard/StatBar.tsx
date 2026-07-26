@@ -75,7 +75,7 @@ export const StatBar: React.FC = () => {
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 divide-y md:divide-y-0 lg:divide-x divide-slate-100">
           {stats.map((item, idx) => (
-            <div key={idx} className={idx >= 4 ? 'col-span-2 md:col-span-1 border-t md:border-t-0' : ''}>
+            <div key={idx} className={idx >= 4 ? 'col-span-2 md:col-span-1 md:border-t-0' : ''}>
               <StatItem
                 icon={item.icon}
                 top={t(item.topKey)}
