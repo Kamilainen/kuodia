@@ -39,17 +39,23 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6"
+            className="space-y-5"
           >
-            <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.08] text-brand-navy">
-              ENGINEERING <br />
-              THE FUTURE OF <br />
-              <span className="text-brand-green bg-clip-text">ENERGY EFFICIENCY</span>
+            <h1 className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[62px] tracking-tight leading-[1.06] text-brand-navy">
+              {t('hero_title_1' as any)} <br />
+              {t('hero_title_2' as any)}<br />
+              <span className="text-brand-green">{t('hero_title_3' as any)}</span>
             </h1>
             
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium font-sans">
-              {t('hero_subtitle')}
-            </p>
+            <div className="space-y-2.5">
+              <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl text-brand-navy tracking-tight">
+                {t('hero_tagline' as any)}
+              </h3>
+              
+              <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium font-sans max-w-xl">
+                {t('hero_subtitle')}
+              </p>
+            </div>
           </motion.div>
 
           {/* Action Buttons */}

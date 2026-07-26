@@ -10,6 +10,10 @@ export interface TranslationType {
 
   // Hero
   hero_title: string;
+  hero_title_1: string;
+  hero_title_2: string;
+  hero_title_3: string;
+  hero_tagline: string;
   hero_subtitle: string;
   hero_cta_consult: string;
   hero_cta_calc: string;
@@ -136,8 +140,12 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_contact: "LIÊN HỆ",
     nav_cta: "LIÊN HỆ NGAY",
 
-    hero_title: "ENGINEERING THE FUTURE OF ENERGY EFFICIENCY",
-    hero_subtitle: "Chúng tôi thiết kế và triển khai các giải pháp tiên tiến để giảm tiêu thụ điện và nước cho khách sạn, khu nghỉ dưỡng và tòa nhà thương mại tại Việt Nam.",
+    hero_title: "Kiến tạo Tương lai. Thuận tự nhiên.",
+    hero_title_1: "Kiến tạo",
+    hero_title_2: "Tương lai.",
+    hero_title_3: "Thuận tự nhiên.",
+    hero_tagline: "Nơi công nghệ hội tụ cùng mảng xanh",
+    hero_subtitle: "Các giải pháp kỹ thuật tiên tiến giúp giảm tiêu thụ năng lượng, sử dụng nước và chi phí vận hành cho các khách sạn, khu nghỉ dưỡng, tòa nhà thương mại và biệt thự cao cấp.",
     hero_cta_consult: "YÊU CẦU TƯ VẤN",
     hero_cta_calc: "TÍNH TOÁN TIẾT KIỆM",
 
@@ -254,8 +262,12 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_contact: "CONTACT",
     nav_cta: "CONTACT NOW",
 
-    hero_title: "ENGINEERING THE FUTURE OF ENERGY EFFICIENCY",
-    hero_subtitle: "We design and implement advanced solutions to reduce energy and water consumption for hotels, resorts and commercial buildings in Vietnam.",
+    hero_title: "Engineering the Future. Naturally.",
+    hero_title_1: "Engineering",
+    hero_title_2: "the Future.",
+    hero_title_3: "Naturally.",
+    hero_tagline: "Where Green Meets Tech",
+    hero_subtitle: "Advanced engineering solutions that reduce energy consumption, water usage and operating costs for hotels, resorts, commercial buildings and luxury residences.",
     hero_cta_consult: "REQUEST CONSULTATION",
     hero_cta_calc: "CALCULATE SAVINGS",
 
@@ -372,8 +384,12 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nav_contact: "CONTACTO",
   nav_cta: "CONTÁCTANOS",
 
-  hero_title: "DISEÑANDO EL FUTURO DE LA EFICIENCIA ENERGÉTICA",
-  hero_subtitle: "Diseñamos e implementamos soluciones avanzadas para reducir el consumo de energía y agua en hoteles, resorts y edificios comerciales en Vietnam.",
+  hero_title: "Diseñando el Futuro. Naturalmente.",
+  hero_title_1: "Diseñando",
+  hero_title_2: "el Futuro.",
+  hero_title_3: "Naturalmente.",
+  hero_tagline: "Donde lo verde se encuentra con la tecnología",
+  hero_subtitle: "Soluciones de ingeniería avanzadas que reducen el consumo de energía, el uso de agua y los costos operativos de hoteles, resorts, edificios comerciales y residencias de lujo.",
   hero_cta_consult: "SOLICITAR ASESORÍA",
   hero_cta_calc: "CALCULAR AHORRO",
 

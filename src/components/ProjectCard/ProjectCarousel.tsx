@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Zap, Clock, Leaf, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Zap, Clock, Leaf, ChevronLeft, ChevronRight, Info, Calendar } from 'lucide-react';
 import { useTranslation } from '../../context/LanguageContext';
 import { projectsData } from '../../data/projects';
 import Container from '../Container';
@@ -18,10 +18,17 @@ export const ProjectCarousel: React.FC = () => {
     <section id="projects" className="py-12 bg-slate-50/50 border-b border-slate-100">
       <Container>
         {/* Section Header Centered */}
-        <div className="text-center max-w-xl mx-auto mb-14 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <h2 className="font-display font-extrabold text-2xl md:text-3xl text-brand-navy tracking-tight leading-tight uppercase">
             {t('projects_title')}
           </h2>
+          <div className="w-12 h-0.5 bg-brand-green mx-auto"></div>
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+            {t('projects_subtitle')}
+          </p>
+          <p className="text-xs md:text-sm font-bold text-brand-navy">
+            {t('projects_note')}
+          </p>
         </div>
 
         {/* Swiper Slider Wrapper with Side Paddings for Buttons */}
@@ -121,6 +128,44 @@ export const ProjectCarousel: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        {/* Bottom Note & Coming Soon Info Cards */}
+        <div className="mt-12 mx-8 md:mx-12 bg-blue-50/15 border border-slate-200/60 rounded-2xl p-6 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 md:divide-x md:divide-slate-200/80">
+            {/* Left Column: Disclaimer */}
+            <div className="flex items-start space-x-4">
+              <div className="bg-brand-navy/10 text-brand-navy p-3 rounded-full flex-shrink-0">
+                <Info className="h-6 w-6" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-display font-extrabold text-sm text-brand-navy uppercase tracking-wider">
+                  {t('projects_bottom_note_title')}
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {t('projects_bottom_note_desc')}
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Coming Soon */}
+            <div className="flex items-start space-x-4 md:pl-8 lg:pl-12">
+              <div className="bg-brand-green/10 text-brand-green p-3 rounded-full flex-shrink-0">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-display font-extrabold text-sm text-brand-navy uppercase tracking-wider">
+                  {t('projects_bottom_coming_title')}
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {t('projects_bottom_coming_desc')}
+                </p>
+                <p className="text-xs font-bold text-brand-green pt-1">
+                  {t('projects_bottom_coming_highlight')}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
