@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import kubiImg from "../../assets/kubi.png";
-import SpeechBubble from "./SpeechBubble";
 import ContactMenu from "./ContactMenu";
-import useRandomSpeech from "../../hooks/useRandomSpeech";
 import { entranceVariants, eyeBlinkVariants } from "./MascotAnimations";
 
 export const ContactMascot: React.FC = () => {
@@ -14,7 +12,7 @@ export const ContactMascot: React.FC = () => {
   const mascotRef = useRef<HTMLDivElement>(null);
 
   // Random speech bubble message using custom hook
-  const activeMessage = useRandomSpeech(15, 25, 3000);
+  // const activeMessage = useRandomSpeech(15, 25, 3000);
 
   // Check prefers-reduced-motion media query
   useEffect(() => {
@@ -129,7 +127,7 @@ export const ContactMascot: React.FC = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Speech Bubble */}
-      <SpeechBubble message={activeMessage} />
+      {/* <SpeechBubble message={activeMessage} /> */}
 
       {/* Glassmorphic Contact Menu options */}
       <ContactMenu isOpen={menuOpen} />
