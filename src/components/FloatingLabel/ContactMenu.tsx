@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "../../context/LanguageContext";
 
 interface ContactMenuProps {
   isOpen: boolean;
@@ -29,7 +28,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 350, damping: 25 },
+    transition: { type: "spring" as const, stiffness: 350, damping: 25 },
   },
   exit: {
     opacity: 0,
@@ -40,8 +39,6 @@ const itemVariants = {
 };
 
 export const ContactMenu: React.FC<ContactMenuProps> = ({ isOpen }) => {
-  const { t } = useTranslation();
-
   const contactItems = [
     {
       name: "WhatsApp",
