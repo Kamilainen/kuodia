@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../../context/LanguageContext';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import logoImg from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
   const { t, language, setLanguage } = useTranslation();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+
+  const isDarkPage = location.pathname.toLowerCase().startsWith('/industries');
 
   // Monitor scroll for header styling changes
   useEffect(() => {
@@ -28,12 +32,13 @@ export const Header: React.FC = () => {
   };
 
   const navItems = [
-    { labelKey: 'nav_home' as const, href: '#home' },
-    { labelKey: 'nav_about' as const, href: '#about' },
-    { labelKey: 'nav_solutions' as const, href: '#solutions' },
-    { labelKey: 'nav_projects' as const, href: '#projects' },
-    { labelKey: 'nav_blog' as const, href: '#blog' },
-    { labelKey: 'nav_contact' as const, href: '#contact' }
+    { labelKey: 'nav_home' as const, href: '/' },
+    { labelKey: 'nav_about' as const, href: '/#about' },
+    { labelKey: 'nav_solutions' as const, href: '/#solutions' },
+    { labelKey: 'nav_industries' as const, href: '/industries' },
+    { labelKey: 'nav_projects' as const, href: '/#projects' },
+    { labelKey: 'nav_blog' as const, href: '/#blog' },
+    { labelKey: 'nav_contact' as const, href: '/#contact' }
   ];
 
   return (
@@ -46,7 +51,7 @@ export const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center group">
+        <Link to="/" className="flex items-center group">
           <img
             src={logoImg}
             alt="Kuodia Renovables Logo"
@@ -54,18 +59,24 @@ export const Header: React.FC = () => {
               isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-24'
             }`}
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-7">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
-              className="text-xs lg:text-sm font-display font-bold text-brand-navy/85 hover:text-brand-green transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-green after:transition-all hover:after:w-full"
+              to={item.href}
+              className={`text-xs lg:text-sm font-display font-bold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-green after:transition-all hover:after:w-full ${
+                isScrolled
+                  ? 'text-brand-navy/85 hover:text-brand-green'
+                  : isDarkPage
+                  ? 'text-white hover:text-brand-green'
+                  : 'text-brand-navy/85 hover:text-brand-green'
+              }`}
             >
               {t(item.labelKey)}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -150,12 +161,12 @@ export const Header: React.FC = () => {
           </div>
 
           {/* CTA Header Button */}
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             className="bg-brand-navy hover:bg-brand-navy-dark text-white text-xs lg:text-sm font-display font-bold py-2.5 px-5 rounded-lg transition-all shadow-md shadow-brand-navy/15 hover:shadow-lg hover:shadow-brand-navy/25 cursor-pointer"
           >
             {t('nav_cta')}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -182,22 +193,22 @@ export const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed top-[60px] left-0 right-0 bg-white border-b border-slate-200 shadow-xl py-4 px-6 space-y-4 flex flex-col z-35 animate-fade-in">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-sm font-display font-bold text-brand-navy/85 hover:text-brand-green py-2 border-b border-slate-50"
             >
               {t(item.labelKey)}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className="bg-brand-navy text-white text-center font-display font-bold py-3 rounded-lg text-sm"
           >
             {t('nav_cta')}
-          </a>
+          </Link>
         </div>
       )}
     </header>

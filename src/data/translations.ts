@@ -7,6 +7,7 @@ export interface TranslationType {
   nav_blog: string;
   nav_contact: string;
   nav_cta: string;
+  nav_industries: string;
 
   // Hero
   hero_title: string;
@@ -128,6 +129,112 @@ export interface TranslationType {
   footer_copyright: string;
   footer_privacy: string;
   footer_terms: string;
+
+  // Industries Page
+  industries_breadcrumb: string;
+  industries_title_1: string;
+  industries_title_2: string;
+  industries_title_green: string;
+  industries_subtitle_1: string;
+  industries_subtitle_2: string;
+  industries_cta_study: string;
+  industries_cta_explore: string;
+  industries_stat_1_val: string;
+  industries_stat_1_lbl: string;
+  industries_stat_1_desc: string;
+  industries_stat_2_val: string;
+  industries_stat_2_lbl: string;
+  industries_stat_2_desc: string;
+  industries_stat_3_val: string;
+  industries_stat_3_lbl: string;
+  industries_stat_3_desc: string;
+  industries_stat_4_val: string;
+  industries_stat_4_lbl: string;
+  industries_stat_4_desc: string;
+
+  // Feature Cards
+  card_1_title: string;
+  card_1_subtitle: string;
+  card_1_desc: string;
+  card_1_bullets: string;
+  card_2_title: string;
+  card_2_subtitle: string;
+  card_2_desc: string;
+  card_2_bullets: string;
+
+  // Integrated Architecture
+  arch_title: string;
+  arch_subtitle: string;
+  arch_step_1: string;
+  arch_step_2: string;
+  arch_step_3: string;
+  arch_step_4: string;
+  arch_step_5: string;
+  arch_step_6: string;
+  arch_energy_flow: string;
+  arch_water_flow: string;
+  arch_hw_1: string;
+  arch_hw_2: string;
+  arch_hw_3: string;
+  arch_hw_4: string;
+  arch_hw_5: string;
+  arch_hl_1_title: string;
+  arch_hl_1_desc: string;
+  arch_hl_2_title: string;
+  arch_hl_2_desc: string;
+  arch_hl_3_title: string;
+  arch_hl_3_desc: string;
+  arch_hl_4_title: string;
+  arch_hl_4_desc: string;
+
+  // Nursery Card
+  nursery_title: string;
+  nursery_subtitle: string;
+  nursery_desc: string;
+  nursery_spec_1_lbl: string;
+  nursery_spec_1_val: string;
+  nursery_spec_2_lbl: string;
+  nursery_spec_2_val: string;
+  nursery_spec_3_lbl: string;
+  nursery_spec_3_val: string;
+  nursery_spec_4_lbl: string;
+  nursery_spec_4_val: string;
+  nursery_spec_5_lbl: string;
+  nursery_spec_5_val: string;
+  nursery_spec_6_lbl: string;
+  nursery_spec_6_val: string;
+
+  // Why Kuodia
+  why_title: string;
+  why_item_1_title: string;
+  why_item_1_desc: string;
+  why_item_2_title: string;
+  why_item_2_desc: string;
+  why_item_3_title: string;
+  why_item_3_desc: string;
+  why_item_4_title: string;
+  why_item_4_desc: string;
+  why_item_5_title: string;
+  why_item_5_desc: string;
+
+  // Featured Project & CTA
+  featured_project_title: string;
+  featured_project_name: string;
+  featured_project_location: string;
+  featured_stat_1_val: string;
+  featured_stat_1_lbl: string;
+  featured_stat_2_val: string;
+  featured_stat_2_lbl: string;
+  featured_stat_3_val: string;
+  featured_stat_3_lbl: string;
+  featured_stat_4_val: string;
+  featured_stat_4_lbl: string;
+  featured_view_case_study: string;
+  cta_card_title: string;
+  cta_card_desc: string;
+  cta_card_feasibility: string;
+  cta_card_zalo: string;
+  cta_card_scan_to_chat: string;
 }
 
 export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
@@ -139,6 +246,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_blog: "BLOG",
     nav_contact: "LIÊN HỆ",
     nav_cta: "LIÊN HỆ NGAY",
+    nav_industries: "LĨNH VỰC",
 
     hero_title: "Kiến tạo Tương lai. Thuận tự nhiên.",
     hero_title_1: "Kiến tạo",
@@ -251,7 +359,113 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_contact_web: "www.kuodia.vn",
     footer_copyright: "© 2026 Kuodia Renovables. Bảo lưu mọi quyền.",
     footer_privacy: "Chính sách bảo mật",
-    footer_terms: "Điều khoản sử dụng"
+    footer_terms: "Điều khoản sử dụng",
+
+    // Industries Page
+    industries_breadcrumb: "LĨNH VỰC > GIẢI PHÁP TRANG TRẠI",
+    industries_title_1: "Giải pháp Trang trại.",
+    industries_title_2: "Kiến tạo cho Cuộc sống.",
+    industries_title_green: "cho Cuộc sống.",
+    industries_subtitle_1: "Hệ thống kỹ thuật tích hợp cho các trang trại thủy canh liên kết, cơ sở sản xuất tôm trong nhà và trại giống.",
+    industries_subtitle_2: "Hiệu suất cao. An toàn sinh học tối đa. Phát triển bền vững.",
+    industries_cta_study: "YÊU CẦU KHẢO SÁT KHẢ THI",
+    industries_cta_explore: "KHÁM PHÁ CÁC GIẢI PHÁP",
+    industries_stat_1_val: "90%+",
+    industries_stat_1_lbl: "Tái tuần hoàn nước",
+    industries_stat_1_desc: "Hệ thống tuần hoàn khép kín giảm thiểu lượng nước ngọt tiêu thụ.",
+    industries_stat_2_val: "±0.5°C",
+    industries_stat_2_lbl: "Ổn định nhiệt độ",
+    industries_stat_2_desc: "Kiểm soát chính xác giúp tối ưu hóa sự phát triển và tỷ lệ sống.",
+    industries_stat_3_val: "30-50%",
+    industries_stat_3_lbl: "Tiết kiệm năng lượng",
+    industries_stat_3_desc: "Giảm chi phí vận hành với thu hồi nhiệt, năng lượng tái tạo và điều khiển thông minh.",
+    industries_stat_4_val: "24/7",
+    industries_stat_4_lbl: "Giám sát thông minh",
+    industries_stat_4_desc: "Nhận thức thời gian thực. Điều khiển từ xa. An tâm tuyệt đối.",
+
+    // Feature Cards
+    card_1_title: "HỆ THỐNG AQUAPONICS",
+    card_1_subtitle: "Cá + Cây. Một hệ sinh thái.",
+    card_1_desc: "Chúng tôi thiết kế các trang trại aquaponic sản lượng cao, nơi cá và cây trồng cùng phát triển trong một hệ thống cân bằng, tự nhiên và hiệu quả cao.",
+    card_1_bullets: "Hệ thống nuôi thủy sản tuần hoàn (RAS),Khay trồng thủy canh,Cân bằng lọc sinh học & dinh dưỡng,Khử trùng UV & xử lý nước,Kiểm soát nhiệt độ bằng bơm nhiệt,Tự động hóa bằng năng lượng mặt trời",
+    card_2_title: "NUÔI TÔM TRONG NHÀ (RAS)",
+    card_2_subtitle: "Sản xuất kiểm soát khí hậu.",
+    card_2_desc: "Sản xuất tôm quanh năm với sự kiểm soát hoàn toàn đối với chất lượng nước, nhiệt độ và môi trường.",
+    card_2_bullets: "Bơm nhiệt năng lượng không khí,Bộ trao đổi nhiệt dạng tấm,Hệ thống tạo oxy & sục khí,Kiểm soát độ mặn pH & chất lượng nước,Quản lý Amoniac nitrit & nitrat,Tự động hóa thông minh & giám sát từ xa",
+
+    // Integrated Architecture
+    arch_title: "KIẾN TRÚC NĂNG LƯỢNG TÍCH HỢP",
+    arch_subtitle: "Một hệ thống. Hiệu quả tối đa.",
+    arch_step_1: "ĐIỆN MẶT TRỜI",
+    arch_step_2: "PHÂN PHỐI ĐIỆN",
+    arch_step_3: "BƠM NHIỆT",
+    arch_step_4: "XỬ LÝ NƯỚC",
+    arch_step_5: "HỆ THỐNG RAS / TRANG TRẠI",
+    arch_step_6: "THU HỒI & TÁI SỬ DỤNG NHIỆT",
+    arch_energy_flow: "Luồng năng lượng",
+    arch_water_flow: "Luồng nước",
+    arch_hw_1: "Giàn pin mặt trời",
+    arch_hw_2: "Tủ điện phân phối",
+    arch_hw_3: "Bơm nhiệt nguồn gió",
+    arch_hw_4: "Hệ thống lọc nước",
+    arch_hw_5: "Bể nuôi thủy sản",
+    arch_hl_1_title: "Thu hồi nhiệt",
+    arch_hl_1_desc: "từ nước thải quy trình",
+    arch_hl_2_title: "Làm nóng sơ bộ",
+    arch_hl_2_desc: "nguồn nước đầu vào",
+    arch_hl_3_title: "Giảm thời gian chạy",
+    arch_hl_3_desc: "giảm mài mòn máy nén",
+    arch_hl_4_title: "Giảm chi phí năng lượng",
+    arch_hl_4_desc: "giảm tổng chi phí vận hành",
+
+    // Nursery Card
+    nursery_title: "ƯƠM & SẢN XUẤT TÔM GIỐNG",
+    nursery_subtitle: "An toàn sinh học. Chính xác. Đáng tin cậy.",
+    nursery_desc: "Môi trường kỹ thuật cho các cơ sở sản xuất tôm giống và ương dưỡng với sự kiểm soát cực kỳ nghiêm ngặt đối với tất cả các thông số quan trọng.",
+    nursery_spec_1_lbl: "Nhiệt độ nước",
+    nursery_spec_1_val: "28–30°C ±0.5°C",
+    nursery_spec_2_lbl: "Oxy hòa tan",
+    nursery_spec_2_val: "> 6 mg/L",
+    nursery_spec_3_lbl: "Ổn định pH",
+    nursery_spec_3_val: "7.8 – 8.2",
+    nursery_spec_4_lbl: "Kiểm soát độ mặn",
+    nursery_spec_4_val: "Có thể tùy chỉnh",
+    nursery_spec_5_lbl: "Khử trùng UV",
+    nursery_spec_5_val: "Tích hợp",
+    nursery_spec_6_lbl: "Nguồn điện dự phòng",
+    nursery_spec_6_val: "Tùy chọn",
+
+    // Why Kuodia
+    why_title: "TẠI SAO CHỌN GIẢI PHÁP TRANG TRẠI KUODIA?",
+    why_item_1_title: "Chuyên môn Kỹ thuật",
+    why_item_1_desc: "Chúng tôi kết hợp công nghệ nước, năng lượng và nhiệt động lực học để thiết kế các hệ thống sản xuất thực phẩm hiệu quả nhất.",
+    why_item_2_title: "Giảm Chi phí Vận hành",
+    why_item_2_desc: "Tích hợp thu hồi nhiệt, năng lượng tái tạo và tự động hóa giúp giảm thiểu chi phí năng lượng và vận hành.",
+    why_item_3_title: "An toàn Sinh học Cao hơn",
+    why_item_3_desc: "Hệ thống tuần hoàn khép kín, lọc nước và khử trùng UV giảm thiểu rủi ro dịch bệnh và ô nhiễm từ bên ngoài.",
+    why_item_4_title: "Phát triển Bền vững",
+    why_item_4_desc: "Sản xuất nhiều thực phẩm hơn với ít nước hơn, ít năng lượng hơn và giảm thiểu dấu chân môi trường.",
+    why_item_5_title: "Giải pháp Linh hoạt",
+    why_item_5_desc: "Từ các dự án thử nghiệm quy mô nhỏ đến các trang trại công nghiệp lớn. Chúng tôi phát triển cùng bạn.",
+
+    // Featured Project & CTA
+    featured_project_title: "DỰ ÁN NỔI BẬT",
+    featured_project_name: "Trang trại Nuôi tôm trong nhà",
+    featured_project_location: "Ninh Thuận, Việt Nam",
+    featured_stat_1_val: "42%",
+    featured_stat_1_lbl: "Tiết kiệm năng lượng",
+    featured_stat_2_val: "95%",
+    featured_stat_2_lbl: "Tái sử dụng nước",
+    featured_stat_3_val: "18",
+    featured_stat_3_lbl: "Bể nuôi",
+    featured_stat_4_val: "12 tháng",
+    featured_stat_4_lbl: "Thời gian hoàn vốn ROI",
+    featured_view_case_study: "XEM CHI TIẾT DỰ ÁN",
+    cta_card_title: "BẠN ĐÃ SẴN SÀNG XÂY DỰNG TRANG TRẠI?",
+    cta_card_desc: "Hãy để chúng tôi thiết kế trang trại thủy sản hoặc aquaponics hiệu suất cao, phát triển bền vững của riêng bạn.",
+    cta_card_feasibility: "YÊU CẦU KHẢO SÁT KHẢ THI",
+    cta_card_zalo: "TRÒ CHUYỆN QUA ZALO",
+    cta_card_scan_to_chat: "Quét mã để trò chuyện"
   },
   en: {
     nav_home: "HOME",
@@ -261,12 +475,13 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_blog: "BLOG",
     nav_contact: "CONTACT",
     nav_cta: "CONTACT NOW",
+    nav_industries: "INDUSTRIES",
 
     hero_title: "Engineering the Future. Naturally.",
     hero_title_1: "Engineering",
     hero_title_2: "the Future.",
     hero_title_3: "Naturally.",
-    hero_tagline: "Where Green Meets Tech",
+    hero_tagline: "Where Green meets Tech",
     hero_subtitle: "Advanced engineering solutions that reduce energy consumption, water usage and operating costs for hotels, resorts, commercial buildings and luxury residences.",
     hero_cta_consult: "REQUEST CONSULTATION",
     hero_cta_calc: "CALCULATE SAVINGS",
@@ -373,7 +588,113 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_contact_web: "www.kuodia.vn",
     footer_copyright: "© 2026 Kuodia Renovables. All rights reserved.",
     footer_privacy: "Privacy Policy",
-    footer_terms: "Terms of Use"
+    footer_terms: "Terms of Use",
+
+    // Industries Page
+    industries_breadcrumb: "INDUSTRIES > FARM SOLUTIONS",
+    industries_title_1: "Farm Solutions.",
+    industries_title_2: "Engineered for Life.",
+    industries_title_green: "for Life.",
+    industries_subtitle_1: "Integrated engineering systems for aquaponics farms, indoor shrimp production and hatcheries.",
+    industries_subtitle_2: "High efficiency. Maximum biosecurity. Sustainable growth.",
+    industries_cta_study: "REQUEST FEASIBILITY STUDY",
+    industries_cta_explore: "EXPLORE SOLUTIONS",
+    industries_stat_1_val: "90%+",
+    industries_stat_1_lbl: "Water Recirculation",
+    industries_stat_1_desc: "Closed-loop systems minimize freshwater consumption.",
+    industries_stat_2_val: "±0.5°C",
+    industries_stat_2_lbl: "Temperature Stability",
+    industries_stat_2_desc: "Precision control for optimal growth and survival.",
+    industries_stat_3_val: "30-50%",
+    industries_stat_3_lbl: "Energy Savings",
+    industries_stat_3_desc: "Lower OPEX with heat recovery, renewables and smart control.",
+    industries_stat_4_val: "24/7",
+    industries_stat_4_lbl: "Smart Monitoring",
+    industries_stat_4_desc: "Real-time insight. Remote control. Total peace of mind.",
+
+    // Feature Cards
+    card_1_title: "AQUAPONICS SYSTEMS",
+    card_1_subtitle: "Fish + Plants. One Ecosystem.",
+    card_1_desc: "We design high-yield aquaponics farms where fish and plants grow together in a balanced, natural and highly efficient system.",
+    card_1_bullets: "Recirculating Aquaculture Systems (RAS),Hydroponic growing beds,Biofiltration & nutrient balancing,UV sterilization & water treatment,Heat pump temperature control,Solar-powered automation",
+    card_2_title: "INDOOR SHRIMP FARMING (RAS)",
+    card_2_subtitle: "Climate-Controlled Production.",
+    card_2_desc: "Year-round shrimp production with complete control over water quality, temperature and environment.",
+    card_2_bullets: "Aerothermal heat pumps,Plate heat exchangers,Oxygenation & aeration systems,Salinity pH & water quality control,Ammonia nitrite & nitrate management,Smart automation & remote monitoring",
+
+    // Integrated Architecture
+    arch_title: "INTEGRATED ENERGY ARCHITECTURE",
+    arch_subtitle: "One System. Maximum Efficiency.",
+    arch_step_1: "SOLAR PV",
+    arch_step_2: "ELECTRICAL DISTRIBUTION",
+    arch_step_3: "HEAT PUMPS",
+    arch_step_4: "WATER CONDITIONING",
+    arch_step_5: "RAS / FARM SYSTEMS",
+    arch_step_6: "HEAT RECOVERY & REUSE",
+    arch_energy_flow: "Energy Flow",
+    arch_water_flow: "Water Flow",
+    arch_hw_1: "Solar Array",
+    arch_hw_2: "Power Cabinet",
+    arch_hw_3: "Aerothermal Heat Pumps",
+    arch_hw_4: "Filtration System",
+    arch_hw_5: "Aquaculture Tank",
+    arch_hl_1_title: "Recover heat",
+    arch_hl_1_desc: "from process water",
+    arch_hl_2_title: "Preheat water",
+    arch_hl_2_desc: "incoming water",
+    arch_hl_3_title: "Reduce runtime",
+    arch_hl_3_desc: "reduce compressor wear",
+    arch_hl_4_title: "Lower energy cost",
+    arch_hl_4_desc: "lower total OPEX",
+
+    // Nursery Card
+    nursery_title: "SHRIMP HATCHERY & NURSERY",
+    nursery_subtitle: "Biosecure. Precise. Reliable.",
+    nursery_desc: "Engineered environments for hatcheries and nursery facilities with extremely tight control of all critical parameters.",
+    nursery_spec_1_lbl: "Water temperature",
+    nursery_spec_1_val: "28–30°C ±0.5°C",
+    nursery_spec_2_lbl: "Dissolved oxygen",
+    nursery_spec_2_val: "> 6 mg/L",
+    nursery_spec_3_lbl: "pH stability",
+    nursery_spec_3_val: "7.8 – 8.2",
+    nursery_spec_4_lbl: "Salinity control",
+    nursery_spec_4_val: "Customizable",
+    nursery_spec_5_lbl: "UV sterilization",
+    nursery_spec_5_val: "Integrated",
+    nursery_spec_6_lbl: "Backup power",
+    nursery_spec_6_val: "Optional",
+
+    // Why Kuodia
+    why_title: "WHY KUODIA FARM SOLUTIONS?",
+    why_item_1_title: "Engineering Expertise",
+    why_item_1_desc: "We combine water, energy and thermodynamics to design the most efficient food production systems.",
+    why_item_2_title: "Lower Operating Costs",
+    why_item_2_desc: "Integrated heat recovery, renewables and automation reduce energy and operational expenses.",
+    why_item_3_title: "Higher Biosecurity",
+    why_item_3_desc: "Closed-loop systems, filtration and UV treatment minimize disease risk and external contamination.",
+    why_item_4_title: "Sustainable Growth",
+    why_item_4_desc: "Produce more food with less water, less energy and a smaller environmental footprint.",
+    why_item_5_title: "Scalable Solutions",
+    why_item_5_desc: "From pilot projects to industrial farms. We grow with you.",
+
+    // Featured Project & CTA
+    featured_project_title: "FEATURED PROJECT",
+    featured_project_name: "Indoor Shrimp Farm",
+    featured_project_location: "Ninh Thuan, Vietnam",
+    featured_stat_1_val: "42%",
+    featured_stat_1_lbl: "Energy Savings",
+    featured_stat_2_val: "95%",
+    featured_stat_2_lbl: "Water Reuse",
+    featured_stat_3_val: "18",
+    featured_stat_3_lbl: "Tanks",
+    featured_stat_4_val: "12 months",
+    featured_stat_4_lbl: "ROI Period",
+    featured_view_case_study: "VIEW CASE STUDY",
+    cta_card_title: "READY TO BUILD YOUR FARM?",
+    cta_card_desc: "Let's design your high-efficiency, sustainable aquaculture or aquaponics farm.",
+    cta_card_feasibility: "REQUEST FEASIBILITY STUDY",
+    cta_card_zalo: "CHAT ON ZALO",
+    cta_card_scan_to_chat: "Scan to chat"
   },
   es: {
   nav_home: "INICIO",
@@ -383,6 +704,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nav_blog: "BLOG",
   nav_contact: "CONTACTO",
   nav_cta: "CONTÁCTANOS",
+  nav_industries: "INDUSTRIAS",
 
   hero_title: "Diseñando el Futuro. Naturalmente.",
   hero_title_1: "Diseñando",
@@ -504,6 +826,112 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
 
   footer_copyright: "© 2026 Kuodia Renovables. Todos los derechos reservados.",
   footer_privacy: "Política de Privacidad",
-  footer_terms: "Términos de Uso"
+  footer_terms: "Términos de Uso",
+
+  // Industries Page
+  industries_breadcrumb: "INDUSTRIAS > SOLUCIONES PARA GRANJAS",
+  industries_title_1: "Soluciones para Granjas.",
+  industries_title_2: "Diseñados para la Vida.",
+  industries_title_green: "para la Vida.",
+  industries_subtitle_1: "Sistemas de ingeniería integrados para granjas acuapónicas, producción de camarones en interiores y criaderos.",
+  industries_subtitle_2: "Alta eficiencia. Máxima bioseguridad. Crecimiento sostenible.",
+  industries_cta_study: "SOLICITAR ESTUDIO DE VIABILIDAD",
+  industries_cta_explore: "EXPLORAR SOLUCIONES",
+  industries_stat_1_val: "90%+",
+  industries_stat_1_lbl: "Recirculación de Agua",
+  industries_stat_1_desc: "Los sistemas de circuito cerrado minimizan el consumo de agua dulce.",
+  industries_stat_2_val: "±0.5°C",
+  industries_stat_2_lbl: "Estabilidad de Temperatura",
+  industries_stat_2_desc: "Control de precisión para un crecimiento y supervivencia óptimos.",
+  industries_stat_3_val: "30-50%",
+  industries_stat_3_lbl: "Ahorro de Energía",
+  industries_stat_3_desc: "Menor OPEX con recuperación de calor, renovables y control inteligente.",
+  industries_stat_4_val: "24/7",
+  industries_stat_4_lbl: "Monitoreo Inteligente",
+  industries_stat_4_desc: "Información en tiempo real. Control remoto. Tranquilidad total.",
+
+  // Feature Cards
+  card_1_title: "SISTEMAS ACUAPÓNICOS",
+  card_1_subtitle: "Peces + Plantas. Un Ecosistema.",
+  card_1_desc: "Diseñamos granjas acuapónicas de alto rendimiento donde los peces y las plantas crecen juntos en un sistema equilibrado, natural y altamente eficiente.",
+  card_1_bullets: "Sistemas de acuicultura de recirculación (RAS),Camas de cultivo hidropónico,Filtración biológica y equilibrio de nutrientes,Esterilización UV y tratamiento de agua,Control de temperatura por bomba de calor,Automatización con energía solar",
+  card_2_title: "CULTIVO DE CAMARONES BAJO TECHO (RAS)",
+  card_2_subtitle: "Producción con control climático.",
+  card_2_desc: "Producción de camarón durante todo el año con control total sobre la calidad del agua, la temperatura y el medio ambiente.",
+  card_2_bullets: "Bombas de calor aerotérmicas,Intercambiadores de calor de placas,Sistemas de oxigenación y aireación,Control de salinidad pH y calidad del agua,Gestión de amoníaco nitrito y nitrato,Automatización inteligente y monitoreo remoto",
+
+  // Integrated Architecture
+  arch_title: "ARQUITECTURA DE ENERGÍA INTEGRADA",
+  arch_subtitle: "Un Sistema. Máxima Eficiencia.",
+  arch_step_1: "ENERGÍA SOLAR",
+  arch_step_2: "DISTRIBUCIÓN ELÉCTRICA",
+  arch_step_3: "BOMBAS DE CALOR",
+  arch_step_4: "ACONDICIONAMIENTO DE AGUA",
+  arch_step_5: "SISTEMAS RAS / GRANJA",
+  arch_step_6: "RECUPERACIÓN Y REUTILIZACIÓN DE CALOR",
+  arch_energy_flow: "Flujo de energía",
+  arch_water_flow: "Flujo de agua",
+  arch_hw_1: "Arreglo solar",
+  arch_hw_2: "Gabinete eléctrico",
+  arch_hw_3: "Bombas de calor aerotérmicas",
+  arch_hw_4: "Sistema de filtración",
+  arch_hw_5: "Tanque de acuicultura",
+  arch_hl_1_title: "Recuperación de calor",
+  arch_hl_1_desc: "del agua de proceso",
+  arch_hl_2_title: "Precalentamiento de agua",
+  arch_hl_2_desc: "agua entrante",
+  arch_hl_3_title: "Reducción de tiempo de ejecución",
+  arch_hl_3_desc: "reduce el desgaste del compresor",
+  arch_hl_4_title: "Menor costo de energía",
+  arch_hl_4_desc: "menor OPEX total",
+
+  // Nursery Card
+  nursery_title: "CRIADERO Y VIVERO DE CAMARONES",
+  nursery_subtitle: "Bioseguro. Preciso. Confiable.",
+  nursery_desc: "Entornos diseñados para instalaciones de criaderos y viveros con un control extremadamente estricto de todos los parámetros críticos.",
+  nursery_spec_1_lbl: "Temperatura del agua",
+  nursery_spec_1_val: "28–30°C ±0.5°C",
+  nursery_spec_2_lbl: "Oxígeno disuelto",
+  nursery_spec_2_val: "> 6 mg/L",
+  nursery_spec_3_lbl: "Estabilidad de pH",
+  nursery_spec_3_val: "7.8 – 8.2",
+  nursery_spec_4_lbl: "Control de salinidad",
+  nursery_spec_4_val: "Personalizable",
+  nursery_spec_5_lbl: "Esterilización UV",
+  nursery_spec_5_val: "Integrado",
+  nursery_spec_6_lbl: "Energía de respaldo",
+  nursery_spec_6_val: "Opcional",
+
+  // Why Kuodia
+  why_title: "¿POR QUÉ ELEGIR LAS SOLUCIONES PARA GRANJAS DE KUODIA?",
+  why_item_1_title: "Experiencia en Ingeniería",
+  why_item_1_desc: "Combinamos agua, energía y termodinámica para diseñar los sistemas de producción de alimentos más eficientes.",
+  why_item_2_title: "Menores Costos Operativos",
+  why_item_2_desc: "La recuperación de calor integrada, las energías renovables y la automatización reducen la energía y los gastos operativos.",
+  why_item_3_title: "Mayor Bioseguridad",
+  why_item_3_desc: "Los sistemas de circuito cerrado, la filtración y el tratamiento UV minimizan el riesgo de enfermedades y la contaminación externa.",
+  why_item_4_title: "Crecimiento Sostenible",
+  why_item_4_desc: "Produzca más alimentos con menos agua, menos energía y una menor huella ambiental.",
+  why_item_5_title: "Soluciones Escalables",
+  why_item_5_desc: "Desde proyectos piloto hasta granjas industriales. Crecemos con usted.",
+
+  // Featured Project & CTA
+  featured_project_title: "PROYECTO DESTACADO",
+  featured_project_name: "Granja de Camarón Bajo Techo",
+  featured_project_location: "Ninh Thuan, Vietnam",
+  featured_stat_1_val: "42%",
+  featured_stat_1_lbl: "Ahorro de energía",
+  featured_stat_2_val: "95%",
+  featured_stat_2_lbl: "Reutilización de agua",
+  featured_stat_3_val: "18",
+  featured_stat_3_lbl: "Tanques",
+  featured_stat_4_val: "12 meses",
+  featured_stat_4_lbl: "Período de retorno ROI",
+  featured_view_case_study: "VER CASO DE ESTUDIO",
+  cta_card_title: "¿LISTO PARA CONSTRUIR SU GRANJA?",
+  cta_card_desc: "Diseñemos su granja de acuicultura o acuaponía de alta eficiencia y sostenible.",
+  cta_card_feasibility: "SOLICITAR ESTUDIO DE VIABILIDAD",
+  cta_card_zalo: "CHATEAR EN ZALO",
+  cta_card_scan_to_chat: "Escanear para chatear"
 }
 };
