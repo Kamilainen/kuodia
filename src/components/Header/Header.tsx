@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../../context/LanguageContext';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
+import { createPortal } from 'react-dom';
 import logoImg from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
@@ -42,13 +43,14 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        (isScrolled || isDarkPage)
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100 py-3'
-          : 'bg-transparent py-5'
-      }`}
-    >
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          (isScrolled || isDarkPage)
+            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100 py-3'
+            : 'bg-transparent py-5'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center group">
@@ -62,7 +64,7 @@ export const Header: React.FC = () => {
         </Link>
  
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-7">
+        <nav className="hidden xl:flex items-center space-x-7">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -73,9 +75,9 @@ export const Header: React.FC = () => {
             </Link>
           ))}
         </nav>
-
+ 
         {/* Action Controls */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden xl:flex items-center space-x-4">
           {/* Language Selector */}
           <div className="relative">
             <button
@@ -164,7 +166,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center space-x-3">
+        <div className="flex xl:hidden items-center space-x-3">
           {/* Mobile Lang Button */}
           <button
             onClick={() => setLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
@@ -182,30 +184,69 @@ export const Header: React.FC = () => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu Drawer */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-[60px] left-0 right-0 bg-white border-b border-slate-200 shadow-xl py-4 px-6 space-y-4 flex flex-col z-35 animate-fade-in">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-display font-bold text-brand-navy/85 hover:text-brand-green py-2 border-b border-slate-50"
-            >
-              {t(item.labelKey)}
-            </Link>
-          ))}
-          <Link
-            to="/#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-brand-navy text-white text-center font-display font-bold py-3 rounded-lg text-sm"
-          >
-            {t('nav_cta')}
-          </Link>
-        </div>
-      )}
     </header>
+
+      {/* Mobile Menu Drawer (Rendered at body root via React Portal to bypass backdrop-filter containment block limitations) */}
+      {isMobileMenuOpen && typeof document !== 'undefined' && createPortal(
+        <div className="xl:hidden fixed inset-0 bg-white z-50 flex flex-col p-6 overflow-y-auto animate-fade-in">
+          {/* Top Row: Logo + Language select + Close X button */}
+          <div className="flex items-center justify-between pb-6 border-b border-slate-100">
+            {/* Logo */}
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center">
+              <img
+                src={logoImg}
+                alt="Kuodia Renovables Logo"
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
+
+            {/* Language Selector + Close button */}
+            <div className="flex items-center space-x-3">
+              <button
+                onClick={() => setLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
+                className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 cursor-pointer"
+              >
+                <Globe className="h-3.5 w-3.5 text-slate-500" />
+                <span className="uppercase">{language}</span>
+              </button>
+
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-brand-navy hover:text-brand-green p-1.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors cursor-pointer"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex-grow py-8 space-y-4 flex flex-col">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-sm font-display font-bold text-brand-navy/85 hover:text-brand-green py-3 border-b border-slate-50 uppercase tracking-wider"
+              >
+                {t(item.labelKey)}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-6 border-t border-slate-100">
+            <Link
+              to="/#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block bg-brand-navy text-white text-center font-display font-bold py-3.5 rounded-xl text-sm shadow-md shadow-brand-navy/15 uppercase tracking-wider"
+            >
+              {t('nav_cta')}
+            </Link>
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
   );
 };
 
