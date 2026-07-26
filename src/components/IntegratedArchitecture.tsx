@@ -35,7 +35,12 @@ const COLORS = {
 // (index into BOTTOM_ITEMS / TOP_STEPS, matches the reference image)
 const WATER_DROPS = [2, 3, 4]; // heat pump, water conditioning, RAS tank
 
-function RingIcon({ Icon, ringColor }) {
+interface RingIconProps {
+  Icon: React.ComponentType<any>;
+  ringColor: string;
+}
+
+function RingIcon({ Icon, ringColor }: RingIconProps) {
   const isSplit = ringColor === "split";
   return (
     <div style={{ position: "relative", width: 88, height: 88 }} className="flex-shrink-0">
@@ -93,7 +98,7 @@ function RingIcon({ Icon, ringColor }) {
   );
 }
 
-function RightArrow({ color = COLORS.arrow }) {
+function RightArrow({ color = COLORS.arrow }: { color?: string }) {
   return (
     <svg width="30" height="12" viewBox="0 0 40 16" style={{ flexShrink: 0 }} className="w-full max-w-[28px] sm:max-w-[40px]">
       <line x1="0" y1="8" x2="30" y2="8" stroke={color} strokeWidth="2.5" />
@@ -102,7 +107,7 @@ function RightArrow({ color = COLORS.arrow }) {
   );
 }
 
-function DownArrow({ color, height = 40 }) {
+function DownArrow({ color, height = 40 }: { color: string; height?: number }) {
   return (
     <svg width="12" height={height} viewBox={`0 0 16 ${height}`}>
       <line
@@ -121,7 +126,7 @@ function DownArrow({ color, height = 40 }) {
   );
 }
 
-function PhotoSlot({ src, label }) {
+function PhotoSlot({ src, label }: { src: string | null; label: string }) {
   return (
     <div
       style={{

@@ -37,7 +37,7 @@ export const WhyKuodia: React.FC = () => {
     <div className="bg-white border border-slate-150 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-900/5 w-full">
       {/* Title */}
       <h3 className="font-display font-black text-lg text-emerald-700 uppercase tracking-wider mb-6 pb-4 border-b border-slate-100">
-        {t("why_title")}
+        {t("why_farm_title")}
       </h3>
 
       {/* Grid of items */}
