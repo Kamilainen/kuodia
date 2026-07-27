@@ -8,6 +8,10 @@ export interface TranslationType {
   nav_contact: string;
   nav_cta: string;
   nav_industries: string;
+  sol_hotel: string;
+  sol_farm: string;
+  sol_residential: string;
+  sol_factory: string;
 
   // Hero
   hero_title: string;
@@ -247,6 +251,10 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_contact: "LIÊN HỆ",
     nav_cta: "LIÊN HỆ NGAY",
     nav_industries: "LĨNH VỰC",
+    sol_hotel: "Giải pháp Khách sạn",
+    sol_farm: "Giải pháp Trang trại",
+    sol_residential: "Nhà ở Dân dụng",
+    sol_factory: "Giải pháp Nhà máy",
 
     hero_title: "Kiến tạo Tương lai. Thuận tự nhiên.",
     hero_title_1: "Kiến tạo",
@@ -362,7 +370,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_terms: "Điều khoản sử dụng",
 
     // Industries Page
-    industries_breadcrumb: "LĨNH VỰC > GIẢI PHÁP TRANG TRẠI",
+    industries_breadcrumb: "GIẢI PHÁP > GIẢI PHÁP TRANG TRẠI",
     industries_title_1: "Giải pháp Trang trại.",
     industries_title_2: "Kiến tạo cho Cuộc sống.",
     industries_title_green: "cho Cuộc sống.",
@@ -476,6 +484,10 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_contact: "CONTACT",
     nav_cta: "CONTACT NOW",
     nav_industries: "INDUSTRIES",
+    sol_hotel: "Hotel Solutions",
+    sol_farm: "Farm Solutions",
+    sol_residential: "Residential House",
+    sol_factory: "Factory Solutions",
 
     hero_title: "Engineering the Future. Naturally.",
     hero_title_1: "Engineering",
@@ -591,7 +603,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_terms: "Terms of Use",
 
     // Industries Page
-    industries_breadcrumb: "INDUSTRIES > FARM SOLUTIONS",
+    industries_breadcrumb: "SOLUTIONS > FARM SOLUTIONS",
     industries_title_1: "Farm Solutions.",
     industries_title_2: "Engineered for Life.",
     industries_title_green: "for Life.",
@@ -705,6 +717,10 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nav_contact: "CONTACTO",
   nav_cta: "CONTÁCTANOS",
   nav_industries: "INDUSTRIAS",
+  sol_hotel: "Soluciones para Hoteles",
+  sol_farm: "Soluciones para Granjas",
+  sol_residential: "Casa Residencial",
+  sol_factory: "Soluciones para Fábricas",
 
   hero_title: "Diseñando el Futuro. Naturalmente.",
   hero_title_1: "Diseñando",
@@ -829,7 +845,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   footer_terms: "Términos de Uso",
 
   // Industries Page
-  industries_breadcrumb: "INDUSTRIAS > SOLUCIONES PARA GRANJAS",
+  industries_breadcrumb: "SOLUCIONES > SOLUCIONES PARA GRANJAS",
   industries_title_1: "Soluciones para Granjas.",
   industries_title_2: "Diseñados para la Vida.",
   industries_title_green: "para la Vida.",

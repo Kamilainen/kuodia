@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
-        <div className="max-w-2xl md:max-w-xl lg:max-w-2xl">
+        <div className="max-w-[350px] md:max-w-lg lg:max-w-2xl">
           {/* Animated Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
                 {t('hero_tagline' as any)}
               </h3>
               
-              <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-medium font-sans max-w-xl">
+              <p className="text-xs sm:text-sm md:text-base text-brand-navy leading-relaxed font-medium font-sans max-w-xl">
                 {t('hero_subtitle')}
               </p>
             </div>

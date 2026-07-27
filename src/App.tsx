@@ -4,6 +4,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Industries from './pages/Industries';
+import SolutionPlaceholder from './pages/SolutionPlaceholder';
 
 // Helper component to handle scrolling to section hashes and top of page on route transitions
 const ScrollToHash: React.FC = () => {
@@ -35,7 +36,8 @@ function App() {
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/industries" element={<Industries />} />
+            <Route path="/solutions/farm" element={<Industries />} />
+            <Route path="/solutions/:category" element={<SolutionPlaceholder />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
