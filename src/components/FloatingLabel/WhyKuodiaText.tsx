@@ -13,11 +13,9 @@ export const WhyKuodiaText: React.FC = () => {
     t("why_check_4"),
   ];
 
+  // Trigger contact mascot menu
   const handleScrollToContact = () => {
-    const contactSec = document.getElementById("contact");
-    if (contactSec) {
-      contactSec.scrollIntoView({ behavior: "smooth" });
-    }
+    window.dispatchEvent(new CustomEvent("open-contact-mascot"));
   };
 
   return (

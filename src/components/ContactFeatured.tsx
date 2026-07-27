@@ -107,13 +107,15 @@ export const ContactFeatured: React.FC = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green-light active:bg-brand-green text-white font-display font-bold text-xs uppercase px-4 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-brand-green/20"
+              <button
+                onClick={() =>
+                  window.dispatchEvent(new CustomEvent("open-contact-mascot"))
+                }
+                className="inline-flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green-light active:bg-brand-green text-white font-display font-bold text-xs uppercase px-4 py-2.5 rounded-full transition-all duration-200 shadow-lg shadow-brand-green/20 cursor-pointer"
               >
                 <span>{t("cta_card_feasibility")}</span>
                 <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+              </button>
 
               <a
                 href="https://zalo.me/0886017923"

@@ -27,13 +27,28 @@ export const ContactMascot: React.FC = () => {
     return () => mediaQuery.removeEventListener("change", listener);
   }, []);
 
+  // Listen for external trigger to open the mascot menu
+  useEffect(() => {
+    let timerId: ReturnType<typeof setTimeout>;
+    const handleOpenMascot = () => {
+      setMenuOpen(true);
+      setIsHovered(true);
+      if (timerId) clearTimeout(timerId);
+      timerId = setTimeout(() => {
+        setIsHovered(false);
+      }, 1500);
+    };
+    window.addEventListener("open-contact-mascot", handleOpenMascot);
+    return () => {
+      window.removeEventListener("open-contact-mascot", handleOpenMascot);
+      if (timerId) clearTimeout(timerId);
+    };
+  }, []);
+
   // Handle clicking outside the mascot to close the contact menu
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (
-        mascotRef.current &&
-        !mascotRef.current.contains(e.target as Node)
-      ) {
+      if (mascotRef.current && !mascotRef.current.contains(e.target as Node)) {
         setMenuOpen(false);
       }
     };
@@ -79,40 +94,40 @@ export const ContactMascot: React.FC = () => {
   const idleAnimate = prefersReducedMotion
     ? {}
     : isHovered || menuOpen
-    ? {
-        y: 0,
-        scale: 1.08,
-        rotate: [0, -3, 3, -3, 3, 0],
-      }
-    : {
-        y: [0, -10, 0],
-        rotate: [-1, 1, -1],
-      };
+      ? {
+          y: 0,
+          scale: 1.08,
+          rotate: [0, -3, 3, -3, 3, 0],
+        }
+      : {
+          y: [0, -10, 0],
+          rotate: [-1, 1, -1],
+        };
 
   const idleTransition = prefersReducedMotion
     ? undefined
     : isHovered || menuOpen
-    ? {
-        rotate: {
-          duration: 1.2,
+      ? {
+          rotate: {
+            duration: 1.2,
+            ease: "easeInOut" as const,
+          },
+          scale: {
+            type: "spring" as const,
+            stiffness: 300,
+            damping: 20,
+          },
+          y: {
+            type: "spring" as const,
+            stiffness: 300,
+            damping: 20,
+          },
+        }
+      : {
+          duration: 3.5,
+          repeat: Infinity,
           ease: "easeInOut" as const,
-        },
-        scale: {
-          type: "spring" as const,
-          stiffness: 300,
-          damping: 20,
-        },
-        y: {
-          type: "spring" as const,
-          stiffness: 300,
-          damping: 20,
-        },
-      }
-    : {
-        duration: 3.5,
-        repeat: Infinity,
-        ease: "easeInOut" as const,
-      };
+        };
 
   return (
     <div
@@ -197,7 +212,11 @@ export const ContactMascot: React.FC = () => {
               ease: "easeInOut" as const,
             }}
           >
-            <path d="M6,0 L0,11 L4,11 L3,20 L10,9 L5,9 Z" stroke="#10B981" strokeWidth="0.5" />
+            <path
+              d="M6,0 L0,11 L4,11 L3,20 L10,9 L5,9 Z"
+              stroke="#10B981"
+              strokeWidth="0.5"
+            />
           </motion.svg>
         </motion.div>
       </motion.div>

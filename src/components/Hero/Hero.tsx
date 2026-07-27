@@ -10,12 +10,9 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
   const { openCalculator } = useLayout();
 
-  // Scroll to contact section
+  // Trigger contact mascot menu
   const handleScrollToContact = () => {
-    const contactSec = document.getElementById('contact');
-    if (contactSec) {
-      contactSec.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.dispatchEvent(new CustomEvent("open-contact-mascot"));
   };
 
   return (

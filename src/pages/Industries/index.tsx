@@ -26,13 +26,7 @@ export const Industries: React.FC = () => {
 
   // Scroll to contact section helper
   const handleScrollToContact = () => {
-    const contactSec = document.getElementById("contact");
-    if (contactSec) {
-      contactSec.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // If contact section is not on this page, redirect to home page with hash
-      window.location.href = "/#contact";
-    }
+    window.dispatchEvent(new CustomEvent("open-contact-mascot"));
   };
 
   // Scroll to solutions/features section
