@@ -209,7 +209,7 @@ export interface TranslationType {
   nursery_spec_6_val: string;
 
   // Why Kuodia
-  why_title: string;
+  why_farm_title: string;
   why_item_1_title: string;
   why_item_1_desc: string;
   why_item_2_title: string;
@@ -444,7 +444,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nursery_spec_6_val: "Tùy chọn",
 
     // Why Kuodia
-    why_title: "TẠI SAO CHỌN GIẢI PHÁP TRANG TRẠI KUODIA?",
+    why_farm_title: "TẠI SAO CHỌN GIẢI PHÁP TRANG TRẠI KUODIA?",
     why_item_1_title: "Chuyên môn Kỹ thuật",
     why_item_1_desc: "Chúng tôi kết hợp công nghệ nước, năng lượng và nhiệt động lực học để thiết kế các hệ thống sản xuất thực phẩm hiệu quả nhất.",
     why_item_2_title: "Giảm Chi phí Vận hành",
@@ -677,7 +677,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nursery_spec_6_val: "Optional",
 
     // Why Kuodia
-    why_title: "WHY KUODIA FARM SOLUTIONS?",
+    why_farm_title: "WHY KUODIA FARM SOLUTIONS?",
     why_item_1_title: "Engineering Expertise",
     why_item_1_desc: "We combine water, energy and thermodynamics to design the most efficient food production systems.",
     why_item_2_title: "Lower Operating Costs",
@@ -919,7 +919,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nursery_spec_6_val: "Opcional",
 
   // Why Kuodia
-  why_title: "¿POR QUÉ ELEGIR LAS SOLUCIONES PARA GRANJAS DE KUODIA?",
+  why_farm_title: "¿POR QUÉ ELEGIR LAS SOLUCIONES PARA GRANJAS DE KUODIA?",
   why_item_1_title: "Experiencia en Ingeniería",
   why_item_1_desc: "Combinamos agua, energía y termodinámica para diseñar los sistemas de producción de alimentos más eficientes.",
   why_item_2_title: "Menores Costos Operativos",
