@@ -297,6 +297,9 @@ export interface TranslationType {
   values_4_desc: string;
   values_5_title: string;
   values_5_desc: string;
+  footer_cta_title: string;
+  footer_cta_subtitle: string;
+  footer_cta_btn: string;
 }
 
 export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
@@ -588,6 +591,9 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     values_4_desc: "Chúng tôi hướng đến sự xuất sắc trong từng chi tiết, từ thiết kế đến thi công.",
     values_5_title: "Tin tưởng",
     values_5_desc: "Chúng tôi xây dựng quan hệ lâu dài dựa trên sự minh bạch và hiệu quả.",
+    footer_cta_title: "Chúng ta cùng thảo luận về dự án của bạn nhé?",
+    footer_cta_subtitle: "Chúng tôi sẵn sàng đồng hành cùng bạn kiến tạo một tương lai hiệu quả và bền vững hơn.",
+    footer_cta_btn: "LIÊN HỆ NGAY",
   },
   en: {
     nav_home: "HOME",
@@ -877,6 +883,9 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     values_4_desc: "We seek excellence in every detail, from design to execution.",
     values_5_title: "Trust",
     values_5_desc: "We build long-term relationships based on transparency and results.",
+    footer_cta_title: "Shall we discuss your project?",
+    footer_cta_subtitle: "We are ready to help you build a more efficient and sustainable future.",
+    footer_cta_btn: "CONTACT NOW",
   },
   es: {
   nav_home: "INICIO",
@@ -1175,5 +1184,8 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   values_4_desc: "Buscamos la excelencia en cada detalle, desde el diseño hasta la ejecución.",
   values_5_title: "Confianza",
   values_5_desc: "Construimos relaciones a largo plazo basadas en transparencia y resultados.",
+  footer_cta_title: "¿Hablamos de tu proyecto?",
+  footer_cta_subtitle: "Estamos listos para ayudarte a construir un futuro más eficiente y sostenible.",
+  footer_cta_btn: "CONTACTAR AHORA",
 }
 };

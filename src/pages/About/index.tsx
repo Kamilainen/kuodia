@@ -6,6 +6,7 @@ import Button from '../../components/Button';
 import { Calendar, Award, Leaf, Globe, ArrowRight, Target, Eye, Handshake, BarChart3, Settings, Calculator, Wrench, CheckCircle2, ShieldCheck, Users, BadgeCheck } from 'lucide-react';
 import skyBg from '../../assets/sky_background.png';
 import kubiImg from '../../assets/kubi.png';
+import footerBg from '../../assets/footer-background.png';
 
 export const About: React.FC = () => {
   const { t } = useTranslation();
@@ -507,6 +508,65 @@ export const About: React.FC = () => {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Project CTA Section */}
+      <section className="relative py-24 px-4 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={footerBg}
+            alt="Project discussion background"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Dark Overlay matching the design for text readability */}
+          <div className="absolute inset-0 bg-[#071d3a]/80 md:bg-[#071d3a]/75 backdrop-blur-[0.5px]" />
+        </div>
+
+        <Container className="relative z-10">
+          {/* Centered Content */}
+          <div className="text-center max-w-3xl mx-auto space-y-6 text-white">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight"
+            >
+              {t('footer_cta_title')}
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xs sm:text-sm md:text-base text-slate-100/90 leading-relaxed font-sans font-medium"
+            >
+              {t('footer_cta_subtitle')}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="pt-4"
+            >
+              <Button
+                onClick={handleScrollToContact}
+                variant="secondary"
+                size="lg"
+                className="group inline-flex items-center space-x-2 bg-brand-green hover:bg-brand-green/90 border border-brand-green text-white font-bold shadow-lg shadow-brand-green/20"
+              >
+                <span className="uppercase tracking-wider text-xs sm:text-sm">
+                  {t('footer_cta_btn')}
+                </span>
+                <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </motion.div>
           </div>
         </Container>
       </section>
