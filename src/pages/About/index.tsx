@@ -144,56 +144,56 @@ export const About: React.FC = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white shadow-xl shadow-slate-200/50 rounded-[28px] p-8 border border-slate-100 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100"
+            className="bg-white shadow-xl shadow-slate-200/50 rounded-[28px] p-6 md:p-8 border border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4"
           >
             {/* Stat Item 1 */}
-            <div className="flex flex-col items-center text-center p-4 md:first:pl-0">
-              <div className="bg-brand-green/10 text-brand-green p-3.5 rounded-full border border-brand-green/20 mb-4 flex items-center justify-center">
-                <Calendar className="h-6 w-6 stroke-[1.5]" />
+            <div className="flex flex-col items-center text-center p-2">
+              <div className="bg-brand-green/10 text-brand-green p-2.5 md:p-3.5 rounded-full border border-brand-green/20 mb-2 md:mb-4 flex items-center justify-center">
+                <Calendar className="h-5 w-5 md:h-6 md:w-6 stroke-[1.5]" />
               </div>
-              <h3 className="font-display font-black text-xl text-brand-navy mb-1.5 leading-tight">
+              <h3 className="font-display font-black text-sm md:text-xl text-brand-navy mb-1 leading-tight">
                 {t('about_stat_1_val')}
               </h3>
-              <p className="text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[200px]">
+              <p className="text-[10px] md:text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[150px]">
                 {t('about_stat_1_lbl')}
               </p>
             </div>
 
             {/* Stat Item 2 */}
-            <div className="flex flex-col items-center text-center p-4 md:pl-4">
-              <div className="bg-brand-green/10 text-brand-green p-3.5 rounded-full border border-brand-green/20 mb-4 flex items-center justify-center">
-                <Award className="h-6 w-6 stroke-[1.5]" />
+            <div className="flex flex-col items-center text-center p-2 border-l border-slate-100/50 md:border-l">
+              <div className="bg-brand-green/10 text-brand-green p-2.5 md:p-3.5 rounded-full border border-brand-green/20 mb-2 md:mb-4 flex items-center justify-center">
+                <Award className="h-5 w-5 md:h-6 md:w-6 stroke-[1.5]" />
               </div>
-              <h3 className="font-display font-black text-xl text-brand-navy mb-1.5 leading-tight">
+              <h3 className="font-display font-black text-sm md:text-xl text-brand-navy mb-1 leading-tight">
                 {t('about_stat_2_val')}
               </h3>
-              <p className="text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[200px]">
+              <p className="text-[10px] md:text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[150px]">
                 {t('about_stat_2_lbl')}
               </p>
             </div>
 
             {/* Stat Item 3 */}
-            <div className="flex flex-col items-center text-center p-4 md:pl-4">
-              <div className="bg-brand-green/10 text-brand-green p-3.5 rounded-full border border-brand-green/20 mb-4 flex items-center justify-center">
-                <Leaf className="h-6 w-6 stroke-[1.5]" />
+            <div className="flex flex-col items-center text-center p-2 border-t md:border-t-0 md:border-l border-slate-100/50 col-span-1">
+              <div className="bg-brand-green/10 text-brand-green p-2.5 md:p-3.5 rounded-full border border-brand-green/20 mb-2 md:mb-4 flex items-center justify-center">
+                <Leaf className="h-5 w-5 md:h-6 md:w-6 stroke-[1.5]" />
               </div>
-              <h3 className="font-display font-black text-xl text-brand-navy mb-1.5 leading-tight">
+              <h3 className="font-display font-black text-sm md:text-xl text-brand-navy mb-1 leading-tight">
                 {t('about_stat_3_val')}
               </h3>
-              <p className="text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[200px]">
+              <p className="text-[10px] md:text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[150px]">
                 {t('about_stat_3_lbl')}
               </p>
             </div>
 
             {/* Stat Item 4 */}
-            <div className="flex flex-col items-center text-center p-4 md:pl-4">
-              <div className="bg-brand-green/10 text-brand-green p-3.5 rounded-full border border-brand-green/20 mb-4 flex items-center justify-center">
-                <Globe className="h-6 w-6 stroke-[1.5]" />
+            <div className="flex flex-col items-center text-center p-2 border-t md:border-t-0 border-l border-slate-100/50 md:border-l col-span-1">
+              <div className="bg-brand-green/10 text-brand-green p-2.5 md:p-3.5 rounded-full border border-brand-green/20 mb-2 md:mb-4 flex items-center justify-center">
+                <Globe className="h-5 w-5 md:h-6 md:w-6 stroke-[1.5]" />
               </div>
-              <h3 className="font-display font-black text-xl text-brand-navy mb-1.5 leading-tight">
+              <h3 className="font-display font-black text-sm md:text-xl text-brand-navy mb-1 leading-tight">
                 {t('about_stat_4_val')}
               </h3>
-              <p className="text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[200px]">
+              <p className="text-[10px] md:text-xs font-semibold text-slate-500 font-sans tracking-wide max-w-[150px]">
                 {t('about_stat_4_lbl')}
               </p>
             </div>
@@ -248,51 +248,23 @@ export const About: React.FC = () => {
       {/* History & Timeline Section */}
       <section className="bg-white py-24 px-4 border-t border-slate-100 relative overflow-hidden">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left Column: Heading and Description */}
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-brand-green font-display font-bold uppercase tracking-wider text-xs md:text-sm block">
+              {t('history_tagline')}
+            </span>
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight leading-tight">
+              {t('history_title')}
+            </h2>
+          </div>
+
+          {/* Centered Timeline */}
+          <div className="max-w-2xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-6 space-y-6"
-            >
-              <div className="space-y-3">
-                <span className="text-brand-green font-display font-bold uppercase tracking-wider text-xs md:text-sm block">
-                  {t('history_tagline')}
-                </span>
-                <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-brand-navy leading-tight tracking-tight">
-                  {t('history_title')}
-                </h2>
-              </div>
-
-              <div className="space-y-4 text-xs sm:text-sm md:text-base text-brand-navy/80 leading-relaxed font-sans font-medium">
-                <p>{t('history_p1')}</p>
-                <p>{t('history_p2')}</p>
-              </div>
-
-              <div className="pt-4">
-                <Button
-                  onClick={handleScrollToContact}
-                  variant="primary"
-                  size="lg"
-                  className="group flex items-center justify-center space-x-2 bg-brand-navy shadow-lg shadow-brand-navy/20"
-                >
-                  <span className="uppercase tracking-wider text-xs sm:text-sm font-bold">
-                    {t('history_cta')}
-                  </span>
-                  <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* Right Column: Interactive/Clean Timeline */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-6 lg:pl-8"
             >
               <div className="relative border-l-2 border-slate-100 pl-8 ml-4 space-y-10 py-2">
                 {/* Year 2012 */}
@@ -378,7 +350,7 @@ export const About: React.FC = () => {
               {/* Connecting line on desktop */}
               <div className="absolute top-[32px] left-[5%] right-[5%] h-0.5 bg-brand-green/20 z-0 hidden lg:block" />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 lg:gap-4 relative z-10">
+              <div className="flex lg:grid lg:grid-cols-7 overflow-x-auto snap-x snap-mandatory gap-6 lg:gap-4 pb-6 lg:pb-0 scrollbar-none relative z-10 -mx-4 px-4 lg:mx-0 lg:px-0">
                 {steps.map((step, index) => (
                   <motion.div
                     key={index}
@@ -386,7 +358,7 @@ export const About: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex flex-col items-center text-center group"
+                    className="flex-shrink-0 min-w-[75vw] sm:min-w-[40vw] lg:min-w-0 snap-center flex flex-col items-center text-center group bg-white lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none border lg:border-none border-slate-100 shadow-sm lg:shadow-none"
                   >
                     {/* Step Icon Container */}
                     <div className="w-16 h-16 rounded-full bg-white border border-slate-100 shadow-md flex items-center justify-center text-brand-navy group-hover:border-brand-green group-hover:text-brand-green group-hover:scale-105 transition-all duration-300 z-10 relative">
@@ -472,7 +444,7 @@ export const About: React.FC = () => {
           </motion.div>
 
           {/* Values Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory gap-6 pb-6 lg:pb-0 scrollbar-none -mx-4 px-4 lg:mx-0 lg:px-0">
             {([
               { key: 1, Icon: Leaf },
               { key: 2, Icon: ShieldCheck },
@@ -487,7 +459,7 @@ export const About: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="group flex flex-col items-center text-center p-6 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:border-brand-green/30 transition-all duration-300"
+                className="flex-shrink-0 min-w-[75vw] sm:min-w-[40vw] lg:min-w-0 snap-center group flex flex-col items-center text-center p-6 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-xl hover:border-brand-green/30 transition-all duration-300"
               >
                 {/* Icon */}
                 <div className="text-brand-green mb-5 group-hover:scale-110 transition-transform duration-300">
