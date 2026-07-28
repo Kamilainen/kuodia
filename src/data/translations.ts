@@ -239,6 +239,64 @@ export interface TranslationType {
   cta_card_feasibility: string;
   cta_card_zalo: string;
   cta_card_scan_to_chat: string;
+
+  // About Page
+  about_breadcrumb: string;
+  about_title: string;
+  about_desc: string;
+  about_cta: string;
+  about_stat_1_val: string;
+  about_stat_1_lbl: string;
+  about_stat_2_val: string;
+  about_stat_2_lbl: string;
+  about_stat_3_val: string;
+  about_stat_3_lbl: string;
+  about_stat_4_val: string;
+  about_stat_4_lbl: string;
+  about_mission_title: string;
+  about_mission_desc: string;
+  about_vision_title: string;
+  about_vision_desc: string;
+  history_tagline: string;
+  history_title: string;
+  history_p1: string;
+  history_p2: string;
+  history_cta: string;
+  history_year_2012_desc: string;
+  history_year_2015_desc: string;
+  history_year_2018_desc: string;
+  history_year_2021_desc: string;
+  history_year_2026_desc: string;
+  process_tagline: string;
+  process_title: string;
+  process_subtitle: string;
+  process_step_1_title: string;
+  process_step_1_desc: string;
+  process_step_2_title: string;
+  process_step_2_desc: string;
+  process_step_3_title: string;
+  process_step_3_desc: string;
+  process_step_4_title: string;
+  process_step_4_desc: string;
+  process_step_5_title: string;
+  process_step_5_desc: string;
+  process_step_6_title: string;
+  process_step_6_desc: string;
+  process_step_7_title: string;
+  process_step_7_desc: string;
+  process_mascot_text: string;
+  values_tagline: string;
+  values_title: string;
+  values_1_title: string;
+  values_1_desc: string;
+  values_2_title: string;
+  values_2_desc: string;
+  values_3_title: string;
+  values_3_desc: string;
+  values_4_title: string;
+  values_4_desc: string;
+  values_5_title: string;
+  values_5_desc: string;
 }
 
 export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
@@ -473,7 +531,63 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     cta_card_desc: "Hãy để chúng tôi thiết kế trang trại thủy sản hoặc aquaponics hiệu suất cao, phát triển bền vững của riêng bạn.",
     cta_card_feasibility: "YÊU CẦU KHẢO SÁT KHẢ THI",
     cta_card_zalo: "TRÒ CHUYỆN QUA ZALO",
-    cta_card_scan_to_chat: "Quét mã để trò chuyện"
+    cta_card_scan_to_chat: "Quét mã để trò chuyện",
+    about_breadcrumb: "VỀ KUODIA",
+    about_title: "Về Kuodia",
+    about_desc: "Từ năm 2012, chúng tôi thiết kế và triển khai các giải pháp kỹ thuật và năng lượng tái tạo giúp giảm tiêu thụ năng lượng và tạo tác động tích cực đến con người, doanh nghiệp và hành tinh.",
+    about_cta: "TÌM HIỂU THÊM VỀ KUODIA",
+    about_stat_1_val: "Từ 2012",
+    about_stat_1_lbl: "Thành lập tại Tây Ban Nha",
+    about_stat_2_val: "14 năm",
+    about_stat_2_lbl: "Kinh nghiệm thực tế",
+    about_stat_3_val: "100%",
+    about_stat_3_lbl: "Cam kết phát triển bền vững",
+    about_stat_4_val: "Châu Âu & Việt Nam",
+    about_stat_4_lbl: "Hiện diện toàn cầu",
+    about_mission_title: "Sứ mệnh của chúng tôi",
+    about_mission_desc: "Giúp khách hàng sử dụng <strong>ít năng lượng hơn</strong>, giảm phát thải và nâng cao <strong>hiệu quả tài chính</strong> cho các tòa nhà thông qua giải pháp kỹ thuật thông minh, đáng tin cậy và được may đo riêng cho từng dự án.",
+    about_vision_title: "Tầm nhìn của chúng tôi",
+    about_vision_desc: "Trở thành doanh nghiệp dẫn đầu về <strong>hiệu quả năng lượng</strong> tại <strong>Đông Nam Á</strong>, thúc đẩy <strong>sáng tạo</strong> công nghệ và xây dựng một tương lai <strong>bền vững</strong> hơn cho ngành dịch vụ lưu trú và thương mại.",
+    history_tagline: "LỊCH SỬ CỦA CHÚNG TÔI",
+    history_title: "14 năm kiến tạo hiệu quả năng lượng",
+    history_p1: "Từ những ngày đầu thành lập vào năm 2012, chúng tôi luôn làm việc với mục tiêu rõ ràng: thay đổi cách các công trình tiêu thụ năng lượng.",
+    history_p2: "Trải qua ngần ấy năm, chúng tôi đã tích lũy kiến thức chuyên sâu, kinh nghiệm thực chiến cùng các mối quan hệ đối tác chiến lược để cung cấp những giải pháp đột phá và kết quả đo lường được.",
+    history_cta: "KHÁM PHÁ HÀNH TRÌNH CỦA CHÚNG TÔI",
+    history_year_2012_desc: "Thành lập Kuodia tại Tây Ban Nha, tập trung vào năng lượng tái tạo và hiệu quả năng lượng.",
+    history_year_2015_desc: "Mở rộng danh mục giải pháp sang các hệ thống HVAC, bơm nhiệt aerothermal và năng lượng mặt trời.",
+    history_year_2018_desc: "Củng cố năng lực dự án trong các phân khúc khách sạn, thương mại và nhà ở dân dụng.",
+    history_year_2021_desc: "Bắt đầu hoạt động tại Châu Á với trọng tâm là thị trường Việt Nam.",
+    history_year_2026_desc: "Kuodia chính thức đặt văn phòng tại Việt Nam nhằm mang đến các giải pháp năng lượng hiệu quả và bền vững hơn cho khu vực.",
+    process_tagline: "QUY TRÌNH LÀM VIỆC",
+    process_title: "Kỹ thuật chuyên sâu. Kết quả đo lường được.",
+    process_subtitle: "Chúng tôi tuân thủ một quy trình rõ ràng và minh bạch để đảm bảo giải pháp hiệu quả và phù hợp nhất với từng khách hàng.",
+    process_step_1_title: "Liên hệ ban đầu",
+    process_step_1_desc: "Chúng tôi lắng nghe nhu cầu và thấu hiểu mục tiêu dự án của bạn.",
+    process_step_2_title: "Kiểm toán & Phân tích",
+    process_step_2_desc: "Đánh giá mức tiêu thụ năng lượng hiện tại, hệ thống sẵn có và tìm kiếm cơ hội tối ưu.",
+    process_step_3_title: "Kỹ thuật & Thiết kế",
+    process_step_3_desc: "Thiết kế giải pháp tối ưu kết hợp giữa công nghệ hiệu suất cao và năng lượng tái tạo.",
+    process_step_4_title: "Mô phỏng tiết kiệm",
+    process_step_4_desc: "Tính toán tỷ suất hoàn vốn ROI: điện năng tiết kiệm, giảm phát thải và thời gian thu hồi vốn.",
+    process_step_5_title: "Triển khai lắp đặt",
+    process_step_5_desc: "Phối hợp thi công với các nhà thầu và nhà cung cấp để đảm bảo chất lượng hàng đầu.",
+    process_step_6_title: "Nghiệm thu vận hành",
+    process_step_6_desc: "Tiến hành chạy thử và tinh chỉnh nhằm đạt hiệu suất tối đa ngay từ ngày đầu tiên.",
+    process_step_7_title: "Giám sát liên tục",
+    process_step_7_desc: "Theo dõi hiệu quả vận hành, đề xuất cải tiến và đồng hành lâu dài cùng doanh nghiệp.",
+    process_mascot_text: "Tôi đồng hành cùng bạn trong từng giai đoạn dự án.",
+    values_tagline: "TRIẾT LÝ CỐT LÕI",
+    values_title: "Giá trị của chúng tôi",
+    values_1_title: "Bền vững",
+    values_1_desc: "Chúng tôi thiết kế các giải pháp bảo vệ hành tinh và tạo ra tác động tích cực.",
+    values_2_title: "Đổi mới",
+    values_2_desc: "Chúng tôi ứng dụng công nghệ tiên tiến để tạo ra các giải pháp hiệu quả nhất.",
+    values_3_title: "Cam kết",
+    values_3_desc: "Chúng tôi tham gia vào mỗi dự án như thể đó là thách thức của chính chúng tôi.",
+    values_4_title: "Chất lượng",
+    values_4_desc: "Chúng tôi hướng đến sự xuất sắc trong từng chi tiết, từ thiết kế đến thi công.",
+    values_5_title: "Tin tưởng",
+    values_5_desc: "Chúng tôi xây dựng quan hệ lâu dài dựa trên sự minh bạch và hiệu quả.",
   },
   en: {
     nav_home: "HOME",
@@ -706,7 +820,63 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     cta_card_desc: "Let's design your high-efficiency, sustainable aquaculture or aquaponics farm.",
     cta_card_feasibility: "REQUEST FEASIBILITY STUDY",
     cta_card_zalo: "CHAT ON ZALO",
-    cta_card_scan_to_chat: "Scan to chat"
+    cta_card_scan_to_chat: "Scan to chat",
+    about_breadcrumb: "ABOUT KUODIA",
+    about_title: "About Kuodia",
+    about_desc: "Since 2012, we design and implement engineering and renewable energy solutions that reduce energy consumption and create a positive impact on people, businesses, and the planet.",
+    about_cta: "LEARN MORE ABOUT KUODIA",
+    about_stat_1_val: "Since 2012",
+    about_stat_1_lbl: "Founded in Spain",
+    about_stat_2_val: "14 Years",
+    about_stat_2_lbl: "Of experience",
+    about_stat_3_val: "100%",
+    about_stat_3_lbl: "Committed to sustainability",
+    about_stat_4_val: "Europe & Vietnam",
+    about_stat_4_lbl: "International presence",
+    about_mission_title: "Our mission",
+    about_mission_desc: "Helping our clients consume <strong>less energy</strong>, reduce emissions, and improve the <strong>profitability</strong> of their buildings through smart, reliable engineering solutions tailored to each project.",
+    about_vision_title: "Our vision",
+    about_vision_desc: "To be a leading company in <strong>energy efficiency</strong> in <strong>Southeast Asia</strong>, driving technological <strong>innovation</strong> and building a more <strong>sustainable</strong> future for the hospitality and commercial sectors.",
+    history_tagline: "OUR HISTORY",
+    history_title: "14 years of driving energy efficiency",
+    history_p1: "Since our inception in 2012, we have worked with a clear objective: to transform the way buildings use energy.",
+    history_p2: "Throughout these years, we have accumulated knowledge, experience, and strategic alliances that allow us to offer high-impact solutions and measurable results.",
+    history_cta: "DISCOVER OUR JOURNEY",
+    history_year_2012_desc: "Birth of Kuodia in Spain with a focus on renewable energies and energy efficiency.",
+    history_year_2015_desc: "Expansion of solutions in HVAC, aerothermal energy, and solar power.",
+    history_year_2018_desc: "Consolidation of projects in the hospitality, commercial, and residential sectors.",
+    history_year_2021_desc: "Launch of operations in Asia, with a focus on Vietnam.",
+    history_year_2026_desc: "Kuodia arrives in Vietnam to drive more efficient and sustainable energy solutions in the region.",
+    process_tagline: "HOW WE WORK",
+    process_title: "Custom engineering. Measurable results.",
+    process_subtitle: "We follow a clear and transparent process to guarantee efficient solutions tailored to each client.",
+    process_step_1_title: "First Contact",
+    process_step_1_desc: "We listen to your needs and understand the objectives of your project.",
+    process_step_2_title: "Audit & Analysis",
+    process_step_2_desc: "We evaluate current energy consumption, existing systems, and identify opportunities for improvement.",
+    process_step_3_title: "Engineering & Design",
+    process_step_3_desc: "We design the ideal solution combining efficient and renewable technologies for each project.",
+    process_step_4_title: "Savings Simulation",
+    process_step_4_desc: "We calculate the return on investment: energy savings, emission reductions, operational costs, and payback time.",
+    process_step_5_title: "Implementation",
+    process_step_5_desc: "We coordinate execution with installers and suppliers to guarantee quality and efficiency.",
+    process_step_6_title: "Commissioning",
+    process_step_6_desc: "We perform testing and adjustments to ensure maximum performance from day one.",
+    process_step_7_title: "Continuous Monitoring",
+    process_step_7_desc: "We monitor performance, propose improvements, and support you in the long term.",
+    process_mascot_text: "I accompany you at every stage of your project.",
+    values_tagline: "OUR CORE PHILOSOPHY",
+    values_title: "Our Values",
+    values_1_title: "Sustainability",
+    values_1_desc: "We design solutions that protect the planet and generate a positive impact.",
+    values_2_title: "Innovation",
+    values_2_desc: "We apply advanced technology to create the most efficient solutions.",
+    values_3_title: "Commitment",
+    values_3_desc: "We engage in every project as if it were our own challenge.",
+    values_4_title: "Quality",
+    values_4_desc: "We seek excellence in every detail, from design to execution.",
+    values_5_title: "Trust",
+    values_5_desc: "We build long-term relationships based on transparency and results.",
   },
   es: {
   nav_home: "INICIO",
@@ -948,6 +1118,62 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   cta_card_desc: "Diseñemos su granja de acuicultura o acuaponía de alta eficiencia y sostenible.",
   cta_card_feasibility: "SOLICITAR ESTUDIO DE VIABILIDAD",
   cta_card_zalo: "CHATEAR EN ZALO",
-  cta_card_scan_to_chat: "Escanear para chatear"
+  cta_card_scan_to_chat: "Escanear para chatear",
+  about_breadcrumb: "SOBRE KUODIA",
+  about_title: "Sobre Kuodia",
+  about_desc: "Desde 2012 desarrollamos soluciones de ingeniería y energías renovables que reducen el consumo energético y crean un impacto positivo en las personas, los negocios y el planeta.",
+  about_cta: "CONOCE MÁS DE KUODIA",
+  about_stat_1_val: "Desde 2012",
+  about_stat_1_lbl: "Fundada en España",
+  about_stat_2_val: "14 años",
+  about_stat_2_lbl: "De experiencia",
+  about_stat_3_val: "100%",
+  about_stat_3_lbl: "Comprometidos con la sostenibilidad",
+  about_stat_4_val: "Europa & Vietnam",
+  about_stat_4_lbl: "Presencia internacional",
+  about_mission_title: "Nuestra misión",
+  about_mission_desc: "Ayudar a nuestros clientes a consumir <strong>menos energía</strong>, reducir emisiones y mejorar la <strong>rentabilidad</strong> de sus edificios mediante soluciones de ingeniería inteligentes, fiables y adaptadas a cada proyecto.",
+  about_vision_title: "Nuestra visión",
+  about_vision_desc: "Ser una empresa de referencia en eficiencia <strong>energética</strong> en el <strong>Sudeste Asiático</strong>, impulsando la <strong>innovación</strong> tecnológica y construyendo un futuro más <strong>sostenible</strong> para la industria de la hospitalidad y el sector comercial.",
+  history_tagline: "NUESTRA HISTORIA",
+  history_title: "14 años impulsando la eficiencia energética",
+  history_p1: "Desde nuestros inicios en 2012, hemos trabajado con un objetivo claro: transformar la manera en que los edificios usan la energía.",
+  history_p2: "A lo largo de estos años, hemos acumulado conocimiento, experiencia y alianzas estratégicas que nos permiten ofrecer soluciones de alto impacto y resultados medibles.",
+  history_cta: "CONOCE NUESTRO RECORRIDO",
+  history_year_2012_desc: "Nacimiento de Kuodia en España con enfoque en energías renovables y eficiencia energética.",
+  history_year_2015_desc: "Expansión de soluciones en sistemas de climatización, aerotermia y energía solar.",
+  history_year_2018_desc: "Consolidación de proyectos en el sector hotelero, comercial y residencial.",
+  history_year_2021_desc: "Inicio de operaciones en Asia, con foco en Vietnam.",
+  history_year_2026_desc: "Kuodia llega a Vietnam para impulsar soluciones energéticas más eficientes y sostenibles en la región.",
+  process_tagline: "CÓMO TRABAJAMOS",
+  process_title: "Ingeniería personalizada. Resultados medibles.",
+  process_subtitle: "Seguimos un proceso claro y transparente para garantizar soluciones eficientes y adaptadas a cada cliente.",
+  process_step_1_title: "Primer contacto",
+  process_step_1_desc: "Escuchamos tus necesidades y entendemos los objetivos de tu proyecto.",
+  process_step_2_title: "Auditoria y análisis",
+  process_step_2_desc: "Evaluamos el consumo energético actual, los sistemas existentes y detectamos oportunidades de mejora.",
+  process_step_3_title: "Ingeniería y diseño",
+  process_step_3_desc: "Diseñamos la solución ideal combinando tecnologías eficientes y renovables según cada proyecto.",
+  process_step_4_title: "Simulación de ahorro",
+  process_step_4_desc: "Calculamos el retorno de la inversión: ahorro energético, reducción de emisiones, costes operativos y tiempo de amortización.",
+  process_step_5_title: "Implementación",
+  process_step_5_desc: "Coordinamos la ejecución junto a instaladores y proveedores para garantizar calidad y eficiencia.",
+  process_step_6_title: "Puesta en marcha",
+  process_step_6_desc: "Realizamos pruebas y ajustes para asegurar el máximo rendimiento desde el primer día.",
+  process_step_7_title: "Seguimiento continuo",
+  process_step_7_desc: "Supervisamos el rendimiento, proponemos mejoras y te acompañamos a largo plazo.",
+  process_mascot_text: "Te acompaño en cada etapa de tu proyecto.",
+  values_tagline: "NUESTRA FILOSOFÍA",
+  values_title: "Nuestros Valores",
+  values_1_title: "Sostenibilidad",
+  values_1_desc: "Diseñamos soluciones que cuidan el planeta y generan un impacto positivo.",
+  values_2_title: "Innovación",
+  values_2_desc: "Aplicamos tecnología avanzada para crear soluciones eficientes.",
+  values_3_title: "Compromiso",
+  values_3_desc: "Nos involucramos en cada proyecto como si fuera nuestro propio desafío.",
+  values_4_title: "Calidad",
+  values_4_desc: "Buscamos la excelencia en cada detalle, desde el diseño hasta la ejecución.",
+  values_5_title: "Confianza",
+  values_5_desc: "Construimos relaciones a largo plazo basadas en transparencia y resultados.",
 }
 };

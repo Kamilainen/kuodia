@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
 
   const navItems = [
     { labelKey: 'nav_home' as const, href: '/' },
-    { labelKey: 'nav_about' as const, href: '/#about' },
+    { labelKey: 'nav_about' as const, href: '/about' },
     {
       labelKey: 'nav_solutions' as const,
       href: '#solutions',
