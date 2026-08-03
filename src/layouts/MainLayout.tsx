@@ -2,7 +2,7 @@ import React, { useState, createContext, useContext } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import CalculatorModal from '../components/CTA/CalculatorModal';
-import ContactMascot from '../components/FloatingLabel/ContactMascot';
+// import ContactMascot from '../components/FloatingLabel/ContactMascot';
 
 interface LayoutContextType {
   openCalculator: () => void;
@@ -38,7 +38,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Footer />
         
         <CalculatorModal isOpen={isCalcOpen} onClose={closeCalculator} />
-        <ContactMascot />
+        {/* <ContactMascot /> */}
       </div>
     </LayoutContext.Provider>
   );
