@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from '../../context/LanguageContext';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, Globe } from 'lucide-react';
 import logoFooterImg from '../../assets/logo-footer.png';
 
 export const Footer: React.FC = () => {
