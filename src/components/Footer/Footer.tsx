@@ -156,12 +156,12 @@ export const Footer: React.FC = () => {
               {t('footer_col_contact')}
             </h4>
             <ul className="space-y-3.5 text-xs text-slate-400">
-              <li className="flex items-start space-x-2.5">
+              {/* <li className="flex items-start space-x-2.5">
                 <MapPin className="h-4 w-4 mt-0.5 text-brand-green-light flex-shrink-0" />
                 <span className="leading-relaxed">
                   {t('footer_contact_address')}
                 </span>
-              </li>
+              </li> */}
               <li className="flex items-center space-x-2.5">
                 <Phone className="h-4 w-4 text-brand-green-light flex-shrink-0" />
                 <a href={`tel:${t('footer_contact_phone')}`} className="hover:text-white transition-colors">
