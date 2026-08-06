@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
             : 'bg-transparent py-5'
         }`}
       >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+      <div className="max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center group">
           <img

@@ -59,27 +59,27 @@ export const Industrie: React.FC = () => {
   // Right-side circular feature list
   const rightFeatures = [
     {
-      icon: <Zap className="h-6 w-6 text-brand-green" />,
+      icon: <Zap className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-white" />,
       title: t("ind_feat_1_title"),
       desc: t("ind_feat_1_desc"),
     },
     {
-      icon: <Flame className="h-6 w-6 text-brand-green" />,
+      icon: <Flame className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-white" />,
       title: t("ind_feat_2_title"),
       desc: t("ind_feat_2_desc"),
     },
     {
-      icon: <Droplet className="h-6 w-6 text-brand-green" />,
+      icon: <Droplet className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-white" />,
       title: t("ind_feat_3_title"),
       desc: t("ind_feat_3_desc"),
     },
     {
-      icon: <Monitor className="h-6 w-6 text-brand-green" />,
+      icon: <Monitor className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-white" />,
       title: t("ind_feat_4_title"),
       desc: t("ind_feat_4_desc"),
     },
     {
-      icon: <Leaf className="h-6 w-6 text-brand-green" />,
+      icon: <Leaf className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-white" />,
       title: t("ind_feat_5_title"),
       desc: t("ind_feat_5_desc"),
     },
@@ -88,35 +88,35 @@ export const Industrie: React.FC = () => {
   // Bottom stats cards
   const statCards = [
     {
-      icon: <Zap className="h-6 w-6 stroke-[2.25]" />,
+      icon: <Zap className="h-3.5 w-3.5 sm:h-6 sm:w-6 stroke-[2.25]" />,
       value: t("ind_stat_1_val"),
       label: t("ind_stat_1_lbl"),
       desc: t("ind_stat_1_desc"),
       colorClass: "text-emerald-600 bg-emerald-50 border-emerald-100 shadow-sm shadow-emerald-100/30",
     },
     {
-      icon: <Droplet className="h-6 w-6 stroke-[2.25]" />,
+      icon: <Droplet className="h-3.5 w-3.5 sm:h-6 sm:w-6 stroke-[2.25]" />,
       value: t("ind_stat_2_val"),
       label: t("ind_stat_2_lbl"),
       desc: t("ind_stat_2_desc"),
       colorClass: "text-blue-600 bg-blue-50 border-blue-100 shadow-sm shadow-blue-100/30",
     },
     {
-      icon: <Flame className="h-6 w-6 stroke-[2.25]" />,
+      icon: <Flame className="h-3.5 w-3.5 sm:h-6 sm:w-6 stroke-[2.25]" />,
       value: t("ind_stat_3_val"),
       label: t("ind_stat_3_lbl"),
       desc: t("ind_stat_3_desc"),
       colorClass: "text-orange-600 bg-orange-50 border-orange-100 shadow-sm shadow-orange-100/30",
     },
     {
-      icon: <Leaf className="h-6 w-6 stroke-[2.25]" />,
+      icon: <Leaf className="h-3.5 w-3.5 sm:h-6 sm:w-6 stroke-[2.25]" />,
       value: t("ind_stat_4_val"),
       label: t("ind_stat_4_lbl"),
       desc: t("ind_stat_4_desc"),
       colorClass: "text-emerald-600 bg-emerald-50 border-emerald-100 shadow-sm shadow-emerald-100/30",
     },
     {
-      icon: <Shield className="h-6 w-6 stroke-[2.25]" />,
+      icon: <Shield className="h-3.5 w-3.5 sm:h-6 sm:w-6 stroke-[2.25]" />,
       value: t("ind_stat_5_val"),
       label: t("ind_stat_5_lbl"),
       desc: t("ind_stat_5_desc"),
@@ -166,29 +166,29 @@ export const Industrie: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-brand-navy">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center pt-32 pb-36 sm:pb-40 lg:pb-44 overflow-hidden">
+      <section className="relative min-h-[240px] sm:min-h-[95vh] flex items-center pt-28 pb-20 sm:pt-32 sm:pb-40 lg:pb-44 overflow-hidden">
         {/* Background Image with Dark Contrast Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={industriesBg}
             alt="Smarter Industry, Lower Costs Background"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[72%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/75 to-slate-950/60 lg:bg-gradient-to-r lg:from-slate-950/90 lg:via-slate-950/75 lg:to-slate-900/40" />
         </div>
 
         {/* Main Hero Content */}
         <Container className="z-10 relative w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-12 gap-2 sm:gap-6 lg:gap-12 items-center w-full">
             
             {/* Left Column: Heading and Details */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <div className="col-span-6 flex flex-col items-start text-left">
               {/* Tagline tag */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[10px] sm:text-xs font-display font-black tracking-widest text-brand-green uppercase mb-6 select-none"
+                className="text-[6px] sm:text-xs font-display font-black tracking-widest text-brand-green uppercase mb-3 sm:mb-6 select-none"
               >
                 {t("sol_industrie")}
               </motion.div>
@@ -199,7 +199,7 @@ export const Industrie: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
               >
-                <h1 className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[62px] tracking-tight leading-[1.06] text-white">
+                <h1 className="font-display font-black text-xs sm:text-3xl md:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-white">
                   {t("ind_title_1")} <br />
                   <span className="text-brand-green">{t("ind_title_2")}</span> <br />
                   {t("ind_title_3")}
@@ -211,7 +211,7 @@ export const Industrie: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="mt-6 text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed font-sans font-medium max-w-xl"
+                className="mt-2 sm:mt-6 text-[7px] sm:text-xs md:text-base text-slate-300 leading-relaxed font-sans font-medium max-w-xl"
               >
                 <p>{t("ind_subtitle")}</p>
               </motion.div>
@@ -221,51 +221,49 @@ export const Industrie: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3.5 sm:space-y-0 sm:space-x-4 mt-8 w-full sm:w-auto"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-1.5 sm:gap-4 mt-3 sm:mt-8 w-full sm:w-auto"
               >
                 <Button
                   onClick={handleScrollToContact}
                   variant="primary"
-                  size="lg"
-                  className="group flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green-dark border-brand-green hover:border-brand-green-dark shadow-lg shadow-brand-green/20"
+                  className="group flex items-center justify-center space-x-1 sm:space-x-2 bg-brand-green hover:bg-brand-green-dark border-brand-green hover:border-brand-green-dark shadow-lg shadow-brand-green/20 text-[6.5px] sm:text-xs py-1 px-2.5 sm:py-2.5 sm:px-5 rounded-full"
                 >
                   <span>{t("ind_cta_study")}</span>
-                  <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-2 w-2 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
 
                 <Button
                   onClick={handleScrollToDetails}
                   variant="outline"
-                  size="lg"
-                  className="group flex items-center justify-center space-x-2 border-white/60 hover:border-white text-white hover:bg-white/10 shadow-sm"
+                  className="group flex items-center justify-center space-x-1 sm:space-x-2 border-white/60 hover:border-white text-white hover:bg-white/10 shadow-sm text-[6.5px] sm:text-xs py-1 px-2.5 sm:py-2.5 sm:px-5 rounded-full"
                 >
                   <span>{t("ind_cta_explore")}</span>
-                  <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-2 w-2 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </motion.div>
             </div>
 
             {/* Right Column: Circular Features Stack */}
-            <div className="lg:col-span-5 w-full">
+            <div className="col-span-5 col-start-8 w-full flex flex-col items-end">
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-4"
+                className="space-y-1.5 sm:space-y-4 flex flex-col items-start"
               >
                 {rightFeatures.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center space-x-4 py-2.5 group hover:translate-x-1 transition-all duration-300"
+                    className="flex items-center space-x-1.5 sm:space-x-4 py-0.5 sm:py-2.5 group hover:translate-x-0.5 transition-all duration-300"
                   >
-                    <div className="h-12 w-12 rounded-full border border-white/30 bg-white/5 flex items-center justify-center flex-shrink-0 text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <div className="h-6 w-6 sm:h-12 sm:w-12 rounded-full border border-white/30 bg-white/5 flex items-center justify-center flex-shrink-0 text-white shadow-sm group-hover:scale-105 transition-transform duration-300">
                       {feat.icon}
                     </div>
                     <div className="flex flex-col min-w-0">
-                      <span className="text-xs sm:text-sm font-display font-black text-white uppercase tracking-wider leading-snug">
+                      <span className="text-[7.5px] sm:text-xs lg:text-sm font-display font-black text-white uppercase tracking-wider leading-snug">
                         {feat.title}
                       </span>
-                      <span className="text-[10px] sm:text-xs font-sans text-slate-300 leading-normal mt-0.5 font-medium">
+                      <span className="text-[6.5px] sm:text-[10px] lg:text-xs font-sans text-slate-300 leading-normal mt-0.5 font-medium">
                         {feat.desc}
                       </span>
                     </div>
@@ -279,34 +277,34 @@ export const Industrie: React.FC = () => {
       </section>
 
       {/* Floating Stats Section */}
-      <section className="relative z-20 -mt-20 lg:-mt-24 pb-12 px-4 md:px-0">
+      <section className="relative z-20 -mt-8 sm:-mt-20 lg:-mt-24 pb-12 px-4 md:px-0">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="bg-white rounded-2xl shadow-2xl border border-slate-100/80 p-6 md:p-6 lg:py-10 grid grid-cols-1 lg:grid-cols-5 gap-x-0 gap-y-2 lg:gap-y-0 divide-y lg:divide-y-0 lg:divide-x divide-slate-100"
+            className="bg-white rounded-2xl shadow-2xl border border-slate-100/80 p-2 sm:p-6 lg:py-10 grid grid-cols-5 divide-x divide-slate-100 gap-x-1 sm:gap-x-4 w-full items-stretch"
           >
             {statCards.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex items-center py-6 lg:py-0 lg:px-8 first:pt-0 lg:first:pl-0 last:pb-0 lg:last:pr-0"
+                className="flex flex-col lg:flex-row items-center lg:items-center justify-center py-2 lg:py-0 lg:px-8 text-center lg:text-left"
               >
                 {/* Icon Container */}
-                <div className={`w-14 h-14 rounded-full border flex items-center justify-center flex-shrink-0 shadow-sm transition-all duration-300 hover:scale-105 bg-white ${stat.colorClass}`}>
+                <div className={`w-5 h-5 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full border flex items-center justify-center flex-shrink-0 shadow-sm transition-all duration-300 hover:scale-105 bg-white ${stat.colorClass} scale-[0.55] sm:scale-100 origin-center lg:origin-left mb-1 sm:mb-2 lg:mb-0`}>
                   {stat.icon}
                 </div>
                 
                 {/* Content Right */}
-                <div className="pl-4 flex flex-col justify-center flex-grow min-w-0">
-                  <span className="text-xl md:text-2xl font-display font-black text-brand-navy leading-none">
+                <div className="pl-0 lg:pl-4 flex flex-col justify-center flex-grow min-w-0 items-center lg:items-start text-center lg:text-left">
+                  <span className="text-[6.5px] sm:text-lg md:text-xl lg:text-2xl font-display font-black text-brand-green leading-none">
                     {stat.value}
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-brand-navy mt-1 leading-snug">
+                  <span className="text-[5px] sm:text-xs md:text-sm font-bold text-brand-navy mt-0.5 sm:mt-1 leading-tight sm:leading-snug">
                     {stat.label}
                   </span>
-                  <span className="text-[10px] sm:text-xs text-slate-500 leading-normal mt-0.5 font-sans font-medium">
+                  <span className="text-[4.5px] sm:text-[9.5px] lg:text-xs text-slate-500 leading-normal mt-0.5 font-sans font-medium">
                     {stat.desc}
                   </span>
                 </div>
@@ -319,9 +317,9 @@ export const Industrie: React.FC = () => {
       {/* Integrated Factory Solution diagram & Optimization list Section */}
       <section className="py-20 bg-white border-b border-slate-100">
         <Container className="space-y-12">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch mt-0">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-6 lg:gap-8 items-stretch mt-0">
             {/* Left Column: What We Optimize */}
-            <div className="hidden lg:block lg:col-span-1 h-full bg-slate-50/70 border border-slate-100 rounded-3xl p-4 sm:p-5 space-y-4 shadow-sm shadow-slate-100">
+            <div className="hidden xl:block xl:col-span-1 h-full bg-slate-50/70 border border-slate-100 rounded-3xl p-4 sm:p-5 space-y-4 shadow-sm shadow-slate-100">
               <div className="space-y-1">
                 <h3 className="text-sm sm:text-base font-display font-black text-brand-navy">
                   {t("ind_opt_title")}
@@ -355,7 +353,7 @@ export const Industrie: React.FC = () => {
             </div>
 
             {/* Center Column: Localized Diagram */}
-            <div className="lg:col-span-3 h-full flex flex-col">
+            <div className="col-span-1 xl:col-span-3 h-full flex flex-col">
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -467,7 +465,7 @@ export const Industrie: React.FC = () => {
 
 
             {/* Right Column: How It Works & Key Benefits */}
-            <div className="hidden lg:flex lg:col-span-1 h-full bg-slate-50/70 border border-slate-100 rounded-3xl p-4 sm:p-5 space-y-6 shadow-sm shadow-slate-100 flex flex-col">
+            <div className="hidden xl:flex xl:col-span-1 h-full bg-slate-50/70 border border-slate-100 rounded-3xl p-4 sm:p-5 space-y-6 shadow-sm shadow-slate-100 flex flex-col">
               {/* How It Works */}
               <div className="space-y-3">
                 <div className="space-y-1">
@@ -536,7 +534,7 @@ export const Industrie: React.FC = () => {
             </h2>
           </div>
 
-          <div className="flex overflow-x-auto scrollbar-none gap-4 pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-6 lg:pb-0 lg:snap-none items-stretch w-full">
+          <div className="flex overflow-x-auto scrollbar-none gap-4 pb-4 snap-x snap-mandatory xl:grid xl:grid-cols-6 xl:pb-0 xl:snap-none items-stretch w-full">
             {[
               { img: heatpump2,      title: t("ind_tech_1_title"), desc: t("ind_tech_1_desc") },
               { img: heatRecovery,   title: t("ind_tech_2_title"), desc: t("ind_tech_2_desc") },
@@ -551,7 +549,7 @@ export const Industrie: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full flex-shrink-0 w-[230px] sm:w-[280px] snap-start lg:w-auto lg:flex-shrink"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full flex-shrink-0 w-[230px] sm:w-[280px] snap-start xl:w-auto xl:flex-shrink"
               >
                 {/* Image Container */}
                 <div className="relative overflow-hidden aspect-[4/3] bg-slate-100">
@@ -585,16 +583,16 @@ export const Industrie: React.FC = () => {
             </h2>
           </div>
 
-          <div className="flex overflow-x-auto scrollbar-none gap-6 pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-8 lg:gap-4 lg:pb-0 lg:snap-none w-full justify-start lg:justify-items-stretch">
+          <div className="flex overflow-x-auto scrollbar-none gap-6 pb-4 snap-x snap-mandatory xl:grid xl:grid-cols-8 xl:gap-4 xl:pb-0 xl:snap-none w-full justify-start xl:justify-items-stretch">
             {[
-              { Icon: Utensils,     title: t("ind_srv_1_title"), desc: t("ind_srv_1_desc"), bg: "bg-amber-50 border-amber-200/60 text-amber-600" },
-              { Icon: Shirt,        title: t("ind_srv_2_title"), desc: t("ind_srv_2_desc"), bg: "bg-blue-50 border-blue-200/60 text-blue-600" },
-              { Icon: Cpu,          title: t("ind_srv_3_title"), desc: t("ind_srv_3_desc"), bg: "bg-indigo-50 border-indigo-200/60 text-indigo-600" },
-              { Icon: Pill,         title: t("ind_srv_4_title"), desc: t("ind_srv_4_desc"), bg: "bg-emerald-50 border-emerald-200/60 text-emerald-600" },
-              { Icon: Car,          title: t("ind_srv_5_title"), desc: t("ind_srv_5_desc"), bg: "bg-red-50 border-red-200/60 text-red-600" },
-              { Icon: Truck,        title: t("ind_srv_6_title"), desc: t("ind_srv_6_desc"), bg: "bg-cyan-50 border-cyan-200/60 text-cyan-600" },
-              { Icon: FlaskConical, title: t("ind_srv_7_title"), desc: t("ind_srv_7_desc"), bg: "bg-purple-50 border-purple-200/60 text-purple-600" },
-              { Icon: Hammer,       title: t("ind_srv_8_title"), desc: t("ind_srv_8_desc"), bg: "bg-orange-50 border-orange-200/60 text-orange-600" },
+              { Icon: Utensils,     title: t("ind_srv_1_title"), desc: t("ind_srv_1_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Shirt,        title: t("ind_srv_2_title"), desc: t("ind_srv_2_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Cpu,          title: t("ind_srv_3_title"), desc: t("ind_srv_3_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Pill,         title: t("ind_srv_4_title"), desc: t("ind_srv_4_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Car,          title: t("ind_srv_5_title"), desc: t("ind_srv_5_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Truck,        title: t("ind_srv_6_title"), desc: t("ind_srv_6_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: FlaskConical, title: t("ind_srv_7_title"), desc: t("ind_srv_7_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
+              { Icon: Hammer,       title: t("ind_srv_8_title"), desc: t("ind_srv_8_desc"), bg: "bg-white-50 border-blue-200/60 text-brand-green" },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -602,16 +600,16 @@ export const Industrie: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="flex flex-col items-center text-center space-y-2 group flex-shrink-0 w-[100px] sm:w-[120px] snap-start lg:w-auto lg:flex-shrink"
+                className="flex flex-row items-center space-x-2.5 group flex-shrink-0 w-[150px] sm:w-[180px] snap-start xl:w-auto xl:flex-shrink"
               >
-                <div className={`flex-shrink-0 w-11 h-11 rounded-full border flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-sm ${item.bg}`}>
-                  <item.Icon className="h-5 w-5" />
+                <div className={`flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-sm ${item.bg}`}>
+                  <item.Icon className="h-4.5 w-4.5" />
                 </div>
-                <div className="flex flex-col space-y-1 items-center">
-                  <span className="text-[11px] sm:text-[12px] font-display font-black text-brand-navy leading-tight uppercase group-hover:text-blue-600 transition-colors duration-200">
+                <div className="flex flex-col space-y-0.5 items-start">
+                  <span className="text-[9px] sm:text-[10px] font-display font-black text-brand-navy leading-tight uppercase group-hover:text-blue-600 transition-colors duration-200">
                     {item.title}
                   </span>
-                  <span className="text-[10px] sm:text-[11px]text-slate-500 font-sans leading-snug font-medium max-w-[110px]">
+                  <span className="text-[8px] sm:text-[9px] text-slate-500 font-sans leading-snug font-medium max-w-[100px] sm:max-w-[120px] xl:max-w-none">
                     {item.desc}
                   </span>
                 </div>
@@ -624,10 +622,15 @@ export const Industrie: React.FC = () => {
       {/* Detail Solutions Section */}
       <section id="solutions-detail" className="py-20 bg-slate-50">
         <Container className="space-y-16">
-          {/* Project Concept + Zalo Contact Cards side by side */}
-          <div className="grid grid-cols-12 gap-3 sm:gap-4 lg:gap-6 w-full items-stretch">
-            <div className="col-span-8"><ProjectConceptCard /></div>
-            <div className="col-span-4"><ZaloContactCard /></div>
+          {/* Project Concept + Zalo Contact Cards side by side on desktop, stacked on mobile/tablet */}
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 w-full items-stretch">
+            <div className="col-span-1 xl:col-span-8"><ProjectConceptCard /></div>
+            <div className="col-span-1 xl:col-span-4">
+              <ZaloContactCard 
+                title={t("ind_cta_card_title")} 
+                description={t("ind_cta_card_desc")} 
+              />
+            </div>
           </div>
         </Container>
       </section>

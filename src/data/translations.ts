@@ -340,6 +340,8 @@ export interface TranslationType {
   ind_stat_5_val: string;
   ind_stat_5_lbl: string;
   ind_stat_5_desc: string;
+  ind_cta_card_title: string;
+  ind_cta_card_desc: string;
 
   // Industrie Section 2 (Integrated Solutions)
   ind_sec2_title: string;
@@ -770,6 +772,8 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     ind_stat_5_val: "Cao hơn",
     ind_stat_5_lbl: "Sức cạnh tranh",
     ind_stat_5_desc: "Bền vững & sẵn sàng tương lai",
+    ind_cta_card_title: "BẠN ĐÃ SẴN SÀNG TỐI ƯU HÓA NHÀ MÁY?",
+    ind_cta_card_desc: "Hãy để chúng tôi thiết kế hệ thống năng lượng và nước hiệu quả cao, phát triển bền vững cho doanh nghiệp của bạn.",
 
     // Industrie Section 2 (Integrated Solutions)
     ind_sec2_title: "GIẢI PHÁP TÍCH HỢP CHO CÔNG NGHIỆP",
@@ -1196,6 +1200,8 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     ind_stat_5_val: "Higher",
     ind_stat_5_lbl: "Competitiveness",
     ind_stat_5_desc: "Sustainable & future-ready",
+    ind_cta_card_title: "READY TO OPTIMIZE YOUR FACILITY?",
+    ind_cta_card_desc: "Let's design your high-efficiency, sustainable industrial energy and water ecosystem.",
 
     // Industrie Section 2 (Integrated Solutions)
     ind_sec2_title: "OUR INTEGRATED SOLUTIONS FOR INDUSTRY",
@@ -1630,6 +1636,8 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   ind_stat_5_val: "Mayor",
   ind_stat_5_lbl: "Competitividad",
   ind_stat_5_desc: "Sostenible y listo",
+  ind_cta_card_title: "¿LISTO PARA OPTIMIZAR SU PLANTA?",
+  ind_cta_card_desc: "Diseñemos su ecosistema industrial de energía y agua de alta eficiencia y sostenible.",
 
   // Industrie Section 2 (Integrated Solutions)
   ind_sec2_title: "NUESTRAS SOLUCIONES INTEGRADAS PARA LA INDUSTRIA",

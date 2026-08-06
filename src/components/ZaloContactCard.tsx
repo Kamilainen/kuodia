@@ -3,8 +3,16 @@ import { useTranslation } from "../context/LanguageContext";
 import { ArrowRight, MessageSquare, Phone, Mail } from "lucide-react";
 import zaloQrImg from "../assets/zalo_qr.jpg";
 
-const ZaloContactCard: React.FC = () => {
+interface ZaloContactCardProps {
+  title?: string;
+  description?: string;
+}
+
+const ZaloContactCard: React.FC<ZaloContactCardProps> = ({ title, description }) => {
   const { t } = useTranslation();
+
+  const displayTitle = title || t("cta_card_title");
+  const displayDesc = description || t("cta_card_desc");
 
   return (
     <div className="bg-[#091E36] rounded-3xl p-3 sm:p-5 lg:p-6 xl:p-8 flex flex-col justify-between shadow-xl shadow-slate-900/10 border border-slate-800 text-white min-h-[220px] sm:min-h-[280px] lg:min-h-[340px] w-full relative overflow-hidden">
@@ -16,10 +24,10 @@ const ZaloContactCard: React.FC = () => {
         <div className="flex-1 space-y-3 lg:space-y-4 w-full">
           <div className="space-y-0.5 sm:space-y-1">
             <h3 className="font-display font-black text-[9px] sm:text-xs lg:text-sm tracking-wider uppercase text-brand-green">
-              {t("cta_card_title")}
+              {displayTitle}
             </h3>
             <p className="font-sans font-semibold text-[8px] sm:text-[10px] lg:text-sm text-slate-300 leading-normal sm:leading-relaxed">
-              {t("cta_card_desc")}
+              {displayDesc}
             </p>
           </div>
 

@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
+      <div className="max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
         <div className="max-w-[350px] md:max-w-lg lg:max-w-2xl">
           {/* Animated Header */}
           <motion.div
