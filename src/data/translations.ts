@@ -7,7 +7,7 @@ export interface TranslationType {
   nav_blog: string;
   nav_contact: string;
   nav_cta: string;
-  nav_industries: string;
+  nav_farm: string;
   sol_hotel: string;
   sol_farm: string;
   sol_residential: string;
@@ -134,27 +134,27 @@ export interface TranslationType {
   footer_privacy: string;
   footer_terms: string;
 
-  // Industries Page
-  industries_breadcrumb: string;
-  industries_title_1: string;
-  industries_title_2: string;
-  industries_title_green: string;
-  industries_subtitle_1: string;
-  industries_subtitle_2: string;
-  industries_cta_study: string;
-  industries_cta_explore: string;
-  industries_stat_1_val: string;
-  industries_stat_1_lbl: string;
-  industries_stat_1_desc: string;
-  industries_stat_2_val: string;
-  industries_stat_2_lbl: string;
-  industries_stat_2_desc: string;
-  industries_stat_3_val: string;
-  industries_stat_3_lbl: string;
-  industries_stat_3_desc: string;
-  industries_stat_4_val: string;
-  industries_stat_4_lbl: string;
-  industries_stat_4_desc: string;
+  // farm Page
+  farm_breadcrumb: string;
+  farm_title_1: string;
+  farm_title_2: string;
+  farm_title_green: string;
+  farm_subtitle_1: string;
+  farm_subtitle_2: string;
+  farm_cta_study: string;
+  farm_cta_explore: string;
+  farm_stat_1_val: string;
+  farm_stat_1_lbl: string;
+  farm_stat_1_desc: string;
+  farm_stat_2_val: string;
+  farm_stat_2_lbl: string;
+  farm_stat_2_desc: string;
+  farm_stat_3_val: string;
+  farm_stat_3_lbl: string;
+  farm_stat_3_desc: string;
+  farm_stat_4_val: string;
+  farm_stat_4_lbl: string;
+  farm_stat_4_desc: string;
 
   // Feature Cards
   card_1_title: string;
@@ -239,6 +239,11 @@ export interface TranslationType {
   cta_card_feasibility: string;
   cta_card_zalo: string;
   cta_card_scan_to_chat: string;
+  ind_concept_badge: string;
+  ind_concept_subtitle: string;
+  ind_concept_body: string;
+  ind_concept_note: string;
+  ind_concept_img_alt: string;
 
   // About Page
   about_breadcrumb: string;
@@ -300,6 +305,137 @@ export interface TranslationType {
   footer_cta_title: string;
   footer_cta_subtitle: string;
   footer_cta_btn: string;
+
+  // Industrie Page
+  sol_industrie: string;
+  ind_breadcrumb: string;
+  ind_title_1: string;
+  ind_title_2: string;
+  ind_title_3: string;
+  ind_subtitle: string;
+  ind_cta_study: string;
+  ind_cta_explore: string;
+  ind_feat_1_title: string;
+  ind_feat_1_desc: string;
+  ind_feat_2_title: string;
+  ind_feat_2_desc: string;
+  ind_feat_3_title: string;
+  ind_feat_3_desc: string;
+  ind_feat_4_title: string;
+  ind_feat_4_desc: string;
+  ind_feat_5_title: string;
+  ind_feat_5_desc: string;
+  ind_stat_1_val: string;
+  ind_stat_1_lbl: string;
+  ind_stat_1_desc: string;
+  ind_stat_2_val: string;
+  ind_stat_2_lbl: string;
+  ind_stat_2_desc: string;
+  ind_stat_3_val: string;
+  ind_stat_3_lbl: string;
+  ind_stat_3_desc: string;
+  ind_stat_4_val: string;
+  ind_stat_4_lbl: string;
+  ind_stat_4_desc: string;
+  ind_stat_5_val: string;
+  ind_stat_5_lbl: string;
+  ind_stat_5_desc: string;
+
+  // Industrie Section 2 (Integrated Solutions)
+  ind_sec2_title: string;
+  ind_opt_title: string;
+  ind_opt_1_title: string;
+  ind_opt_1_desc: string;
+  ind_opt_2_title: string;
+  ind_opt_2_desc: string;
+  ind_opt_3_title: string;
+  ind_opt_3_desc: string;
+  ind_opt_4_title: string;
+  ind_opt_4_desc: string;
+  ind_opt_5_title: string;
+  ind_opt_5_desc: string;
+  ind_opt_6_title: string;
+  ind_opt_6_desc: string;
+  ind_opt_7_title: string;
+  ind_opt_7_desc: string;
+  
+  ind_how_title: string;
+  ind_how_1: string;
+  ind_how_2: string;
+  ind_how_3: string;
+  ind_how_4: string;
+  ind_how_5: string;
+  
+  ind_ben_title: string;
+  ind_ben_1: string;
+  ind_ben_2: string;
+  ind_ben_3: string;
+  ind_ben_4: string;
+  ind_ben_5: string;
+  ind_ben_6: string;
+
+  // Diagram top annotations
+  ind_ann_solar_title: string;
+  ind_ann_solar_desc: string;
+  ind_ann_hp_title: string;
+  ind_ann_hp_desc: string;
+  ind_ann_hr_title: string;
+  ind_ann_hr_desc: string;
+  ind_ann_wt_title: string;
+  ind_ann_wt_desc: string;
+  ind_ann_bms_title: string;
+  ind_ann_bms_desc: string;
+
+  // Diagram bottom equipment labels
+  ind_eq_1: string;
+  ind_eq_2: string;
+  ind_eq_3: string;
+  ind_eq_4: string;
+  ind_eq_5: string;
+  ind_eq_6: string;
+  ind_eq_7: string;
+
+  // Legend
+  ind_leg_1: string;
+  ind_leg_2: string;
+  ind_leg_3: string;
+  ind_leg_4: string;
+  ind_leg_5: string;
+  ind_leg_6: string;
+
+  // Key Technologies
+  ind_tech_title: string;
+  ind_tech_1_title: string;
+  ind_tech_1_desc: string;
+  ind_tech_2_title: string;
+  ind_tech_2_desc: string;
+  ind_tech_3_title: string;
+  ind_tech_3_desc: string;
+  ind_tech_4_title: string;
+  ind_tech_4_desc: string;
+  ind_tech_5_title: string;
+  ind_tech_5_desc: string;
+  ind_tech_6_title: string;
+  ind_tech_6_desc: string;
+
+  // Industries We Serve
+  ind_serve_title: string;
+  ind_srv_1_title: string;
+  ind_srv_1_desc: string;
+  ind_srv_2_title: string;
+  ind_srv_2_desc: string;
+  ind_srv_3_title: string;
+  ind_srv_3_desc: string;
+  ind_srv_4_title: string;
+  ind_srv_4_desc: string;
+  ind_srv_5_title: string;
+  ind_srv_5_desc: string;
+  ind_srv_6_title: string;
+  ind_srv_6_desc: string;
+  ind_srv_7_title: string;
+  ind_srv_7_desc: string;
+  ind_srv_8_title: string;
+  ind_srv_8_desc: string;
 }
 
 export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
@@ -311,7 +447,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_blog: "BLOG",
     nav_contact: "LIÊN HỆ",
     nav_cta: "LIÊN HỆ NGAY",
-    nav_industries: "LĨNH VỰC",
+    nav_farm: "LĨNH VỰC",
     sol_hotel: "Giải pháp Khách sạn",
     sol_farm: "Giải pháp Trang trại",
     sol_residential: "Nhà ở Dân dụng",
@@ -430,27 +566,27 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_privacy: "Chính sách bảo mật",
     footer_terms: "Điều khoản sử dụng",
 
-    // Industries Page
-    industries_breadcrumb: "GIẢI PHÁP > GIẢI PHÁP TRANG TRẠI",
-    industries_title_1: "Giải pháp Trang trại.",
-    industries_title_2: "Kiến tạo cho Cuộc sống.",
-    industries_title_green: "cho Cuộc sống.",
-    industries_subtitle_1: "Hệ thống kỹ thuật tích hợp cho các trang trại thủy canh liên kết, cơ sở sản xuất tôm trong nhà và trại giống.",
-    industries_subtitle_2: "Hiệu suất cao. An toàn sinh học tối đa. Phát triển bền vững.",
-    industries_cta_study: "YÊU CẦU KHẢO SÁT KHẢ THI",
-    industries_cta_explore: "KHÁM PHÁ CÁC GIẢI PHÁP",
-    industries_stat_1_val: "90%+",
-    industries_stat_1_lbl: "Tái tuần hoàn nước",
-    industries_stat_1_desc: "Hệ thống tuần hoàn khép kín giảm thiểu lượng nước ngọt tiêu thụ.",
-    industries_stat_2_val: "±0.5°C",
-    industries_stat_2_lbl: "Ổn định nhiệt độ",
-    industries_stat_2_desc: "Kiểm soát chính xác giúp tối ưu hóa sự phát triển và tỷ lệ sống.",
-    industries_stat_3_val: "30-50%",
-    industries_stat_3_lbl: "Tiết kiệm năng lượng",
-    industries_stat_3_desc: "Giảm chi phí vận hành với thu hồi nhiệt, năng lượng tái tạo và điều khiển thông minh.",
-    industries_stat_4_val: "24/7",
-    industries_stat_4_lbl: "Giám sát thông minh",
-    industries_stat_4_desc: "Nhận thức thời gian thực. Điều khiển từ xa. An tâm tuyệt đối.",
+    // farm Page
+    farm_breadcrumb: "GIẢI PHÁP > GIẢI PHÁP TRANG TRẠI",
+    farm_title_1: "Giải pháp Trang trại.",
+    farm_title_2: "Kiến tạo cho Cuộc sống.",
+    farm_title_green: "cho Cuộc sống.",
+    farm_subtitle_1: "Hệ thống kỹ thuật tích hợp cho các trang trại thủy canh liên kết, cơ sở sản xuất tôm trong nhà và trại giống.",
+    farm_subtitle_2: "Hiệu suất cao. An toàn sinh học tối đa. Phát triển bền vững.",
+    farm_cta_study: "YÊU CẦU KHẢO SÁT KHẢ THI",
+    farm_cta_explore: "KHÁM PHÁ CÁC GIẢI PHÁP",
+    farm_stat_1_val: "90%+",
+    farm_stat_1_lbl: "Tái tuần hoàn nước",
+    farm_stat_1_desc: "Hệ thống tuần hoàn khép kín giảm thiểu lượng nước ngọt tiêu thụ.",
+    farm_stat_2_val: "±0.5°C",
+    farm_stat_2_lbl: "Ổn định nhiệt độ",
+    farm_stat_2_desc: "Kiểm soát chính xác giúp tối ưu hóa sự phát triển và tỷ lệ sống.",
+    farm_stat_3_val: "30-50%",
+    farm_stat_3_lbl: "Tiết kiệm năng lượng",
+    farm_stat_3_desc: "Giảm chi phí vận hành với thu hồi nhiệt, năng lượng tái tạo và điều khiển thông minh.",
+    farm_stat_4_val: "24/7",
+    farm_stat_4_lbl: "Giám sát thông minh",
+    farm_stat_4_desc: "Nhận thức thời gian thực. Điều khiển từ xa. An tâm tuyệt đối.",
 
     // Feature Cards
     card_1_title: "HỆ THỐNG AQUAPONICS",
@@ -535,6 +671,11 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     cta_card_feasibility: "YÊU CẦU KHẢO SÁT KHẢ THI",
     cta_card_zalo: "TRÒ CHUYỆN QUA ZALO",
     cta_card_scan_to_chat: "Quét mã để trò chuyện",
+    ind_concept_badge: "VÍ DỤ DỰ ÁN TIÊU BIỂU",
+    ind_concept_subtitle: "Minh hoạ khái niệm — chỉ dùng cho mục đích trình bày.",
+    ind_concept_body: "Đây là khái niệm minh hoạ cho thấy hệ thống năng lượng và nước tích hợp có thể trông như thế nào trong một cơ sở công nghiệp điển hình. Thiết kế kỹ thuật cuối cùng sẽ được tuỳ chỉnh cho từng khách hàng và cơ sở.",
+    ind_concept_note: "Thiết kế được tuỳ chỉnh riêng cho từng khách hàng và cơ sở.",
+    ind_concept_img_alt: "Sơ đồ hệ sinh thái năng lượng tích hợp",
     about_breadcrumb: "VỀ KUODIA",
     about_title: "Về Kuodia",
     about_desc: "Từ năm 2012, chúng tôi thiết kế và triển khai các giải pháp kỹ thuật và năng lượng tái tạo giúp giảm tiêu thụ năng lượng và tạo tác động tích cực đến con người, doanh nghiệp và hành tinh.",
@@ -594,6 +735,135 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_cta_title: "Chúng ta cùng thảo luận về dự án của bạn nhé?",
     footer_cta_subtitle: "Chúng tôi sẵn sàng đồng hành cùng bạn kiến tạo một tương lai hiệu quả và bền vững hơn.",
     footer_cta_btn: "LIÊN HỆ NGAY",
+
+    // Industrie Page
+    sol_industrie: "Giải pháp Công nghiệp",
+    ind_breadcrumb: "GIẢI PHÁP > GIẢI PHÁP CÔNG NGHIỆP",
+    ind_title_1: "Công nghiệp Thông minh.",
+    ind_title_2: "Chi phí Thấp hơn.",
+    ind_title_3: "Tương lai Xanh hơn.",
+    ind_subtitle: "Chúng tôi thiết kế các hệ thống năng lượng và nước tích hợp giúp giảm tiêu thụ, thu hồi chất thải và tối ưu hóa mọi quy trình để đạt hiệu quả và tính bền vững tối đa.",
+    ind_cta_study: "YÊU CẦU KHẢO SÁT KHẢ THI",
+    ind_cta_explore: "KHÁM PHÁ CÁC GIẢI PHÁP",
+    ind_feat_1_title: "HIỆU QUẢ NĂNG LƯỢNG",
+    ind_feat_1_desc: "Giảm tiêu thụ và chi phí vận hành",
+    ind_feat_2_title: "THU HỒI NHIỆT",
+    ind_feat_2_desc: "Chuyển nhiệt thải thành năng lượng hữu ích",
+    ind_feat_3_title: "TỐI ƯU HÓA NƯỚC",
+    ind_feat_3_desc: "Xử lý, tái sử dụng và tiết kiệm nước",
+    ind_feat_4_title: "ĐIỀU KHIỂN THÔNG MINH",
+    ind_feat_4_desc: "Giám sát và tối ưu hóa theo thời gian thực",
+    ind_feat_5_title: "GIẢM PHÁT THẢI",
+    ind_feat_5_desc: "Giảm thiểu dấu chân carbon",
+    ind_stat_1_val: "20–50%",
+    ind_stat_1_lbl: "Tiết kiệm năng lượng",
+    ind_stat_1_desc: "Giảm chi phí vận hành",
+    ind_stat_2_val: "30–70%",
+    ind_stat_2_lbl: "Tiết kiệm nước",
+    ind_stat_2_desc: "Qua tái sử dụng và tái chế",
+    ind_stat_3_val: "Lên đến 60%",
+    ind_stat_3_lbl: "Thu hồi nhiệt",
+    ind_stat_3_desc: "Từ các quy trình công nghiệp",
+    ind_stat_4_val: "Giảm CO₂",
+    ind_stat_4_lbl: "Phát thải",
+    ind_stat_4_desc: "Hướng tới Net Zero",
+    ind_stat_5_val: "Cao hơn",
+    ind_stat_5_lbl: "Sức cạnh tranh",
+    ind_stat_5_desc: "Bền vững & sẵn sàng tương lai",
+
+    // Industrie Section 2 (Integrated Solutions)
+    ind_sec2_title: "GIẢI PHÁP TÍCH HỢP CHO CÔNG NGHIỆP",
+    ind_opt_title: "LĨNH VỰC TỐI ƯU HÓA",
+    ind_opt_1_title: "Kiểm toán Năng lượng",
+    ind_opt_1_desc: "Xác định tổn thất và cơ hội tiết kiệm",
+    ind_opt_2_title: "Thu hồi Nhiệt thải",
+    ind_opt_2_desc: "Thu hồi & tái sử dụng nhiệt từ thiết bị và quy trình",
+    ind_opt_3_title: "Hệ thống Nước nóng",
+    ind_opt_3_desc: "Bơm nhiệt hiệu suất cao và bể tích nhiệt",
+    ind_opt_4_title: "Tối ưu hóa HVAC",
+    ind_opt_4_desc: "Phân vùng thông minh, làm mát tự nhiên và thông gió thu hồi nhiệt",
+    ind_opt_5_title: "Tối ưu Khí nén",
+    ind_opt_5_desc: "Phát hiện rò rỉ, kiểm soát áp suất và thu hồi nhiệt",
+    ind_opt_6_title: "Quản lý Nguồn nước",
+    ind_opt_6_desc: "Xử lý, tái sử dụng, thu hồi nước ngưng và tái chế",
+    ind_opt_7_title: "Điều khiển Thông minh",
+    ind_opt_7_desc: "Hệ thống BMS, cảm biến IoT và phân tích thời gian thực",
+    ind_how_title: "QUY TRÌNH HOẠT ĐỘNG",
+    ind_how_1: "Phân tích dòng năng lượng và nước hiện tại.",
+    ind_how_2: "Xác định các cơ hội tiết kiệm tiềm năng.",
+    ind_how_3: "Thiết kế giải pháp tích hợp may đo riêng theo quy trình.",
+    ind_how_4: "Triển khai lắp đặt công nghệ chất lượng cao.",
+    ind_how_5: "Giám sát liên tục và tối ưu hóa hiệu suất.",
+    ind_ben_title: "LỢI ÍCH CHÍNH",
+    ind_ben_1: "Giảm chi phí năng lượng",
+    ind_ben_2: "Tối ưu hóa sử dụng nước",
+    ind_ben_3: "Nâng cao độ tin cậy và chất lượng sản phẩm",
+    ind_ben_4: "Giảm chi phí bảo trì",
+    ind_ben_5: "Giảm lượng phát thải CO₂",
+    ind_ben_6: "Rút ngắn thời gian hoàn vốn đầu tư",
+
+    // Diagram top annotations
+    ind_ann_solar_title: "NĂNG LƯỢNG MẶT TRỜI",
+    ind_ann_solar_desc: "Tạo điện sạch",
+    ind_ann_hp_title: "BƠM NHIỆT",
+    ind_ann_hp_desc: "Sưởi & làm lạnh",
+    ind_ann_hr_title: "THU HỒI NHIỆT",
+    ind_ann_hr_desc: "Nhiệt thải từ quy trình",
+    ind_ann_wt_title: "XỬ LÝ NƯỚC",
+    ind_ann_wt_desc: "Tái sử dụng & tái chế",
+    ind_ann_bms_title: "BMS THÔNG MINH",
+    ind_ann_bms_desc: "Giám sát & điều khiển",
+
+    // Diagram bottom equipment labels
+    ind_eq_1: "Bơm nhiệt (Hiệu suất cao)",
+    ind_eq_2: "Bình tích nhiệt (Buffer Tanks)",
+    ind_eq_3: "Thiết bị trao đổi nhiệt (Tấm)",
+    ind_eq_4: "Bình phân phối thủy lực",
+    ind_eq_5: "Tủ điều khiển & BMS",
+    ind_eq_6: "Bơm & Van (Hiệu suất cao)",
+    ind_eq_7: "Đồng hồ & Cảm biến (Lưu lượng, Nhiệt độ, Năng lượng)",
+
+    // Legend
+    ind_leg_1: "Nước nóng / Nhiệt",
+    ind_leg_2: "Nước lạnh",
+    ind_leg_3: "Nhiệt thu hồi",
+    ind_leg_4: "Nước tái chế",
+    ind_leg_5: "Điện mặt trời",
+    ind_leg_6: "Dữ liệu & Điều khiển (BMS)",
+
+    // Key Technologies
+    ind_tech_title: "CÔNG NGHỆ CỐT LÕI",
+    ind_tech_1_title: "Bơm nhiệt (Heat Pumps)",
+    ind_tech_1_desc: "Hệ thống năng lượng nhiệt hiệu quả để sưởi ấm, làm mát và nước nóng.",
+    ind_tech_2_title: "Hệ thống thu hồi nhiệt",
+    ind_tech_2_desc: "Thu hồi nhiệt từ máy nén, máy làm lạnh, lò nướng và các quy trình công nghiệp.",
+    ind_tech_3_title: "Xử lý & Tái sử dụng nước",
+    ind_tech_3_desc: "Lọc, xử lý và tái chế tiên tiến cho nước sản xuất và nước sinh hoạt.",
+    ind_tech_4_title: "Hệ thống điện mặt trời (Solar PV)",
+    ind_tech_4_desc: "Điện mặt trời tại chỗ giúp giảm hóa đơn năng lượng và giảm phát thải.",
+    ind_tech_5_title: "Smart BMS & IoT",
+    ind_tech_5_desc: "Giám sát thời gian thực, phân tích dữ liệu và tối ưu hóa thông minh.",
+    ind_tech_6_title: "Hệ thống HVAC hiệu suất cao",
+    ind_tech_6_desc: "Hệ thống thông gió hiệu quả, thu hồi nhiệt và kiểm soát khí hậu.",
+
+    // Industries We Serve
+    ind_serve_title: "CÁC NGÀNH CÔNG NGHIỆP CHÚNG TÔI PHỤC VỤ",
+    ind_srv_1_title: "Thực phẩm & Đồ uống",
+    ind_srv_1_desc: "Quy trình an toàn, hiệu quả và vệ sinh.",
+    ind_srv_2_title: "Dệt may & May mặc",
+    ind_srv_2_desc: "Giảm tiêu thụ năng lượng và nước.",
+    ind_srv_3_title: "Điện tử",
+    ind_srv_3_desc: "Khí hậu chính xác và phòng sạch.",
+    ind_srv_4_title: "Dược phẩm",
+    ind_srv_4_desc: "Đáng tin cậy, được kiểm soát và tuân thủ.",
+    ind_srv_5_title: "Ô tô",
+    ind_srv_5_desc: "Hiệu suất cao và tối ưu hóa năng lượng.",
+    ind_srv_6_title: "Logistics & Kho lạnh",
+    ind_srv_6_desc: "Làm mát hiệu quả và chi phí vận hành thấp.",
+    ind_srv_7_title: "Hóa chất",
+    ind_srv_7_desc: "Quản lý năng lượng và nước.",
+    ind_srv_8_title: "Kim loại & Máy móc",
+    ind_srv_8_desc: "Quy trình hạng nặng và thu hồi nhiệt.",
   },
   en: {
     nav_home: "HOME",
@@ -603,7 +873,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_blog: "BLOG",
     nav_contact: "CONTACT",
     nav_cta: "CONTACT NOW",
-    nav_industries: "INDUSTRIES",
+    nav_farm: "farm",
     sol_hotel: "Hotel Solutions",
     sol_farm: "Farm Solutions",
     sol_residential: "Residential House",
@@ -722,27 +992,27 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms of Use",
 
-    // Industries Page
-    industries_breadcrumb: "SOLUTIONS > FARM SOLUTIONS",
-    industries_title_1: "Farm Solutions.",
-    industries_title_2: "Engineered for Life.",
-    industries_title_green: "for Life.",
-    industries_subtitle_1: "Integrated engineering systems for aquaponics farms, indoor shrimp production and hatcheries.",
-    industries_subtitle_2: "High efficiency. Maximum biosecurity. Sustainable growth.",
-    industries_cta_study: "REQUEST FEASIBILITY STUDY",
-    industries_cta_explore: "EXPLORE SOLUTIONS",
-    industries_stat_1_val: "90%+",
-    industries_stat_1_lbl: "Water Recirculation",
-    industries_stat_1_desc: "Closed-loop systems minimize freshwater consumption.",
-    industries_stat_2_val: "±0.5°C",
-    industries_stat_2_lbl: "Temperature Stability",
-    industries_stat_2_desc: "Precision control for optimal growth and survival.",
-    industries_stat_3_val: "30-50%",
-    industries_stat_3_lbl: "Energy Savings",
-    industries_stat_3_desc: "Lower OPEX with heat recovery, renewables and smart control.",
-    industries_stat_4_val: "24/7",
-    industries_stat_4_lbl: "Smart Monitoring",
-    industries_stat_4_desc: "Real-time insight. Remote control. Total peace of mind.",
+    // farm Page
+    farm_breadcrumb: "SOLUTIONS > FARM SOLUTIONS",
+    farm_title_1: "Farm Solutions.",
+    farm_title_2: "Engineered for Life.",
+    farm_title_green: "for Life.",
+    farm_subtitle_1: "Integrated engineering systems for aquaponics farms, indoor shrimp production and hatcheries.",
+    farm_subtitle_2: "High efficiency. Maximum biosecurity. Sustainable growth.",
+    farm_cta_study: "REQUEST FEASIBILITY STUDY",
+    farm_cta_explore: "EXPLORE SOLUTIONS",
+    farm_stat_1_val: "90%+",
+    farm_stat_1_lbl: "Water Recirculation",
+    farm_stat_1_desc: "Closed-loop systems minimize freshwater consumption.",
+    farm_stat_2_val: "±0.5°C",
+    farm_stat_2_lbl: "Temperature Stability",
+    farm_stat_2_desc: "Precision control for optimal growth and survival.",
+    farm_stat_3_val: "30-50%",
+    farm_stat_3_lbl: "Energy Savings",
+    farm_stat_3_desc: "Lower OPEX with heat recovery, renewables and smart control.",
+    farm_stat_4_val: "24/7",
+    farm_stat_4_lbl: "Smart Monitoring",
+    farm_stat_4_desc: "Real-time insight. Remote control. Total peace of mind.",
 
     // Feature Cards
     card_1_title: "AQUAPONICS SYSTEMS",
@@ -827,6 +1097,11 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     cta_card_feasibility: "REQUEST FEASIBILITY STUDY",
     cta_card_zalo: "CHAT ON ZALO",
     cta_card_scan_to_chat: "Scan to chat",
+    ind_concept_badge: "EXAMPLE PROJECT CONCEPT",
+    ind_concept_subtitle: "Illustrative concept for demonstration purposes.",
+    ind_concept_body: "This is an illustrative concept showing how an integrated energy and water system could look in a typical industrial facility. Final engineering design is customized for each client and facility.",
+    ind_concept_note: "Final engineering design is customized for each client and facility.",
+    ind_concept_img_alt: "Integrated Energy Ecosystem diagram",
     about_breadcrumb: "ABOUT KUODIA",
     about_title: "About Kuodia",
     about_desc: "Since 2012, we design and implement engineering and renewable energy solutions that reduce energy consumption and create a positive impact on people, businesses, and the planet.",
@@ -886,6 +1161,135 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     footer_cta_title: "Shall we discuss your project?",
     footer_cta_subtitle: "We are ready to help you build a more efficient and sustainable future.",
     footer_cta_btn: "CONTACT NOW",
+
+    // Industrie Page
+    sol_industrie: "Industries Solutions",
+    ind_breadcrumb: "SOLUTIONS > INDUSTRIES SOLUTIONS",
+    ind_title_1: "Smarter Industry.",
+    ind_title_2: "Lower Costs.",
+    ind_title_3: "A Greener Future.",
+    ind_subtitle: "We engineer integrated energy and water systems that reduce consumption, recover waste, and optimize every process for maximum efficiency and sustainability.",
+    ind_cta_study: "REQUEST FEASIBILITY STUDY",
+    ind_cta_explore: "EXPLORE OUR SOLUTIONS",
+    ind_feat_1_title: "ENERGY EFFICIENCY",
+    ind_feat_1_desc: "Reduce consumption and operating costs",
+    ind_feat_2_title: "HEAT RECOVERY",
+    ind_feat_2_desc: "Turn waste heat into usable energy",
+    ind_feat_3_title: "WATER OPTIMIZATION",
+    ind_feat_3_desc: "Treat, reuse and save water",
+    ind_feat_4_title: "SMART CONTROL",
+    ind_feat_4_desc: "Real-time monitoring and optimization",
+    ind_feat_5_title: "LOWER EMISSIONS",
+    ind_feat_5_desc: "Smaller carbon footprint",
+    ind_stat_1_val: "20–50%",
+    ind_stat_1_lbl: "Energy savings",
+    ind_stat_1_desc: "Lower operating costs",
+    ind_stat_2_val: "30–70%",
+    ind_stat_2_lbl: "Water savings",
+    ind_stat_2_desc: "Through reuse and recycling",
+    ind_stat_3_val: "Up to 60%",
+    ind_stat_3_lbl: "Heat Recovery",
+    ind_stat_3_desc: "From industrial processes",
+    ind_stat_4_val: "Lower CO₂",
+    ind_stat_4_lbl: "Emissions",
+    ind_stat_4_desc: "Towards Net Zero",
+    ind_stat_5_val: "Higher",
+    ind_stat_5_lbl: "Competitiveness",
+    ind_stat_5_desc: "Sustainable & future-ready",
+
+    // Industrie Section 2 (Integrated Solutions)
+    ind_sec2_title: "OUR INTEGRATED SOLUTIONS FOR INDUSTRY",
+    ind_opt_title: "WHAT WE OPTIMIZE",
+    ind_opt_1_title: "Energy Audit",
+    ind_opt_1_desc: "Identify losses and opportunities",
+    ind_opt_2_title: "Heat Recovery",
+    ind_opt_2_desc: "Recover & reuse waste heat from equipment and processes",
+    ind_opt_3_title: "Hot Water Systems",
+    ind_opt_3_desc: "High-efficiency heat pumps and thermal storage",
+    ind_opt_4_title: "HVAC Optimization",
+    ind_opt_4_desc: "Smart zoning, free cooling and heat recovery ventilation",
+    ind_opt_5_title: "Compressed Air Optimization",
+    ind_opt_5_desc: "Leak detection, pressure control and heat recovery",
+    ind_opt_6_title: "Water Management",
+    ind_opt_6_desc: "Treatment, reuse, condensate recovery and recycling",
+    ind_opt_7_title: "Smart Controls",
+    ind_opt_7_desc: "BMS, IoT sensors and real-time analytics",
+    ind_how_title: "HOW IT WORKS",
+    ind_how_1: "We analyze your current energy and water flows.",
+    ind_how_2: "We identify savings opportunities.",
+    ind_how_3: "We design an integrated solution tailored to your processes.",
+    ind_how_4: "We implement with high-quality technology.",
+    ind_how_5: "We monitor and optimize continuously.",
+    ind_ben_title: "KEY BENEFITS",
+    ind_ben_1: "Lower energy costs",
+    ind_ben_2: "Optimized water use",
+    ind_ben_3: "Improved process reliability and product quality",
+    ind_ben_4: "Reduced maintenance",
+    ind_ben_5: "Lower CO₂ emissions",
+    ind_ben_6: "Faster return on investment",
+
+    // Diagram top annotations
+    ind_ann_solar_title: "SOLAR PV",
+    ind_ann_solar_desc: "Clean energy generation",
+    ind_ann_hp_title: "HEAT PUMPS",
+    ind_ann_hp_desc: "Heating & cooling productions",
+    ind_ann_hr_title: "HEAT RECOVERY",
+    ind_ann_hr_desc: "Recover waste heat from processes",
+    ind_ann_wt_title: "WATER TREATMENT",
+    ind_ann_wt_desc: "Reuse & recycle water",
+    ind_ann_bms_title: "SMART BMS",
+    ind_ann_bms_desc: "Control & monitoring",
+
+    // Diagram bottom equipment labels
+    ind_eq_1: "Heat Pumps (High Efficiency)",
+    ind_eq_2: "Buffer Tanks (Thermal Storage)",
+    ind_eq_3: "Heat Exchangers (Plate)",
+    ind_eq_4: "Hydraulic Manifold",
+    ind_eq_5: "Control Panel & BMS",
+    ind_eq_6: "Pumps & Valves (High Efficiency)",
+    ind_eq_7: "Meters & Sensors (Flow, Temp, Energy)",
+
+    // Legend
+    ind_leg_1: "Hot Water / Heat",
+    ind_leg_2: "Cold Water",
+    ind_leg_3: "Recovered Heat",
+    ind_leg_4: "Recycled Water",
+    ind_leg_5: "Solar Power",
+    ind_leg_6: "Data & Control (BMS)",
+
+    // Key Technologies
+    ind_tech_title: "OUR KEY TECHNOLOGIES",
+    ind_tech_1_title: "Heat Pumps",
+    ind_tech_1_desc: "High-efficiency aerothermal systems for heating, cooling and hot water.",
+    ind_tech_2_title: "Heat Recovery Systems",
+    ind_tech_2_desc: "Recover heat from compressors, chillers, ovens and industrial processes.",
+    ind_tech_3_title: "Water Treatment & Reuse",
+    ind_tech_3_desc: "Advanced filtration, treatment and recycling for process and utility water.",
+    ind_tech_4_title: "Solar PV Systems",
+    ind_tech_4_desc: "On-site solar power for lower energy bills and reduced emissions.",
+    ind_tech_5_title: "Smart BMS & IoT",
+    ind_tech_5_desc: "Real-time monitoring, data analytics and intelligent optimization.",
+    ind_tech_6_title: "High Efficiency HVAC",
+    ind_tech_6_desc: "Efficient ventilation, heat recovery and climate control systems.",
+
+    // Industries We Serve
+    ind_serve_title: "INDUSTRIES WE SERVE",
+    ind_srv_1_title: "Food & Beverage",
+    ind_srv_1_desc: "Safe, efficient and hygienic processes.",
+    ind_srv_2_title: "Textile & Garment",
+    ind_srv_2_desc: "Lower energy and water consumption.",
+    ind_srv_3_title: "Electronics",
+    ind_srv_3_desc: "Precision climate and clean rooms.",
+    ind_srv_4_title: "Pharmaceutical",
+    ind_srv_4_desc: "Reliable, controlled and compliant.",
+    ind_srv_5_title: "Automotive",
+    ind_srv_5_desc: "High performance and energy optimization.",
+    ind_srv_6_title: "Logistics & Cold Storage",
+    ind_srv_6_desc: "Efficient cooling and low operating costs.",
+    ind_srv_7_title: "Chemical",
+    ind_srv_7_desc: "Energy and water management.",
+    ind_srv_8_title: "Metal & Machinery",
+    ind_srv_8_desc: "Heavy-duty processes and heat recovery.",
   },
   es: {
   nav_home: "INICIO",
@@ -895,7 +1299,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nav_blog: "BLOG",
   nav_contact: "CONTACTO",
   nav_cta: "CONTÁCTANOS",
-  nav_industries: "INDUSTRIAS",
+  nav_farm: "INDUSTRIAS",
   sol_hotel: "Soluciones para Hoteles",
   sol_farm: "Soluciones para Granjas",
   sol_residential: "Casa Residencial",
@@ -1021,27 +1425,27 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   footer_privacy: "Política de Privacidad",
   footer_terms: "Términos de Uso",
 
-  // Industries Page
-  industries_breadcrumb: "SOLUCIONES > SOLUCIONES PARA GRANJAS",
-  industries_title_1: "Soluciones para Granjas.",
-  industries_title_2: "Diseñados para la Vida.",
-  industries_title_green: "para la Vida.",
-  industries_subtitle_1: "Sistemas de ingeniería integrados para granjas acuapónicas, producción de camarones en interiores y criaderos.",
-  industries_subtitle_2: "Alta eficiencia. Máxima bioseguridad. Crecimiento sostenible.",
-  industries_cta_study: "SOLICITAR ESTUDIO DE VIABILIDAD",
-  industries_cta_explore: "EXPLORAR SOLUCIONES",
-  industries_stat_1_val: "90%+",
-  industries_stat_1_lbl: "Recirculación de Agua",
-  industries_stat_1_desc: "Los sistemas de circuito cerrado minimizan el consumo de agua dulce.",
-  industries_stat_2_val: "±0.5°C",
-  industries_stat_2_lbl: "Estabilidad de Temperatura",
-  industries_stat_2_desc: "Control de precisión para un crecimiento y supervivencia óptimos.",
-  industries_stat_3_val: "30-50%",
-  industries_stat_3_lbl: "Ahorro de Energía",
-  industries_stat_3_desc: "Menor OPEX con recuperación de calor, renovables y control inteligente.",
-  industries_stat_4_val: "24/7",
-  industries_stat_4_lbl: "Monitoreo Inteligente",
-  industries_stat_4_desc: "Información en tiempo real. Control remoto. Tranquilidad total.",
+  // farm Page
+  farm_breadcrumb: "SOLUCIONES > SOLUCIONES PARA GRANJAS",
+  farm_title_1: "Soluciones para Granjas.",
+  farm_title_2: "Diseñados para la Vida.",
+  farm_title_green: "para la Vida.",
+  farm_subtitle_1: "Sistemas de ingeniería integrados para granjas acuapónicas, producción de camarones en interiores y criaderos.",
+  farm_subtitle_2: "Alta eficiencia. Máxima bioseguridad. Crecimiento sostenible.",
+  farm_cta_study: "SOLICITAR ESTUDIO DE VIABILIDAD",
+  farm_cta_explore: "EXPLORAR SOLUCIONES",
+  farm_stat_1_val: "90%+",
+  farm_stat_1_lbl: "Recirculación de Agua",
+  farm_stat_1_desc: "Los sistemas de circuito cerrado minimizan el consumo de agua dulce.",
+  farm_stat_2_val: "±0.5°C",
+  farm_stat_2_lbl: "Estabilidad de Temperatura",
+  farm_stat_2_desc: "Control de precisión para un crecimiento y supervivencia óptimos.",
+  farm_stat_3_val: "30-50%",
+  farm_stat_3_lbl: "Ahorro de Energía",
+  farm_stat_3_desc: "Menor OPEX con recuperación de calor, renovables y control inteligente.",
+  farm_stat_4_val: "24/7",
+  farm_stat_4_lbl: "Monitoreo Inteligente",
+  farm_stat_4_desc: "Información en tiempo real. Control remoto. Tranquilidad total.",
 
   // Feature Cards
   card_1_title: "SISTEMAS ACUAPÓNICOS",
@@ -1127,6 +1531,11 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   cta_card_feasibility: "SOLICITAR ESTUDIO DE VIABILIDAD",
   cta_card_zalo: "CHATEAR EN ZALO",
   cta_card_scan_to_chat: "Escanear para chatear",
+  ind_concept_badge: "EJEMPLO DE PROYECTO",
+  ind_concept_subtitle: "Concepto ilustrativo con fines de demostración.",
+  ind_concept_body: "Este es un concepto ilustrativo que muestra cómo podría verse un sistema integrado de energía y agua en una instalación industrial típica. El diseño de ingeniería final se personaliza para cada cliente e instalación.",
+  ind_concept_note: "El diseño de ingeniería final se personaliza para cada cliente e instalación.",
+  ind_concept_img_alt: "Diagrama del ecosistema de energía integrada",
   about_breadcrumb: "SOBRE KUODIA",
   about_title: "Sobre Kuodia",
   about_desc: "Desde 2012 desarrollamos soluciones de ingeniería y energías renovables que reducen el consumo energético y crean un impacto positivo en las personas, los negocios y el planeta.",
@@ -1186,5 +1595,134 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   footer_cta_title: "¿Hablamos de tu proyecto?",
   footer_cta_subtitle: "Estamos listos para ayudarte a construir un futuro más eficiente y sostenible.",
   footer_cta_btn: "CONTACTAR AHORA",
+
+  // Industrie Page
+  sol_industrie: "Soluciones Industriales",
+  ind_breadcrumb: "SOLUCIONES > SOLUCIONES INDUSTRIALES",
+  ind_title_1: "Industria Inteligente.",
+  ind_title_2: "Menores Costes.",
+  ind_title_3: "Un Futuro más Verde.",
+  ind_subtitle: "Diseñamos sistemas integrados de energía y agua que reducen el consumo, recuperan residuos y optimizan cada proceso para una máxima eficiencia y sostenibilidad.",
+  ind_cta_study: "SOLICITAR ESTUDIO DE VIABILIDAD",
+  ind_cta_explore: "EXPLORAR NUESTRAS SOLUCIONES",
+  ind_feat_1_title: "EFICIENCIA ENERGÉTICA",
+  ind_feat_1_desc: "Reducir el consumo y costes operativos",
+  ind_feat_2_title: "RECUPERACIÓN DE CALOR",
+  ind_feat_2_desc: "Convertir calor residual en energía útil",
+  ind_feat_3_title: "OPTIMIZACIÓN DE AGUA",
+  ind_feat_3_desc: "Tratar, reutilizar y ahorrar agua",
+  ind_feat_4_title: "CONTROL INTELIGENTE",
+  ind_feat_4_desc: "Monitoreo y optimización en tiempo real",
+  ind_feat_5_title: "MENORES EMISIONES",
+  ind_feat_5_desc: "Menor huella de carbono",
+  ind_stat_1_val: "20–50%",
+  ind_stat_1_lbl: "Ahorro de energía",
+  ind_stat_1_desc: "Menores costes operativos",
+  ind_stat_2_val: "30–70%",
+  ind_stat_2_lbl: "Ahorro de agua",
+  ind_stat_2_desc: "Reutilización y reciclaje",
+  ind_stat_3_val: "Hasta 60%",
+  ind_stat_3_lbl: "Recuperación de calor",
+  ind_stat_3_desc: "De procesos industriales",
+  ind_stat_4_val: "Menor CO₂",
+  ind_stat_4_lbl: "Emisiones",
+  ind_stat_4_desc: "Hacia el Cero Neto",
+  ind_stat_5_val: "Mayor",
+  ind_stat_5_lbl: "Competitividad",
+  ind_stat_5_desc: "Sostenible y listo",
+
+  // Industrie Section 2 (Integrated Solutions)
+  ind_sec2_title: "NUESTRAS SOLUCIONES INTEGRADAS PARA LA INDUSTRIA",
+  ind_opt_title: "QUÉ OPTIMIZAMOS",
+  ind_opt_1_title: "Auditoría Energética",
+  ind_opt_1_desc: "Identificar pérdidas y oportunidades",
+  ind_opt_2_title: "Recuperación de Calor",
+  ind_opt_2_desc: "Recuperar y reutilizar calor residual de equipos y procesos",
+  ind_opt_3_title: "Sistemas de Agua Caliente",
+  ind_opt_3_desc: "Bombas de calor de alta eficiencia y almacenamiento térmico",
+  ind_opt_4_title: "Optimización de HVAC",
+  ind_opt_4_desc: "Zonificación inteligente, enfriamiento gratuito y ventilación con recuperación",
+  ind_opt_5_title: "Optimización de Aire Comprimido",
+  ind_opt_5_desc: "Detección de fugas, control de presión y recuperación de calor",
+  ind_opt_6_title: "Gestión del Agua",
+  ind_opt_6_desc: "Tratamiento, reutilización, recuperación de condensados y reciclaje",
+  ind_opt_7_title: "Controles Inteligentes",
+  ind_opt_7_desc: "BMS, sensores IoT y análisis en tiempo real",
+  ind_how_title: "CÓMO FUNCIONA",
+  ind_how_1: "Analizamos sus flujos actuales de energía y agua.",
+  ind_how_2: "Identificamos oportunidades de ahorro.",
+  ind_how_3: "Diseñamos una solución integrada adaptada a sus procesos.",
+  ind_how_4: "Implementamos con tecnología de alta calidad.",
+  ind_how_5: "Monitoreamos y optimizamos continuamente.",
+  ind_ben_title: "BENEFICIOS CLAVE",
+  ind_ben_1: "Menores costos de energía",
+  ind_ben_2: "Uso optimizado del agua",
+  ind_ben_3: "Mayor confiabilidad del proceso y calidad del producto",
+  ind_ben_4: "Mantenimiento reducido",
+  ind_ben_5: "Menores emisiones de CO₂",
+  ind_ben_6: "Retorno de inversión más rápido",
+
+  // Diagram top annotations
+  ind_ann_solar_title: "SOLAR PV",
+  ind_ann_solar_desc: "Generación de energía limpia",
+  ind_ann_hp_title: "BOMBAS DE CALOR",
+  ind_ann_hp_desc: "Calefacción y refrigeración",
+  ind_ann_hr_title: "RECUPERACIÓN DE CALOR",
+  ind_ann_hr_desc: "Recuperar calor residual de procesos",
+  ind_ann_wt_title: "TRATAMIENTO DE AGUA",
+  ind_ann_wt_desc: "Reutilizar y reciclar agua",
+  ind_ann_bms_title: "BMS INTELIGENTE",
+  ind_ann_bms_desc: "Control y monitoreo",
+
+  // Diagram bottom equipment labels
+  ind_eq_1: "Bombas de Calor (Alta Eficiencia)",
+  ind_eq_2: "Tanques Buffer (Almacenamiento Térmico)",
+  ind_eq_3: "Intercambiadores de Calor (Placa)",
+  ind_eq_4: "Colector Hidráulico",
+  ind_eq_5: "Panel de Control & BMS",
+  ind_eq_6: "Bombas & Válvulas (Alta Eficiencia)",
+  ind_eq_7: "Medidores & Sensores (Flujo, Temp, Energía)",
+
+  // Legend
+  ind_leg_1: "Agua Caliente / Calor",
+  ind_leg_2: "Agua Fría",
+  ind_leg_3: "Calor Recuperado",
+  ind_leg_4: "Agua Reciclada",
+  ind_leg_5: "Energía Solar",
+  ind_leg_6: "Datos & Control (BMS)",
+
+  // Key Technologies
+  ind_tech_title: "NUESTRAS TECNOLOGÍAS CLAVE",
+  ind_tech_1_title: "Bombas de Calor",
+  ind_tech_1_desc: "Sistemas aerotérmicos de alta eficiencia para calefacción, refrigeración y agua caliente.",
+  ind_tech_2_title: "Sistemas de Recuperación de Calor",
+  ind_tech_2_desc: "Recuperación de calor de compresores, enfriadores, hornos y procesos industriales.",
+  ind_tech_3_title: "Tratamiento & Reutilización de Agua",
+  ind_tech_3_desc: "Filtración, tratamiento y reciclaje avanzado para agua de proceso y de servicios públicos.",
+  ind_tech_4_title: "Sistemas Solares Fotovoltaicos",
+  ind_tech_4_desc: "Energía solar in situ para facturas de energía más bajas y emisiones reducidas.",
+  ind_tech_5_title: "Smart BMS & IoT",
+  ind_tech_5_desc: "Monitoreo en tiempo real, análisis de datos y optimización inteligente.",
+  ind_tech_6_title: "HVAC de Alta Eficiencia",
+  ind_tech_6_desc: "Ventilación eficiente, recuperación de calor y sistemas de control climático.",
+
+  // Industries We Serve
+  ind_serve_title: "INDUSTRIAS A LAS QUE SERVIMOS",
+  ind_srv_1_title: "Alimentos & Bebidas",
+  ind_srv_1_desc: "Procesos seguros, eficientes e higiénicos.",
+  ind_srv_2_title: "Textil & Confección",
+  ind_srv_2_desc: "Menor consumo de energía y agua.",
+  ind_srv_3_title: "Electrónica",
+  ind_srv_3_desc: "Climatización de precisión y salas limpias.",
+  ind_srv_4_title: "Farmacéutica",
+  ind_srv_4_desc: "Confiable, controlado y conforme.",
+  ind_srv_5_title: "Automotriz",
+  ind_srv_5_desc: "Alto rendimiento y optimización energética.",
+  ind_srv_6_title: "Logística & Almacenamiento en Frío",
+  ind_srv_6_desc: "Refrigeración eficiente y bajos costos operativos.",
+  ind_srv_7_title: "Química",
+  ind_srv_7_desc: "Gestión de energía y agua.",
+  ind_srv_8_title: "Metalúrgica & Maquinaria",
+  ind_srv_8_desc: "Procesos pesados y recuperación de calor.",
 }
 };

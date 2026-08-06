@@ -78,7 +78,7 @@ export const ContactMenu: React.FC<ContactMenuProps> = ({ isOpen }) => {
           <polyline points="22,6 12,13 2,6" />
         </svg>
       ),
-      href: "mailto:info@kuodia.vn",
+      href: "mailto:david@kuodia.vn",
       color:
         "hover:bg-rose-50 text-slate-700 hover:text-rose-600 border-rose-500/10 hover:border-rose-500/25",
     },

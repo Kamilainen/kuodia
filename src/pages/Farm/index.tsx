@@ -21,7 +21,7 @@ import IntegratedArchitecture from "../../components/IntegratedArchitecture";
 import WhyKuodia from "../../components/WhyKuodia";
 import ContactFeatured from "../../components/ContactFeatured";
 
-export const Industries: React.FC = () => {
+export const Farms: React.FC = () => {
   const { t } = useTranslation();
 
   // Scroll to contact section helper
@@ -38,34 +38,34 @@ export const Industries: React.FC = () => {
   };
 
   // Dynamic breadcrumb parser for styling
-  const breadcrumb = t("industries_breadcrumb");
+  const breadcrumb = t("farm_breadcrumb");
   const breadcrumbParts = breadcrumb.split(">");
 
   // Floating cards data
   const statCards = [
     {
       icon: <Droplet className="h-6 w-6 stroke-[1.5]" />,
-      value: t("industries_stat_1_val"),
-      label: t("industries_stat_1_lbl"),
-      desc: t("industries_stat_1_desc"),
+      value: t("farm_stat_1_val"),
+      label: t("farm_stat_1_lbl"),
+      desc: t("farm_stat_1_desc"),
     },
     {
       icon: <Thermometer className="h-6 w-6 stroke-[1.5]" />,
-      value: t("industries_stat_2_val"),
-      label: t("industries_stat_2_lbl"),
-      desc: t("industries_stat_2_desc"),
+      value: t("farm_stat_2_val"),
+      label: t("farm_stat_2_lbl"),
+      desc: t("farm_stat_2_desc"),
     },
     {
       icon: <Zap className="h-6 w-6 stroke-[1.5]" />,
-      value: t("industries_stat_3_val"),
-      label: t("industries_stat_3_lbl"),
-      desc: t("industries_stat_3_desc"),
+      value: t("farm_stat_3_val"),
+      label: t("farm_stat_3_lbl"),
+      desc: t("farm_stat_3_desc"),
     },
     {
       icon: <ShieldCheck className="h-6 w-6 stroke-[1.5]" />,
-      value: t("industries_stat_4_val"),
-      label: t("industries_stat_4_lbl"),
-      desc: t("industries_stat_4_desc"),
+      value: t("farm_stat_4_val"),
+      label: t("farm_stat_4_lbl"),
+      desc: t("farm_stat_4_desc"),
     },
   ];
 
@@ -112,10 +112,10 @@ export const Industries: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.1 }}
             >
               <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-[58px] tracking-tight leading-[1.08] text-white">
-                {t("industries_title_1")} <br />
+                {t("farm_title_1")} <br />
                 {(() => {
-                  const title2 = t("industries_title_2");
-                  const greenText = t("industries_title_green");
+                  const title2 = t("farm_title_2");
+                  const greenText = t("farm_title_green");
                   if (title2.includes(greenText)) {
                     const parts = title2.split(greenText);
                     return (
@@ -138,9 +138,9 @@ export const Industries: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 space-y-2 max-w-2xl text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed font-sans font-medium"
             >
-              <p>{t("industries_subtitle_1")}</p>
+              <p>{t("farm_subtitle_1")}</p>
               <p className="text-slate-400 font-semibold">
-                {t("industries_subtitle_2")}
+                {t("farm_subtitle_2")}
               </p>
             </motion.div>
 
@@ -157,7 +157,7 @@ export const Industries: React.FC = () => {
                 size="lg"
                 className="group flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green-dark border-brand-green hover:border-brand-green-dark shadow-lg shadow-brand-green/20"
               >
-                <span>{t("industries_cta_study")}</span>
+                <span>{t("farm_cta_study")}</span>
                 <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Button>
 
@@ -167,7 +167,7 @@ export const Industries: React.FC = () => {
                 size="lg"
                 className="group flex items-center justify-center space-x-2 border-white/60 hover:border-white text-white hover:bg-white/10 shadow-sm"
               >
-                <span>{t("industries_cta_explore")}</span>
+                <span>{t("farm_cta_explore")}</span>
                 <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
               </Button>
             </motion.div>
@@ -271,4 +271,4 @@ export const Industries: React.FC = () => {
   );
 };
 
-export default Industries;
+export default Farms;

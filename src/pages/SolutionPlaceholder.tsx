@@ -122,7 +122,7 @@ export const SolutionPlaceholder: React.FC = () => {
                   size="lg"
                   className="group bg-brand-green hover:bg-brand-green-light active:bg-brand-green text-white font-display font-bold space-x-2 rounded-full shadow-lg shadow-brand-green/20"
                 >
-                  <span>{t("industries_cta_study" as any) || "REQUEST FEASIBILITY STUDY"}</span>
+                  <span>{t("farm_cta_study" as any) || "REQUEST FEASIBILITY STUDY"}</span>
                   <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>

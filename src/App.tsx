@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
-import Industries from './pages/Industries';
+import Farms from './pages/Farm';
+import Industrie from './pages/Industrie';
 import SolutionPlaceholder from './pages/SolutionPlaceholder';
 import About from './pages/About';
 
@@ -38,7 +39,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/solutions/farm" element={<Industries />} />
+            <Route path="/solutions/farm" element={<Farms />} />
+            <Route path="/solutions/industrie" element={<Industrie />} />
             <Route path="/solutions/:category" element={<SolutionPlaceholder />} />
           </Routes>
         </MainLayout>
