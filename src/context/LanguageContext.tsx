@@ -2,25 +2,37 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { translations } from '../data/translations';
 import type { TranslationType } from '../data/translations';
 
-type Language = 'vi' | 'en' | 'es';
+export type Language = 'vi' | 'en' | 'es';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: keyof TranslationType) => string;
+  /** Trả về '' nếu vi (no prefix), '/en' hoặc '/es' nếu khác */
+  langPrefix: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem('language');
-    return (saved === 'vi' || saved === 'en' || saved === 'es') ? saved : 'vi';
-  });
+interface LanguageProviderProps {
+  children: React.ReactNode;
+  /** Lang được truyền từ URL route (App.tsx). Mặc định 'vi'. */
+  initialLang?: Language;
+}
+
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+  children,
+  initialLang = 'vi',
+}) => {
+  const [language, setLanguageState] = useState<Language>(initialLang);
+
+  // Sync khi URL thay đổi (ví dụ navigate giữa /en và /)
+  useEffect(() => {
+    setLanguageState(initialLang);
+  }, [initialLang]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('language', lang);
   };
 
   const t = (key: keyof TranslationType): string => {
@@ -28,12 +40,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   useEffect(() => {
-    // Sync html lang attribute
     document.documentElement.lang = language;
   }, [language]);
 
+  const langPrefix = language === 'vi' ? '' : `/${language}`;
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, langPrefix }}>
       {children}
     </LanguageContext.Provider>
   );

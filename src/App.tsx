@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
+import type { Language } from './context/LanguageContext';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Farms from './pages/Farm';
@@ -30,22 +31,52 @@ const ScrollToHash: React.FC = () => {
   return null;
 };
 
+// Wrapper component: đọc :lang param từ URL, inject vào LanguageProvider
+const LangRouter: React.FC<{ lang: Language }> = ({ lang }) => {
+  return (
+    <LanguageProvider initialLang={lang}>
+      <ScrollToHash />
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
+    </LanguageProvider>
+  );
+};
+
+
+
 function App() {
   return (
-    <LanguageProvider>
-      <BrowserRouter>
-        <ScrollToHash />
-        <MainLayout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/solutions/farm" element={<Farms />} />
-            <Route path="/solutions/industrie" element={<Industrie />} />
-            <Route path="/solutions/:category" element={<SolutionPlaceholder />} />
-          </Routes>
-        </MainLayout>
-      </BrowserRouter>
-    </LanguageProvider>
+    <BrowserRouter>
+      <Routes>
+        {/* Tiếng Việt — no prefix (mặc định) */}
+        <Route path="/*" element={<LangRouter lang="vi" />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="solutions/farm" element={<Farms />} />
+          <Route path="solutions/industrie" element={<Industrie />} />
+          <Route path="solutions/:category" element={<SolutionPlaceholder />} />
+        </Route>
+
+        {/* English — /en prefix */}
+        <Route path="/en/*" element={<LangRouter lang="en" />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="solutions/farm" element={<Farms />} />
+          <Route path="solutions/industrie" element={<Industrie />} />
+          <Route path="solutions/:category" element={<SolutionPlaceholder />} />
+        </Route>
+
+        {/* Español — /es prefix */}
+        <Route path="/es/*" element={<LangRouter lang="es" />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="solutions/farm" element={<Farms />} />
+          <Route path="solutions/industrie" element={<Industrie />} />
+          <Route path="solutions/:category" element={<SolutionPlaceholder />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

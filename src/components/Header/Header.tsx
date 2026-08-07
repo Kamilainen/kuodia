@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../context/LanguageContext';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import logoImg from '../../assets/logo.png';
+import type { Language } from '../../context/LanguageContext';
 
 export const Header: React.FC = () => {
-  const { t, language, setLanguage } = useTranslation();
+  const { t, language, langPrefix } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
 
-  const isDarkPage = location.pathname.toLowerCase().startsWith('/solutions');
+  const isDarkPage = location.pathname.toLowerCase().includes('/solutions');
 
   // Monitor scroll for header styling changes
   useEffect(() => {
@@ -28,27 +30,37 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLanguage = (lang: 'vi' | 'en' | 'es') => {
-    setLanguage(lang);
+  const toggleLanguage = (lang: Language) => {
+    // Tính path hiện tại bỏ prefix cũ, thêm prefix mới
+    const currentPath = location.pathname;
+    let pathWithoutLang = currentPath;
+    if (currentPath.startsWith('/en')) {
+      pathWithoutLang = currentPath.slice(3) || '/';
+    } else if (currentPath.startsWith('/es')) {
+      pathWithoutLang = currentPath.slice(3) || '/';
+    }
+    const newPrefix = lang === 'vi' ? '' : `/${lang}`;
+    const newPath = newPrefix + (pathWithoutLang.startsWith('/') ? pathWithoutLang : '/' + pathWithoutLang);
+    navigate(newPath + location.search + location.hash);
     setIsLangDropdownOpen(false);
   };
 
   const navItems = [
-    { labelKey: 'nav_home' as const, href: '/' },
-    { labelKey: 'nav_about' as const, href: '/about' },
+    { labelKey: 'nav_home' as const, href: `${langPrefix}/` },
+    { labelKey: 'nav_about' as const, href: `${langPrefix}/about` },
     {
       labelKey: 'nav_solutions' as const,
       href: '#solutions',
       dropdownItems: [
-        { labelKey: 'sol_hotel' as const, href: '/solutions/hotel' },
-        { labelKey: 'sol_farm' as const, href: '/solutions/farm' },
-        { labelKey: 'sol_industrie' as const, href: '/solutions/industrie' },
-        { labelKey: 'sol_residential' as const, href: '/solutions/residential' },
+        { labelKey: 'sol_hotel' as const, href: `${langPrefix}/solutions/hotel` },
+        { labelKey: 'sol_farm' as const, href: `${langPrefix}/solutions/farm` },
+        { labelKey: 'sol_industrie' as const, href: `${langPrefix}/solutions/industrie` },
+        { labelKey: 'sol_residential' as const, href: `${langPrefix}/solutions/residential` },
       ]
     },
-    { labelKey: 'nav_projects' as const, href: '/#projects' },
-    { labelKey: 'nav_blog' as const, href: '/#blog' },
-    { labelKey: 'nav_contact' as const, href: '/#contact' }
+    { labelKey: 'nav_projects' as const, href: `${langPrefix}/#projects` },
+    { labelKey: 'nav_blog' as const, href: `${langPrefix}/#blog` },
+    { labelKey: 'nav_contact' as const, href: `${langPrefix}/#contact` }
   ];
 
   return (
@@ -62,7 +74,7 @@ export const Header: React.FC = () => {
       >
       <div className="max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group">
+        <Link to={`${langPrefix}/`} className="flex items-center group">
           <img
             src={logoImg}
             alt="Kuodia Renovables Logo"
@@ -214,7 +226,7 @@ export const Header: React.FC = () => {
         <div className="flex xl:hidden items-center space-x-3">
           {/* Mobile Lang Button */}
           <button
-            onClick={() => setLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
+            onClick={() => toggleLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
             className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 cursor-pointer"
           >
             <Globe className="h-3.5 w-3.5 text-slate-500" />
@@ -248,7 +260,7 @@ export const Header: React.FC = () => {
             {/* Language Selector + Close button */}
             <div className="flex items-center space-x-3">
               <button
-                onClick={() => setLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
+                onClick={() => toggleLanguage(language === 'vi' ? 'en' : language === 'en' ? 'es' : 'vi')}
                 className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 cursor-pointer"
               >
                 <Globe className="h-3.5 w-3.5 text-slate-500" />

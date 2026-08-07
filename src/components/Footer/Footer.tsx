@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../../context/LanguageContext';
 import { Mail, Phone, Globe } from 'lucide-react';
 import logoFooterImg from '../../assets/logo-footer.png';
 
 export const Footer: React.FC = () => {
-  const { t, language } = useTranslation();
+  const { t, language, langPrefix } = useTranslation();
 
   const socialLinks = [
     {
@@ -126,9 +127,9 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs">
               {aboutLinks.map((item, idx) => (
                 <li key={idx}>
-                  <a href="/about" className="hover:text-white transition-colors">
+                  <Link to={`${langPrefix}/about`} className="hover:text-white transition-colors">
                     {language === 'vi' ? item.labelVi : language === 'es' ? item.labelEs : item.labelEn}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
