@@ -174,7 +174,7 @@ export const Industrie: React.FC = () => {
             alt="Smarter Industry, Lower Costs Background"
             className="w-full h-full object-cover object-[72%_center] sm:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/75 to-slate-950/60 lg:bg-gradient-to-r lg:from-slate-950/90 lg:via-slate-950/75 lg:to-slate-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/50 to-slate-950/20 lg:bg-gradient-to-r lg:from-slate-950/70 lg:via-slate-950/50 lg:to-slate-900/10" />
         </div>
 
         {/* Main Hero Content */}
