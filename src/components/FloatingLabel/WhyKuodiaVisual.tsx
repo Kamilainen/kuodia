@@ -14,6 +14,7 @@ interface HotspotProps {
   isActive: boolean;
   onHover: (active: boolean) => void;
   tooltipDirection?: "up" | "down";
+  tooltipAlign?: "left" | "center" | "right";
 }
 
 const Hotspot: React.FC<HotspotProps> = ({
@@ -26,7 +27,32 @@ const Hotspot: React.FC<HotspotProps> = ({
   isActive,
   onHover,
   tooltipDirection = "up",
+  tooltipAlign = "center",
 }) => {
+  const getAlignClass = () => {
+    switch (tooltipAlign) {
+      case "left":
+        return "left-0";
+      case "right":
+        return "right-0";
+      case "center":
+      default:
+        return "left-1/2 -translate-x-1/2";
+    }
+  };
+
+  const getArrowAlignClass = () => {
+    switch (tooltipAlign) {
+      case "left":
+        return "left-4";
+      case "right":
+        return "right-4";
+      case "center":
+      default:
+        return "left-1/2 -translate-x-1/2";
+    }
+  };
+
   return (
     <div
       id={`hotspot-${id}`}
@@ -36,9 +62,9 @@ const Hotspot: React.FC<HotspotProps> = ({
       onMouseLeave={() => onHover(false)}
     >
       {/* Pulse Dot */}
-      <div className="relative flex items-center justify-center cursor-pointer">
+      <div className="relative flex items-center justify-center cursor-pointer p-1">
         <span className="animate-ping absolute inline-flex h-5 w-5 rounded-full bg-brand-green opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-green border-2 border-white shadow-md"></span>
+        <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-brand-green border-2 border-white shadow-md"></span>
       </div>
 
       {/* Hover Card */}
@@ -57,17 +83,26 @@ const Hotspot: React.FC<HotspotProps> = ({
               y: tooltipDirection === "down" ? -10 : 10,
             }}
             transition={{ duration: 0.2 }}
-            className={`absolute left-1/2 -translate-x-1/2 w-64 bg-slate-900/95 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-white/10 text-left ${
-              tooltipDirection === "down" ? "top-6" : "bottom-6"
+            className={`absolute w-60 sm:w-68 max-w-[calc(100vw-2rem)] bg-slate-900/95 backdrop-blur-md text-white p-3.5 sm:p-4 rounded-xl shadow-2xl border border-white/15 text-left z-30 ${getAlignClass()} ${
+              tooltipDirection === "down" ? "top-7" : "bottom-7"
             }`}
           >
+            {/* Arrow Pointer */}
+            <div
+              className={`absolute w-2.5 h-2.5 bg-slate-900/95 border-white/15 rotate-45 ${getArrowAlignClass()} ${
+                tooltipDirection === "down"
+                  ? "-top-1.5 border-t border-l"
+                  : "-bottom-1.5 border-b border-r"
+              }`}
+            />
+
             <div className="flex items-center space-x-2 mb-1.5 text-brand-green-light">
               {icon}
               <h4 className="font-display font-bold text-xs uppercase tracking-wider">
                 {title}
               </h4>
             </div>
-            <p className="text-[10px] text-slate-300 leading-relaxed">
+            <p className="text-[11px] text-slate-300 leading-relaxed font-normal">
               {description}
             </p>
           </motion.div>
@@ -96,6 +131,8 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
       title: t("hotspot_solar"),
       description: t("hotspot_solar_desc"),
       icon: <Sun className="h-4 w-4" />,
+      direction: "down" as const,
+      align: "left" as const,
     },
     {
       id: "recovery",
@@ -104,6 +141,8 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
       title: t("hotspot_recovery"),
       description: t("hotspot_recovery_desc"),
       icon: <RefreshCw className="h-4 w-4" />,
+      direction: "up" as const,
+      align: "left" as const,
     },
     {
       id: "pump",
@@ -112,6 +151,8 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
       title: t("hotspot_pump"),
       description: t("hotspot_pump_desc"),
       icon: <Fan className="h-4 w-4" />,
+      direction: "up" as const,
+      align: "right" as const,
     },
     {
       id: "mgmt",
@@ -120,6 +161,8 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
       title: t("hotspot_mgmt"),
       description: t("hotspot_mgmt_desc"),
       icon: <Cpu className="h-4 w-4" />,
+      direction: "up" as const,
+      align: "right" as const,
     },
   ];
 
@@ -153,7 +196,8 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
               description={spot.description}
               icon={spot.icon}
               isActive={activeHotspot === spot.id}
-              tooltipDirection={spot.id === "solar" ? "down" : "up"}
+              tooltipDirection={spot.direction}
+              tooltipAlign={spot.align}
               onHover={(active) =>
                 setActiveHotspot(active ? spot.id : null)
               }
@@ -161,27 +205,25 @@ export const WhyKuodiaVisual: React.FC<WhyKuodiaVisualProps> = ({
           ))}
 
           {/* Overlay labels (matching design static texts) */}
-          <div className="absolute top-4 right-4 z-10 flex flex-col items-end space-y-1.5 pointer-events-none hidden sm:flex">
-            <span
-              className={`px-2 py-1 text-[9px] font-bold text-white rounded shadow-sm ${activeHotspot === "solar" ? "bg-brand-green" : "bg-brand-navy/70"}`}
-            >
-              {t("hotspot_solar")}
-            </span>
-            <span
-              className={`px-2 py-1 text-[9px] font-bold text-white rounded shadow-sm ${activeHotspot === "recovery" ? "bg-brand-green" : "bg-brand-navy/70"}`}
-            >
-              {t("hotspot_recovery")}
-            </span>
-            <span
-              className={`px-2 py-1 text-[9px] font-bold text-white rounded shadow-sm ${activeHotspot === "pump" ? "bg-brand-green" : "bg-brand-navy/70"}`}
-            >
-              {t("hotspot_pump")}
-            </span>
-            <span
-              className={`px-2 py-1 text-[9px] font-bold text-white rounded shadow-sm ${activeHotspot === "mgmt" ? "bg-brand-green" : "bg-brand-navy/70"}`}
-            >
-              {t("hotspot_mgmt")}
-            </span>
+          <div className="absolute top-4 right-4 z-10 flex flex-col items-end space-y-1.5 hidden sm:flex">
+            {hotspots.map((spot) => (
+              <button
+                key={`label-${spot.id}`}
+                type="button"
+                onMouseEnter={() => setActiveHotspot(spot.id)}
+                onMouseLeave={() => setActiveHotspot(null)}
+                onClick={() =>
+                  setActiveHotspot(activeHotspot === spot.id ? null : spot.id)
+                }
+                className={`px-2.5 py-1 text-[9px] font-bold text-white rounded shadow-sm transition-all cursor-pointer ${
+                  activeHotspot === spot.id
+                    ? "bg-brand-green scale-105"
+                    : "bg-brand-navy/70 hover:bg-brand-navy"
+                }`}
+              >
+                {spot.title}
+              </button>
+            ))}
           </div>
         </div>
 
