@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../../context/LanguageContext";
 import Container from "../../../components/Container";
 import solarPvImg from "../../../assets/solarpv.jpg";
-import heatpumpImg from "../../../assets/heatpump.png";
-import electronicCabinImg from "../../../assets/electronic_cabin.png";
-import heatRecoveryImg from "../../../assets/heat_recovery.png";
+import aerothermal from "../../../assets/aerothermal.png";
+import lithium from "../../../assets/lithiumBa.png";
+import plateImg from "../../../assets/plateHeat.png";
 import bmsImg from "../../../assets/bms.png";
-import solarSystemImg from "../../../assets/solarsystem.png";
+import totalConfort from "../../../assets/totalComfort.png";
 
 export const ResidentialHowItWorks: React.FC = () => {
   const { t } = useTranslation();
@@ -21,19 +21,19 @@ export const ResidentialHowItWorks: React.FC = () => {
     },
     {
       num: 2,
-      image: heatpumpImg,
+      image: aerothermal,
       title: t("res_hiw_2_title"),
       bullets: [t("res_hiw_2_b1"), t("res_hiw_2_b2"), t("res_hiw_2_b3")],
     },
     {
       num: 3,
-      image: electronicCabinImg,
+      image: lithium,
       title: t("res_hiw_3_title"),
       bullets: [t("res_hiw_3_b1"), t("res_hiw_3_b2"), t("res_hiw_3_b3")],
     },
     {
       num: 4,
-      image: heatRecoveryImg,
+      image: plateImg,
       title: t("res_hiw_4_title"),
       bullets: [t("res_hiw_4_b1"), t("res_hiw_4_b2"), t("res_hiw_4_b3")],
     },
@@ -45,7 +45,7 @@ export const ResidentialHowItWorks: React.FC = () => {
     },
     {
       num: 6,
-      image: solarSystemImg,
+      image: totalConfort,
       title: t("res_hiw_6_title"),
       bullets: [t("res_hiw_6_b1"), t("res_hiw_6_b2"), t("res_hiw_6_b3")],
     },
