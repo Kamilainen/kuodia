@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "../../../context/LanguageContext";
 import Container from "../../../components/Container";
-import kubiImg from "../../../assets/kubi.png";
 import {
   Home as HomeIcon,
   MessageSquare,
