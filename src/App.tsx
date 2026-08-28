@@ -8,6 +8,7 @@ import Farms from './pages/Farm';
 import Farm2 from './pages/Farm2';
 import Industrie from './pages/Industrie';
 import Hotel from './pages/Hotel';
+import Residential from './pages/Residential';
 import SolutionPlaceholder from './pages/SolutionPlaceholder';
 import About from './pages/About';
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="solutions/farm" element={<Farms />} />
           <Route path="solutions/farm2" element={<Farm2 />} />
           <Route path="solutions/hotel" element={<Hotel />} />
+          <Route path="solutions/residential" element={<Residential />} />
           <Route path="solutions/industrie" element={<Industrie />} />
           <Route path="solutions/:category" element={<SolutionPlaceholder />} />
         </Route>
@@ -69,6 +71,7 @@ function App() {
           <Route path="solutions/farm" element={<Farms />} />
           <Route path="solutions/farm2" element={<Farm2 />} />
           <Route path="solutions/hotel" element={<Hotel />} />
+          <Route path="solutions/residential" element={<Residential />} />
           <Route path="solutions/industrie" element={<Industrie />} />
           <Route path="solutions/:category" element={<SolutionPlaceholder />} />
         </Route>
@@ -80,6 +83,7 @@ function App() {
           <Route path="solutions/farm" element={<Farms />} />
           <Route path="solutions/farm2" element={<Farm2 />} />
           <Route path="solutions/hotel" element={<Hotel />} />
+          <Route path="solutions/residential" element={<Residential />} />
           <Route path="solutions/industrie" element={<Industrie />} />
           <Route path="solutions/:category" element={<SolutionPlaceholder />} />
         </Route>

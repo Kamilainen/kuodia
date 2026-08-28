@@ -235,6 +235,72 @@ export interface TranslationType {
   hotel_banner_btn_eval: string;
   hotel_banner_btn_expert: string;
 
+  // Residential Page Section
+  res_hero_tag: string;
+  res_hero_title_1: string;
+  res_hero_title_2: string;
+  res_hero_desc: string;
+  res_hero_cta_consult: string;
+  res_hero_cta_brochure: string;
+
+  res_hero_badge_1_val: string;
+  res_hero_badge_1_desc: string;
+  res_hero_badge_2_val: string;
+  res_hero_badge_2_desc: string;
+  res_hero_badge_3_val: string;
+  res_hero_badge_3_desc: string;
+  res_hero_badge_4_val: string;
+  res_hero_badge_4_desc: string;
+  res_hero_badge_5_val: string;
+  res_hero_badge_5_desc: string;
+
+  // Residential How It Works Section
+  res_hiw_title: string;
+  res_hiw_subtitle: string;
+  res_hiw_1_title: string;
+  res_hiw_1_b1: string;
+  res_hiw_1_b2: string;
+  res_hiw_1_b3: string;
+  res_hiw_2_title: string;
+  res_hiw_2_b1: string;
+  res_hiw_2_b2: string;
+  res_hiw_2_b3: string;
+  res_hiw_3_title: string;
+  res_hiw_3_b1: string;
+  res_hiw_3_b2: string;
+  res_hiw_3_b3: string;
+  res_hiw_4_title: string;
+  res_hiw_4_b1: string;
+  res_hiw_4_b2: string;
+  res_hiw_4_b3: string;
+  res_hiw_5_title: string;
+  res_hiw_5_b1: string;
+  res_hiw_5_b2: string;
+  res_hiw_5_b3: string;
+  res_hiw_6_title: string;
+  res_hiw_6_b1: string;
+  res_hiw_6_b2: string;
+  res_hiw_6_b3: string;
+
+  // Residential Benefits Section
+  res_ben_tag: string;
+  res_ben_1_title: string;
+  res_ben_1_desc: string;
+  res_ben_2_title: string;
+  res_ben_2_desc: string;
+  res_ben_3_title: string;
+  res_ben_3_desc: string;
+  res_ben_4_title: string;
+  res_ben_4_desc: string;
+  res_ben_5_title: string;
+  res_ben_5_desc: string;
+
+  // Residential Banner Section
+  res_banner_title: string;
+  res_banner_desc: string;
+  res_banner_btn_eval: string;
+  res_banner_btn_expert: string;
+
   // Projects
   projects_title: string;
   projects_subtitle: string;
@@ -1170,6 +1236,72 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     hotel_banner_desc: "Tại Kuodia, chúng tôi kết hợp công nghệ, tính bền vững và kinh nghiệm để kiến tạo các công trình thông minh, lợi nhuận cao và thân thiện với hành tinh.",
     hotel_banner_btn_eval: "ĐÁNH GIÁ MIỄN PHÍ",
     hotel_banner_btn_expert: "NÓI CHUYỆN VỚI CHUYÊN GIA",
+
+    // Residential Page Section
+    res_hero_tag: "GIẢI PHÁP CHO NGÔI NHÀ",
+    res_hero_title_1: "Ngôi nhà thông minh hơn.",
+    res_hero_title_2: "Năng lượng sạch, cuộc sống tốt hơn.",
+    res_hero_desc: "Hệ thống toàn diện của Kuodia cho nhà ở dân dụng kết hợp năng lượng mặt trời, bơm nhiệt aerothermal, lưu trữ và quản lý thông minh giúp bạn tận hưởng sự thoải mái, tiết kiệm và bền vững.",
+    res_hero_cta_consult: "YÊU CẦU TƯ VẤN",
+    res_hero_cta_brochure: "TẢI BROCHURE",
+
+    res_hero_badge_1_val: "TIẾT KIỆM 40–60%",
+    res_hero_badge_1_desc: "năng lượng tiêu thụ",
+    res_hero_badge_2_val: "THOẢI MÁI",
+    res_hero_badge_2_desc: "quanh năm",
+    res_hero_badge_3_val: "GIA TĂNG",
+    res_hero_badge_3_desc: "giá trị bất động sản",
+    res_hero_badge_4_val: "GIẢM THIỂU",
+    res_hero_badge_4_desc: "dấu chân carbon",
+    res_hero_badge_5_val: "BẢO VỆ",
+    res_hero_badge_5_desc: "khoản đầu tư của bạn",
+
+    // Residential How It Works Section
+    res_hiw_title: "CÁCH THỨC HOẠT ĐỘNG CỦA NGÔI NHÀ THÔNG MINH",
+    res_hiw_subtitle: "Công nghệ tiên tiến, hiệu suất thực tế, tất cả trong cùng một hệ thống.",
+    res_hiw_1_title: "TẤM PIN MẶT TRỜI",
+    res_hiw_1_b1: "Phát điện sạch",
+    res_hiw_1_b2: "Cấp điện cho nhà & pin",
+    res_hiw_1_b3: "Đẩy điện dư lên lưới (tùy chọn)",
+    res_hiw_2_title: "BƠM NHIỆT AEROTERMIA",
+    res_hiw_2_b1: "Điều hòa hiệu suất cao",
+    res_hiw_2_b2: "Nước nóng sinh hoạt",
+    res_hiw_2_b3: "Phát thải CO2 cực thấp",
+    res_hiw_3_title: "PIN LƯU TRỮ LITHIUM",
+    res_hiw_3_b1: "Lưu trữ năng lượng mặt trời",
+    res_hiw_3_b2: "Cấp điện cho gia đình",
+    res_hiw_3_b3: "Tự chủ năng lượng cao",
+    res_hiw_4_title: "TRAO ĐỔI NHIỆT BỂ BỘI",
+    res_hiw_4_b1: "Sưởi ấm nước bể bơi",
+    res_hiw_4_b2: "Kết hợp bơm nhiệt",
+    res_hiw_4_b3: "Tiết kiệm năng lượng",
+    res_hiw_5_title: "QUẢN LÝ THÔNG MINH",
+    res_hiw_5_b1: "Giám sát thời gian thực",
+    res_hiw_5_b2: "Tối ưu hóa tiêu thụ",
+    res_hiw_5_b3: "Điều khiển qua điện thoại",
+    res_hiw_6_title: "THOẢI MÁI TOÀN DIỆN",
+    res_hiw_6_b1: "Khí hậu mát mẻ quanh năm",
+    res_hiw_6_b2: "Nước nóng dồi dào",
+    res_hiw_6_b3: "Năng lượng sạch & ổn định",
+
+    // Residential Benefits Section
+    res_ben_tag: "LỢI ÍCH CHÍNH",
+    res_ben_1_title: "TIẾT KIỆM",
+    res_ben_1_desc: "hóa đơn hàng tháng",
+    res_ben_2_title: "NĂNG LƯỢNG",
+    res_ben_2_desc: "sạch & tái tạo",
+    res_ben_3_title: "TỐI ĐA",
+    res_ben_3_desc: "sự thoải mái",
+    res_ben_4_title: "GIA TĂNG",
+    res_ben_4_desc: "giá trị bất động sản",
+    res_ben_5_title: "BẢO VỆ",
+    res_ben_5_desc: "môi trường sống",
+
+    // Residential Banner Section
+    res_banner_title: "Ngôi nhà của bạn, hiệu quả hơn cùng Kuodia",
+    res_banner_desc: "Chúng tôi thiết kế và lắp đặt các giải pháp năng lượng toàn diện, tùy chỉnh cho từng ngôi nhà để bạn tận hưởng không gian sống thông minh, bền vững và tiết kiệm.",
+    res_banner_btn_eval: "YÊU CẦU ĐÁNH GIÁ MIỄN PHÍ",
+    res_banner_btn_expert: "NÓI CHUYỆN VỚI CHUYÊN GIA",
   },
   en: {
     nav_home: "HOME",
@@ -1516,6 +1648,72 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     hotel_banner_desc: "At Kuodia, we combine technology, sustainability, and expertise to create smart, profitable, and eco-friendly buildings.",
     hotel_banner_btn_eval: "FREE EVALUATION",
     hotel_banner_btn_expert: "TALK TO AN EXPERT",
+
+    // Residential Page Section
+    res_hero_tag: "RESIDENTIAL SOLUTIONS",
+    res_hero_title_1: "Smarter homes.",
+    res_hero_title_2: "Clean energy, better life.",
+    res_hero_desc: "Kuodia's comprehensive system for residential homes combines solar energy, aerothermal heat pumps, battery storage, and smart management so you can enjoy comfort, savings, and sustainability.",
+    res_hero_cta_consult: "REQUEST CONSULTATION",
+    res_hero_cta_brochure: "DOWNLOAD BROCHURE",
+
+    res_hero_badge_1_val: "SAVE 40–60%",
+    res_hero_badge_1_desc: "in energy consumption",
+    res_hero_badge_2_val: "COMFORT",
+    res_hero_badge_2_desc: "all year round",
+    res_hero_badge_3_val: "INCREASE",
+    res_hero_badge_3_desc: "property value",
+    res_hero_badge_4_val: "REDUCE",
+    res_hero_badge_4_desc: "carbon footprint",
+    res_hero_badge_5_val: "PROTECT",
+    res_hero_badge_5_desc: "your investment",
+
+    // Residential How It Works Section
+    res_hiw_title: "HOW YOUR SMART HOME WORKS",
+    res_hiw_subtitle: "Advanced technology, real efficiency, all in one system.",
+    res_hiw_1_title: "SOLAR PANELS",
+    res_hiw_1_b1: "Generate clean electricity",
+    res_hiw_1_b2: "Power your home & batteries",
+    res_hiw_1_b3: "Feed surplus to grid (optional)",
+    res_hiw_2_title: "AEROTHERMAL HEAT PUMPS",
+    res_hiw_2_b1: "Efficient climate control",
+    res_hiw_2_b2: "Domestic hot water",
+    res_hiw_2_b3: "Low CO2 emissions",
+    res_hiw_3_title: "LITHIUM BATTERIES",
+    res_hiw_3_b1: "Store solar energy",
+    res_hiw_3_b2: "Power your home",
+    res_hiw_3_b3: "Greater independence",
+    res_hiw_4_title: "PLATE HEAT EXCHANGER (POOL)",
+    res_hiw_4_b1: "Heat pool water",
+    res_hiw_4_b2: "With aerothermal energy",
+    res_hiw_4_b3: "Energy savings",
+    res_hiw_5_title: "SMART MANAGEMENT",
+    res_hiw_5_b1: "Real-time monitoring",
+    res_hiw_5_b2: "Optimize consumption",
+    res_hiw_5_b3: "Control from mobile",
+    res_hiw_6_title: "TOTAL COMFORT",
+    res_hiw_6_b1: "Climate control",
+    res_hiw_6_b2: "Hot water",
+    res_hiw_6_b3: "Clean & stable energy",
+
+    // Residential Benefits Section
+    res_ben_tag: "MAIN BENEFITS",
+    res_ben_1_title: "SAVINGS",
+    res_ben_1_desc: "on your energy bills",
+    res_ben_2_title: "ENERGY",
+    res_ben_2_desc: "clean & renewable",
+    res_ben_3_title: "MAXIMUM",
+    res_ben_3_desc: "comfort",
+    res_ben_4_title: "INCREASE",
+    res_ben_4_desc: "your property value",
+    res_ben_5_title: "PROTECT",
+    res_ben_5_desc: "the environment",
+
+    // Residential Banner Section
+    res_banner_title: "Your home, more efficient with Kuodia",
+    res_banner_desc: "We design and install complete energy solutions adapted to each home so you can enjoy a smarter, sustainable and efficient living space.",
+    res_banner_btn_eval: "REQUEST FREE EVALUATION",
+    res_banner_btn_expert: "TALK TO AN EXPERT",
 
     // Feature Cards
     card_1_title: "AQUAPONICS SYSTEMS",
@@ -2293,5 +2491,71 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   hotel_sys_8_title: "Tratamiento aguas grises",
   hotel_sys_8_desc: "Reutiliza el agua para WC y riego, reduciendo el consumo.",
   hotel_sys_8_bullets: "Filtrado y desinfección, Reutilización para WC y riego, Ahorro de agua hasta 40%",
+
+  // Residential Page Section
+  res_hero_tag: "SOLUCIONES RESIDENCIALES",
+  res_hero_title_1: "Hogares más inteligentes.",
+  res_hero_title_2: "Energía limpia, vida mejor.",
+  res_hero_desc: "El sistema integral de Kuodia para viviendas residenciales combina energía solar, aerotermia, almacenamiento y gestión inteligente para que disfrutes de confort, ahorro y sostenibilidad.",
+  res_hero_cta_consult: "SOLICITAR ASESORÍA",
+  res_hero_cta_brochure: "DESCARGAR BROCHURE",
+
+  res_hero_badge_1_val: "AHORRA 40–60%",
+  res_hero_badge_1_desc: "en consumo energético",
+  res_hero_badge_2_val: "CONFORT",
+  res_hero_badge_2_desc: "todo el año",
+  res_hero_badge_3_val: "AUMENTA",
+  res_hero_badge_3_desc: "el valor de tu propiedad",
+  res_hero_badge_4_val: "REDUCE",
+  res_hero_badge_4_desc: "tu huella de carbono",
+  res_hero_badge_5_val: "PROTEGE",
+  res_hero_badge_5_desc: "tu inversión",
+
+  // Residential How It Works Section
+  res_hiw_title: "ASÍ FUNCIONA TU HOGAR INTELIGENTE",
+  res_hiw_subtitle: "Tecnología avanzada, eficiencia real, todo en un mismo sistema.",
+  res_hiw_1_title: "PANELES SOLARES",
+  res_hiw_1_b1: "Generan electricidad limpia",
+  res_hiw_1_b2: "Alimentan tu hogar y baterías",
+  res_hiw_1_b3: "Excedentes a la red (opcional)",
+  res_hiw_2_title: "AEROTERMIA",
+  res_hiw_2_b1: "Climatización eficiente",
+  res_hiw_2_b2: "Agua caliente sanitaria",
+  res_hiw_2_b3: "Baja emisión de CO2",
+  res_hiw_3_title: "BATERÍAS",
+  res_hiw_3_b1: "Almacenan energía solar",
+  res_hiw_3_b2: "Alimentan tu hogar",
+  res_hiw_3_b3: "Mayor independencia",
+  res_hiw_4_title: "INTERCAMBIADOR DE PLACAS (PISCINA)",
+  res_hiw_4_b1: "Calienta el agua de la piscina",
+  res_hiw_4_b2: "Con la aerotermia",
+  res_hiw_4_b3: "Ahorro energético",
+  res_hiw_5_title: "GESTIÓN INTELIGENTE",
+  res_hiw_5_b1: "Monitorea en tiempo real",
+  res_hiw_5_b2: "Optimiza el consumo",
+  res_hiw_5_b3: "Control desde tu móvil",
+  res_hiw_6_title: "CONFORT TOTAL",
+  res_hiw_6_b1: "Climatización",
+  res_hiw_6_b2: "Agua caliente",
+  res_hiw_6_b3: "Energía limpia y estable",
+
+  // Residential Benefits Section
+  res_ben_tag: "BENEFICIOS PRINCIPALES",
+  res_ben_1_title: "AHORRO",
+  res_ben_1_desc: "en tus facturas",
+  res_ben_2_title: "ENERGÍA",
+  res_ben_2_desc: "limpia y renovable",
+  res_ben_3_title: "MAYOR",
+  res_ben_3_desc: "confort",
+  res_ben_4_title: "INCREMENTA",
+  res_ben_4_desc: "el valor de tu propiedad",
+  res_ben_5_title: "CONTRIBUYE",
+  res_ben_5_desc: "al medio ambiente",
+
+  // Residential Banner Section
+  res_banner_title: "Tu hogar, más eficiente con Kuodia",
+  res_banner_desc: "Diseñamos e instalamos soluciones energéticas completas, adaptadas a cada vivienda, para que disfrutes de un hogar más inteligente, sostenible y eficiente.",
+  res_banner_btn_eval: "Solicitar evaluación gratuita",
+  res_banner_btn_expert: "Hablar con un experto",
 }
 };
