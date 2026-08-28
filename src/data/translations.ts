@@ -156,6 +156,85 @@ export interface TranslationType {
   tb_5_title: string;
   tb_5_desc: string;
 
+  // Hotel Page Section
+  hotel_hero_tag: string;
+  hotel_hero_title_1: string;
+  hotel_hero_title_2: string;
+  hotel_hero_title_3: string;
+  hotel_hero_desc: string;
+  hotel_hero_cta_consult: string;
+  hotel_hero_cta_brochure: string;
+
+  hotel_hero_badge_1_val: string;
+  hotel_hero_badge_1_desc: string;
+  hotel_hero_badge_2_val: string;
+  hotel_hero_badge_2_desc: string;
+  hotel_hero_badge_3_val: string;
+  hotel_hero_badge_3_desc: string;
+  hotel_hero_badge_4_val: string;
+  hotel_hero_badge_4_desc: string;
+
+  hotel_hs_1_title: string;
+  hotel_hs_1_desc: string;
+  hotel_hs_2_title: string;
+  hotel_hs_2_desc: string;
+  hotel_hs_3_title: string;
+  hotel_hs_3_desc: string;
+  hotel_hs_4_title: string;
+  hotel_hs_4_desc: string;
+  hotel_hs_5_title: string;
+  hotel_hs_5_desc: string;
+  hotel_hs_6_title: string;
+  hotel_hs_6_desc: string;
+  hotel_hs_7_title: string;
+  hotel_hs_7_desc: string;
+
+  // Hotel 8 Systems Section
+  hotel_sys_tag: string;
+  hotel_sys_title: string;
+  hotel_sys_1_title: string;
+  hotel_sys_1_desc: string;
+  hotel_sys_1_bullets: string;
+  hotel_sys_2_title: string;
+  hotel_sys_2_desc: string;
+  hotel_sys_2_bullets: string;
+  hotel_sys_3_title: string;
+  hotel_sys_3_desc: string;
+  hotel_sys_3_bullets: string;
+  hotel_sys_4_title: string;
+  hotel_sys_4_desc: string;
+  hotel_sys_4_bullets: string;
+  hotel_sys_5_title: string;
+  hotel_sys_5_desc: string;
+  hotel_sys_5_bullets: string;
+  hotel_sys_6_title: string;
+  hotel_sys_6_desc: string;
+  hotel_sys_6_bullets: string;
+  hotel_sys_7_title: string;
+  hotel_sys_7_desc: string;
+  hotel_sys_7_bullets: string;
+  hotel_sys_8_title: string;
+  hotel_sys_8_desc: string;
+  hotel_sys_8_bullets: string;
+
+  // Hotel Dashboard Section
+  hotel_db_title: string;
+  hotel_db_desc: string;
+  hotel_db_stat_1_val: string;
+  hotel_db_stat_1_lbl: string;
+  hotel_db_stat_2_val: string;
+  hotel_db_stat_2_lbl: string;
+  hotel_db_stat_3_val: string;
+  hotel_db_stat_3_lbl: string;
+  hotel_db_stat_4_val: string;
+  hotel_db_stat_4_lbl: string;
+  hotel_db_btn: string;
+
+  hotel_banner_title: string;
+  hotel_banner_desc: string;
+  hotel_banner_btn_eval: string;
+  hotel_banner_btn_expert: string;
+
   // Projects
   projects_title: string;
   projects_subtitle: string;
@@ -1011,6 +1090,86 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     ind_srv_7_desc: "Quản lý năng lượng và nước.",
     ind_srv_8_title: "Kim loại & Máy móc",
     ind_srv_8_desc: "Quy trình hạng nặng và thu hồi nhiệt.",
+
+
+    // hotel
+    hotel_hero_tag: "GIẢI PHÁP CHO KHÁCH SẠN & TÒA NHÀ CHO THUÊ",
+    hotel_hero_title_1: "Tòa nhà thông minh.",
+    hotel_hero_title_2: "Khách hàng hài lòng.",
+    hotel_hero_title_3: "Lợi nhuận bền vững.",
+    hotel_hero_desc: "Giải pháp tích hợp toàn diện năng lượng, nước và tự động hóa cho các tòa nhà cho thuê & khách sạn hiện đại. Giảm chi phí vận hành, nâng cao sự thoải mái và tạo tác động tích cực cho hành tinh.",
+    hotel_hero_cta_consult: "YÊU CẦU TƯ VẤN",
+    hotel_hero_cta_brochure: "TẢI BROCHURE",
+
+    hotel_hero_badge_1_val: "TIẾT KIỆM 40–60%",
+    hotel_hero_badge_1_desc: "năng lượng tiêu thụ",
+    hotel_hero_badge_2_val: "TĂNG ĐỘ HÀI LÒNG",
+    hotel_hero_badge_2_desc: "của khách hàng & cư dân",
+    hotel_hero_badge_3_val: "VẬN HÀNH HIỆU QUẢ",
+    hotel_hero_badge_3_desc: "và tự động hóa toàn diện",
+    hotel_hero_badge_4_val: "BẢO VỆ ĐẦU TƯ",
+    hotel_hero_badge_4_desc: "tăng tuổi thọ công trình",
+
+    hotel_hs_1_title: "ĐIỆN MẶT TRỜI & LƯU TRỮ",
+    hotel_hs_1_desc: "Phát điện mặt trời, pin lưu trữ dung lượng cao & quản lý thông minh",
+    hotel_hs_2_title: "AQUAPONICS THÔNG MINH",
+    hotel_hs_2_desc: "Trồng rau sạch, hệ thống aquaponics & giám sát vi khí hậu",
+    hotel_hs_3_title: "PODS NGHỈ NƠI THÔNG MINH",
+    hotel_hs_3_desc: "Điều hòa hiệu suất cao, giám sát điện nước & cảm biến hiện diện",
+    hotel_hs_4_title: "PODS HỌP THÔNG MINH",
+    hotel_hs_4_desc: "Cách âm tuyệt đối, điều hòa riêng biệt & đặt chỗ thông minh",
+    hotel_hs_5_title: "CAFETERIA THÔNG MINH",
+    hotel_hs_5_desc: "Robot barista, quản lý năng lượng & tối ưu hóa chi phí",
+    hotel_hs_6_title: "GIẶT SẤY THÔNG MINH",
+    hotel_hs_6_desc: "Máy giặt sấy tiết kiệm điện, tự động đong hóa chất & tái sử dụng nước",
+    hotel_hs_7_title: "XỬ LÝ NƯỚC XÁM",
+    hotel_hs_7_desc: "Lọc & khử trùng, tái sử dụng cho xả toilet & tưới cây, tiết kiệm nước 40%",
+
+    // Hotel 8 Systems Section
+    hotel_sys_tag: "CHI TIẾT TÒA NHÀ",
+    hotel_sys_title: "Một tòa nhà, 8 hệ thống thông minh tích hợp",
+    hotel_sys_1_title: "Điện mặt trời & Lưu trữ",
+    hotel_sys_1_desc: "Phát điện sạch và lưu trữ cho sử dụng ngày và đêm.",
+    hotel_sys_1_bullets: "Tấm pin hiệu suất cao, Bộ lưu trữ Lithium, Quản lý thông minh",
+    hotel_sys_2_title: "Aquaponics thông minh",
+    hotel_sys_2_desc: "Sản xuất thực phẩm bền vững ngay bên trong tòa nhà.",
+    hotel_sys_2_bullets: "Trồng rau & cây xanh, Hệ thống Aquaponics khép kín, Giám sát pH & dinh dưỡng, Sản xuất tại chỗ quanh năm",
+    hotel_sys_3_title: "Pods thông minh",
+    hotel_sys_3_desc: "Không gian nghỉ ngơi với kiểm soát toàn diện và tối đa hiệu suất.",
+    hotel_sys_3_bullets: "Điều hòa tiết kiệm điện, Giám sát điện nước, Cảm biến hiện diện, Điều khiển chiếu sáng & TV",
+    hotel_sys_4_title: "Pods họp thông minh",
+    hotel_sys_4_desc: "Không gian cách âm trang bị hiện đại cho cuộc họp và làm việc.",
+    hotel_sys_4_bullets: "Cách âm tuyệt đối, Điều hòa riêng biệt, Giám sát tiêu thụ, Đặt chỗ & sử dụng thông minh",
+    hotel_sys_5_title: "Cafeteria thông minh",
+    hotel_sys_5_desc: "Quán cafe với robot barista và quản lý năng lượng nâng cao.",
+    hotel_sys_5_bullets: "Robot barista, Quản lý năng lượng, Giám sát nguồn nước, Tối ưu hóa chi phí",
+    hotel_sys_6_title: "Giặt sấy thông minh",
+    hotel_sys_6_desc: "Tiệm giặt sấy hiệu suất cao kết hợp tái sử dụng nước.",
+    hotel_sys_6_bullets: "Máy giặt sấy tiết kiệm điện, Tự động đong hóa chất, Tái sử dụng nước",
+    hotel_sys_7_title: "Dịch vụ tầng trệt",
+    hotel_sys_7_desc: "Khu vệ sinh tiện nghi, tiết kiệm với cảm biến thông minh.",
+    hotel_sys_7_bullets: "Bồn rửa & bidet hiện đại, Thiết kế tiện nghi, Cảm biến tiết kiệm nước",
+    hotel_sys_8_title: "Xử lý nước xám",
+    hotel_sys_8_desc: "Tái sử dụng nước cho xả toilet và tưới cây, giảm tiêu thụ.",
+    hotel_sys_8_bullets: "Lọc & khử trùng, Tái sử dụng xả toilet & tưới cây, Tiết kiệm nước đến 40%",
+
+    // Hotel Dashboard Section
+    hotel_db_title: "Bảng điều khiển thời gian thực",
+    hotel_db_desc: "Quản lý và tối ưu hóa tất cả các hệ thống của tòa nhà từ một nền tảng trực quan duy nhất.",
+    hotel_db_stat_1_val: "-35%",
+    hotel_db_stat_1_lbl: "Tiết kiệm nước",
+    hotel_db_stat_2_val: "-30%",
+    hotel_db_stat_2_lbl: "Tiết kiệm năng lượng",
+    hotel_db_stat_3_val: "24/7",
+    hotel_db_stat_3_lbl: "Giám sát hoạt động",
+    hotel_db_stat_4_val: "100%",
+    hotel_db_stat_4_lbl: "Kiểm soát toàn diện",
+    hotel_db_btn: "KHÁM PHÁ NỀN TẢNG",
+
+    hotel_banner_title: "Cùng nhau xây dựng các tòa nhà thông minh & bền vững hơn",
+    hotel_banner_desc: "Tại Kuodia, chúng tôi kết hợp công nghệ, tính bền vững và kinh nghiệm để kiến tạo các công trình thông minh, lợi nhuận cao và thân thiện với hành tinh.",
+    hotel_banner_btn_eval: "ĐÁNH GIÁ MIỄN PHÍ",
+    hotel_banner_btn_expert: "NÓI CHUYỆN VỚI CHUYÊN GIA",
   },
   en: {
     nav_home: "HOME",
@@ -1278,6 +1437,85 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     tb_4_desc: "Design & Build with International Quality",
     tb_5_title: "After-Sales Support",
     tb_5_desc: "Long term service & optimization",
+
+    // Hotel Page Section
+    hotel_hero_tag: "SOLUTIONS FOR HOTELS & RENTAL BUILDINGS",
+    hotel_hero_title_1: "Smart buildings.",
+    hotel_hero_title_2: "Happy guests.",
+    hotel_hero_title_3: "Sustainable profitability.",
+    hotel_hero_desc: "Integrated energy, water, and automation solutions for modern rental buildings & hotels. Lower operational costs, higher guest comfort, and a positive impact on the planet.",
+    hotel_hero_cta_consult: "REQUEST CONSULTATION",
+    hotel_hero_cta_brochure: "DOWNLOAD BROCHURE",
+
+    hotel_hero_badge_1_val: "SAVE 40–60%",
+    hotel_hero_badge_1_desc: "in energy consumption",
+    hotel_hero_badge_2_val: "HIGHER SATISFACTION",
+    hotel_hero_badge_2_desc: "from guests & tenants",
+    hotel_hero_badge_3_val: "EFFICIENT OPERATION",
+    hotel_hero_badge_3_desc: "and fully automated",
+    hotel_hero_badge_4_val: "PROTECT INVESTMENT",
+    hotel_hero_badge_4_desc: "extend building lifespan",
+
+    hotel_hs_1_title: "SOLAR PV & STORAGE",
+    hotel_hs_1_desc: "Solar generation, high capacity batteries & smart management",
+    hotel_hs_2_title: "SMART AQUAPONICS",
+    hotel_hs_2_desc: "Vegetable cultivation, aquaponics & microclimate monitoring",
+    hotel_hs_3_title: "SMART STAY PODS",
+    hotel_hs_3_desc: "Efficient climate control, energy/water monitoring & occupancy sensors",
+    hotel_hs_4_title: "MEETING PODS",
+    hotel_hs_4_desc: "Soundproof, dedicated climate control & smart booking",
+    hotel_hs_5_title: "SMART CAFETERIA",
+    hotel_hs_5_desc: "Robot barista cafe, energy management & cost optimization",
+    hotel_hs_6_title: "SMART LAUNDRY",
+    hotel_hs_6_desc: "Efficient washers/dryers, auto-dosing & water reuse",
+    hotel_hs_7_title: "GREYWATER TREATMENT",
+    hotel_hs_7_desc: "Filtration & disinfection, reuse for WC & irrigation, save up to 40% water",
+
+    // Hotel 8 Systems Section
+    hotel_sys_tag: "BUILDING DETAILS",
+    hotel_sys_title: "One building, 8 integrated smart systems",
+    hotel_sys_1_title: "Solar PV & Storage",
+    hotel_sys_1_desc: "Generate clean energy and store it for daytime and night-time use.",
+    hotel_sys_1_bullets: "High efficiency panels, Lithium battery storage, Smart management",
+    hotel_sys_2_title: "Smart Aquaponics",
+    hotel_sys_2_desc: "Sustainable food production inside the building.",
+    hotel_sys_2_bullets: "Vegetable & plant cultivation, Closed aquaponics system, pH & nutrient monitoring, Year-round local production",
+    hotel_sys_3_title: "Smart Pods",
+    hotel_sys_3_desc: "Accommodation units with full control and maximum efficiency.",
+    hotel_sys_3_bullets: "Efficient climate control, Energy & water monitoring, Occupancy sensors, Lighting & TV control",
+    hotel_sys_4_title: "Meeting Pods",
+    hotel_sys_4_desc: "Soundproof and equipped spaces for meetings and work.",
+    hotel_sys_4_bullets: "Soundproofed, Dedicated climate control, Consumption monitoring, Smart booking & usage",
+    hotel_sys_5_title: "Smart Cafeteria",
+    hotel_sys_5_desc: "Cafeteria with robot barista and advanced energy management.",
+    hotel_sys_5_bullets: "Robot barista, Energy management, Water monitoring, Equipment control, Cost optimization",
+    hotel_sys_6_title: "Smart Laundry",
+    hotel_sys_6_desc: "Efficient laundry facility with water reuse technology.",
+    hotel_sys_6_bullets: "Efficient washers & dryers, Automatic dosing, Water reuse system",
+    hotel_sys_7_title: "Ground Floor Services",
+    hotel_sys_7_desc: "Accessible and efficient restrooms with water-saving sensors.",
+    hotel_sys_7_bullets: "Modern washbasin & bidet, Accessible design, Water-saving sensors",
+    hotel_sys_8_title: "Greywater Treatment",
+    hotel_sys_8_desc: "Reuse water for WC flushing and irrigation, reducing consumption.",
+    hotel_sys_8_bullets: "Filtration & disinfection, Reuse for WC & irrigation, Up to 40% water savings",
+
+    // Hotel Dashboard Section
+    hotel_db_title: "Real-time Dashboard",
+    hotel_db_desc: "Control and optimize all building systems from a single intuitive platform.",
+    hotel_db_stat_1_val: "-35%",
+    hotel_db_stat_1_lbl: "Water savings",
+    hotel_db_stat_2_val: "-30%",
+    hotel_db_stat_2_lbl: "Energy savings",
+    hotel_db_stat_3_val: "24/7",
+    hotel_db_stat_3_lbl: "Active monitoring",
+    hotel_db_stat_4_val: "100%",
+    hotel_db_stat_4_lbl: "Total control",
+    hotel_db_btn: "VIEW PLATFORM",
+
+    hotel_banner_title: "Let's build more efficient and sustainable rental buildings together",
+    hotel_banner_desc: "At Kuodia, we combine technology, sustainability, and expertise to create smart, profitable, and eco-friendly buildings.",
+    hotel_banner_btn_eval: "FREE EVALUATION",
+    hotel_banner_btn_expert: "TALK TO AN EXPERT",
 
     // Feature Cards
     card_1_title: "AQUAPONICS SYSTEMS",
@@ -1994,5 +2232,66 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   ind_srv_7_desc: "Gestión de energía y agua.",
   ind_srv_8_title: "Metalúrgica & Maquinaria",
   ind_srv_8_desc: "Procesos pesados y recuperación de calor.",
+
+  // Hotel Page Section
+  hotel_hero_tag: "SOLUCIONES PARA ALQUILERES Y HOTELES",
+  hotel_hero_title_1: "Edificios inteligentes.",
+  hotel_hero_title_2: "Inquilinos felices.",
+  hotel_hero_title_3: "Rentabilidad sostenible.",
+  hotel_hero_desc: "Soluciones integradas de energía, agua y automatización para edificios de alquiler modernos. Menores costes operativos, mayor confort y un impacto positivo en el planeta.",
+  hotel_hero_cta_consult: "SOLICITAR ASESORÍA",
+  hotel_hero_cta_brochure: "DESCARGAR BROCHURE",
+
+  hotel_hero_badge_1_val: "AHORRA 40–60%",
+  hotel_hero_badge_1_desc: "en consumo energético",
+  hotel_hero_badge_2_val: "MAYOR SATISFACCIÓN",
+  hotel_hero_badge_2_desc: "de inquilinos y huéspedes",
+  hotel_hero_badge_3_val: "OPERACIÓN EFICIENTE",
+  hotel_hero_badge_3_desc: "y automatizada",
+  hotel_hero_badge_4_val: "PROTEGE TU INVERSIÓN",
+  hotel_hero_badge_4_desc: "y alarga la vida útil del edificio",
+
+  hotel_hs_1_title: "SOLAR FOTOVOLTAICA Y ALMACENAMIENTO",
+  hotel_hs_1_desc: "Generación solar, baterías de almacenamiento y gestión inteligente",
+  hotel_hs_2_title: "ACUAPONÍA INTELIGENTE",
+  hotel_hs_2_desc: "Cultivo de hortalizas y plantas, sistema acuapónico y monitoreo",
+  hotel_hs_3_title: "PODS INTELIGENTES",
+  hotel_hs_3_desc: "Climatización eficiente, monitoreo de energía/agua y sensores",
+  hotel_hs_4_title: "PODS DE REUNIONES",
+  hotel_hs_4_desc: "Insonorizado, climatización dedicada y reservas inteligentes",
+  hotel_hs_5_title: "CAFETERÍA INTELIGENTE",
+  hotel_hs_5_desc: "Cafetería con robot barista, gestión energética y optimización",
+  hotel_hs_6_title: "LAUNDRY INTELIGENTE",
+  hotel_hs_6_desc: "Lavadoras y secadoras eficientes, dosificación y reutilización",
+  hotel_hs_7_title: "TRATAMIENTO AGUAS GRISES",
+  hotel_hs_7_desc: "Filtrado y desinfección, reutilización para WC y riego, ahorro 40%",
+
+  // Hotel 8 Systems Section
+  hotel_sys_tag: "DETALLE DEL EDIFICIO",
+  hotel_sys_title: "Un edificio, 8 sistemas inteligentes integrados",
+  hotel_sys_1_title: "Solar fotovoltaica y almacenamiento",
+  hotel_sys_1_desc: "Genera energía limpia y almacénala para uso diurno y nocturno.",
+  hotel_sys_1_bullets: "Paneles de alta eficiencia, Baterías de litio, Gestión inteligente",
+  hotel_sys_2_title: "Acuaponía inteligente",
+  hotel_sys_2_desc: "Producción sostenible de alimentos dentro del edificio.",
+  hotel_sys_2_bullets: "Cultivo de hortalizas y plantas, Sistema acuapónico cerrado, Monitoreo de pH, nutrientes y agua, Producción local todo el año",
+  hotel_sys_3_title: "Pods inteligentes",
+  hotel_sys_3_desc: "Unidades de alojamiento con control total y máxima eficiencia.",
+  hotel_sys_3_bullets: "Climatización eficiente, Monitoreo de energía y agua, Sensores de ocupación, Control de iluminación y TV",
+  hotel_sys_4_title: "Pods de reuniones",
+  hotel_sys_4_desc: "Espacios insonorizados y equipados para reuniones y trabajo.",
+  hotel_sys_4_bullets: "Insonorizado, Climatización dedicada, Monitoreo de consumo, Reserva y uso inteligente",
+  hotel_sys_5_title: "Cafetería inteligente",
+  hotel_sys_5_desc: "Cafetería con robot barista y gestión energética avanzada.",
+  hotel_sys_5_bullets: "Robot barista, Gestión energética, Monitoreo de agua, Control de equipos, Optimización de costes",
+  hotel_sys_6_title: "Laundry inteligente",
+  hotel_sys_6_desc: "Lavandería eficiente con reutilización de agua.",
+  hotel_sys_6_bullets: "Lavadoras y secadoras eficientes, Dosificación automática, Reutilización de aguas",
+  hotel_sys_7_title: "Servicios planta baja",
+  hotel_sys_7_desc: "Baños accesibles y eficientes con sensores de ahorro.",
+  hotel_sys_7_bullets: "Lavabo y bidet, Diseño accesible, Sensores de ahorro de agua",
+  hotel_sys_8_title: "Tratamiento aguas grises",
+  hotel_sys_8_desc: "Reutiliza el agua para WC y riego, reduciendo el consumo.",
+  hotel_sys_8_bullets: "Filtrado y desinfección, Reutilización para WC y riego, Ahorro de agua hasta 40%",
 }
 };
