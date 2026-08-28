@@ -10,10 +10,37 @@ export interface TranslationType {
   nav_farm: string;
   sol_hotel: string;
   sol_farm: string;
+  sol_farm2: string;
   sol_residential: string;
   sol_factory: string;
 
-  // Hero
+  // Our Farm Solutions Section
+  farm_solutions_title: string;
+  farm_solutions_subtitle: string;
+  farm_sol_1_title: string;
+  farm_sol_1_desc: string;
+  farm_sol_2_title: string;
+  farm_sol_2_desc: string;
+  farm_sol_3_title: string;
+  farm_sol_3_desc: string;
+  farm_sol_4_title: string;
+  farm_sol_4_desc: string;
+  farm_sol_5_title: string;
+  farm_sol_5_desc: string;
+  farm_sol_6_title: string;
+  farm_sol_6_desc: string;
+  farm_sol_7_title: string;
+  farm_sol_7_desc: string;
+  farm_sol_8_title: string;
+  farm_sol_8_desc: string;
+  farm_sol_9_title: string;
+  farm_sol_9_desc: string;
+  farm_sol_10_title: string;
+  farm_sol_10_desc: string;
+  farm_sol_11_title: string;
+  farm_sol_11_desc: string;
+  farm_sol_12_title: string;
+  farm_sol_12_desc: string;
   hero_title: string;
   hero_title_1: string;
   hero_title_2: string;
@@ -70,6 +97,64 @@ export interface TranslationType {
   hotspot_recovery_desc: string;
   hotspot_pump_desc: string;
   hotspot_mgmt_desc: string;
+
+  // Aquaponics Ecosystem Section
+  aqua_eco_title: string;
+  aqua_eco_subtitle: string;
+  aqua_eco_desc: string;
+  aqua_eco_check_1: string;
+  aqua_eco_check_2: string;
+  aqua_eco_check_3: string;
+  aqua_eco_check_4: string;
+
+  aqua_step_1_title: string;
+  aqua_step_1_desc: string;
+  aqua_step_2_title: string;
+  aqua_step_2_desc: string;
+  aqua_step_3_title: string;
+  aqua_step_3_desc: string;
+  aqua_step_4_title: string;
+  aqua_step_4_desc: string;
+  aqua_step_5_title: string;
+  aqua_step_5_desc: string;
+
+  // Impact Stats Banner Section
+  impact_stat_1_val: string;
+  impact_stat_1_lbl: string;
+  impact_stat_2_val: string;
+  impact_stat_2_lbl: string;
+  impact_stat_3_val: string;
+  impact_stat_3_lbl: string;
+  impact_stat_4_val: string;
+  impact_stat_4_lbl: string;
+  impact_stat_5_val: string;
+  impact_stat_5_lbl: string;
+
+  // Farm Case Study Section
+  cs_aquaponics_tag: string;
+  cs_aquaponics_title: string;
+  cs_aquaponics_location: string;
+  cs_aquaponics_stat_1_val: string;
+  cs_aquaponics_stat_1_lbl: string;
+  cs_aquaponics_stat_2_val: string;
+  cs_aquaponics_stat_2_lbl: string;
+  cs_aquaponics_stat_3_val: string;
+  cs_aquaponics_stat_3_lbl: string;
+  cs_aquaponics_stat_4_val: string;
+  cs_aquaponics_stat_4_lbl: string;
+  cs_aquaponics_link: string;
+
+  // Trust Badges Section
+  tb_1_title: string;
+  tb_1_desc: string;
+  tb_2_title: string;
+  tb_2_desc: string;
+  tb_3_title: string;
+  tb_3_desc: string;
+  tb_4_title: string;
+  tb_4_desc: string;
+  tb_5_title: string;
+  tb_5_desc: string;
 
   // Projects
   projects_title: string;
@@ -452,6 +537,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_farm: "LĨNH VỰC",
     sol_hotel: "Giải pháp Khách sạn",
     sol_farm: "Giải pháp Trang trại",
+    sol_farm2: "Giải pháp Trang trại (V2)",
     sol_residential: "Nhà ở Dân dụng",
     sol_factory: "Giải pháp Nhà máy",
 
@@ -590,7 +676,64 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     farm_stat_4_lbl: "Giám sát thông minh",
     farm_stat_4_desc: "Nhận thức thời gian thực. Điều khiển từ xa. An tâm tuyệt đối.",
 
-    // Feature Cards
+    // farm2 Hero
+    farm2_eyebrow: "TRANG TRẠI THÔNG MINH. TƯƠNG LAI BỀN VỮNG.",
+    farm2_title_1: "Giải Pháp Tích Hợp Cho",
+    farm2_title_2: "Trang Trại Thông Minh & Năng Suất Hơn.",
+    farm2_desc: "Từ thủy canh đến cánh đồng và chăn nuôi, Kuodia cung cấp công nghệ toàn diện, dữ liệu và tự động hóa nhằm tối đa hóa sản lượng, giảm chi phí và kiến tạo tương lai bền vững.",
+    farm2_cta_explore: "KHÁM PHÁ GIẢI PHÁP TRANG TRẠI",
+    farm2_cta_expert: "TƯ VẤN VỚI CHUYÊN GIA",
+    farm2_cmd_title: "KUBI FARM COMMAND CENTER",
+    farm2_cmd_yield_val: "+28%",
+    farm2_cmd_yield_lbl: "SẢN LƯỢNG",
+    farm2_cmd_water_val: "-35%",
+    farm2_cmd_water_lbl: "TIẾT KIỆM NƯỚC",
+    farm2_cmd_energy_val: "-30%",
+    farm2_cmd_energy_lbl: "TIẾT KIỆM NĂNG LƯỢNG",
+    farm2_cmd_alerts_val: "3",
+    farm2_cmd_alerts_lbl: "CẢNH BÁO HOẠT ĐỘNG",
+    farm2_cmd_status_val: "Tất cả hệ thống OK",
+    farm2_cmd_status_lbl: "TRẠNG THÁI HỆ THỐNG",
+    farm2_feat_1_title: "Giám Sát Bằng Drone",
+    farm2_feat_1_desc: "Dữ liệu trên không cho cây trồng, chăn nuôi & cơ sở",
+    farm2_feat_2_title: "Quản Lý Thông Minh",
+    farm2_feat_2_desc: "Điều khiển tập trung với hệ thống Kubi",
+    farm2_feat_3_title: "Tối Ưu Sản Xuất",
+    farm2_feat_3_desc: "Theo dõi hiệu suất, gia tăng năng suất",
+    farm2_feat_4_title: "Kiểm Soát Sâu Bệnh",
+    farm2_feat_4_desc: "Phát hiện sớm và xử lý đúng mục tiêu",
+    farm2_feat_5_title: "Quản Lý Nguồn Nước",
+    farm2_feat_5_desc: "Sử dụng hiệu quả, chất lượng & tuần hoàn",
+    farm2_feat_6_title: "Tăng Trưởng Bền Vững",
+    farm2_feat_6_desc: "Chi phí thấp hơn, năng suất cao hơn, tương lai tốt hơn",
+
+    // Our Farm Solutions Section
+    farm_solutions_title: "GIẢI PHÁP TRANG TRẠI CỦA CHÚNG TÔI",
+    farm_solutions_subtitle: "Công nghệ thông minh cho từng khu vực trang trại. Tích hợp đồng bộ. Tối ưu toàn diện. Tất cả trong một.",
+    farm_sol_1_title: "DRONE MONITORING & MAPPING",
+    farm_sol_1_desc: "Phân tích đa phổ, sức khỏe cây trồng, theo dõi tăng trưởng, kiểm tra tưới tiêu và bản đồ địa hình.",
+    farm_sol_2_title: "KUBI CENTRALIZED SYSTEM",
+    farm_sol_2_desc: "Một nền tảng điều khiển toàn bộ hoạt động, nhà xưởng, cảm biến, cảnh báo và báo cáo theo thời gian thực.",
+    farm_sol_3_title: "PRODUCTION & INCIDENT MANAGEMENT",
+    farm_sol_3_desc: "Giám sát KPI, phát hiện sự cố, quản lý công việc và theo dõi mọi lúc mọi nơi.",
+    farm_sol_4_title: "PEST & DISEASE CONTROL",
+    farm_sol_4_desc: "Phát hiện bằng AI, trinh sát bằng drone và cảnh báo thông minh giúp xử lý chủ động.",
+    farm_sol_5_title: "WATER MANAGEMENT",
+    farm_sol_5_desc: "Giám sát mức sử dụng, chất lượng và áp suất. Tối ưu tưới tiêu và giảm lãng phí nước.",
+    farm_sol_6_title: "CLIMATE & GREENHOUSE CONTROL",
+    farm_sol_6_desc: "Kiểm soát nhiệt độ, độ ẩm, CO₂ và thông gió cho điều kiện tăng trưởng tối ưu.",
+    farm_sol_7_title: "AQUAPONICS SYSTEMS",
+    farm_sol_7_desc: "Hệ sinh thái kết hợp cá và cây trồng. Tuần hoàn nước, lọc sinh học và cân bằng dinh dưỡng.",
+    farm_sol_8_title: "SHRIMP & FISH FARMING (RAS)",
+    farm_sol_8_desc: "Sản xuất tôm cá trong nhà với kiểm soát khí hậu và quản lý chất lượng nước nghiêm ngặt.",
+    farm_sol_9_title: "LIVESTOCK MONITORING",
+    farm_sol_9_desc: "Giám sát sức khỏe, theo dõi hành vi và kiểm soát môi trường cho vật nuôi.",
+    farm_sol_10_title: "ENERGY MANAGEMENT",
+    farm_sol_10_desc: "Điện mặt trời, bơm nhiệt và quản lý năng lượng thông minh giúp giảm chi phí.",
+    farm_sol_11_title: "SMART INFRASTRUCTURE",
+    farm_sol_11_desc: "Bơm, cảm biến, tự động hóa và thiết bị IoT cho hạ tầng trang trại tin cậy.",
+    farm_sol_12_title: "RESOURCE & COST OPTIMIZATION",
+    farm_sol_12_desc: "Phân tích dữ liệu và AI để tối ưu nguồn lực, giảm thất thoát và tối đa lợi nhuận.",
     card_1_title: "HỆ THỐNG AQUAPONICS",
     card_1_subtitle: "Cá + Cây. Một hệ sinh thái.",
     card_1_desc: "Chúng tôi thiết kế các trang trại aquaponic sản lượng cao, nơi cá và cây trồng cùng phát triển trong một hệ thống cân bằng, tự nhiên và hiệu quả cao.",
@@ -880,6 +1023,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     nav_farm: "farm",
     sol_hotel: "Hotel Solutions",
     sol_farm: "Farm Solutions",
+    sol_farm2: "Farm Solutions (V2)",
     sol_residential: "Residential House",
     sol_factory: "Factory Solutions",
 
@@ -1017,6 +1161,123 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
     farm_stat_4_val: "24/7",
     farm_stat_4_lbl: "Smart Monitoring",
     farm_stat_4_desc: "Real-time insight. Remote control. Total peace of mind.",
+
+    // farm2 Hero
+    farm2_eyebrow: "SMARTER FARMS. STRONGER FUTURES.",
+    farm2_title_1: "Integrated Solutions for",
+    farm2_title_2: "Smarter, More Productive Farms.",
+    farm2_desc: "From aquaponics to crop fields and livestock, Kuodia provides end-to-end technology, data and automation to maximize yields, reduce costs and build a sustainable future.",
+    farm2_cta_explore: "EXPLORE OUR FARM SOLUTIONS",
+    farm2_cta_expert: "TALK TO AN EXPERT",
+    farm2_cmd_title: "KUBI FARM COMMAND CENTER",
+    farm2_cmd_yield_val: "+28%",
+    farm2_cmd_yield_lbl: "YIELD",
+    farm2_cmd_water_val: "-35%",
+    farm2_cmd_water_lbl: "WATER SAVINGS",
+    farm2_cmd_energy_val: "-30%",
+    farm2_cmd_energy_lbl: "ENERGY SAVINGS",
+    farm2_cmd_alerts_val: "3",
+    farm2_cmd_alerts_lbl: "ACTIVE ALERTS",
+    farm2_cmd_status_val: "All Systems OK",
+    farm2_cmd_status_lbl: "SYSTEM STATUS",
+    farm2_feat_1_title: "Drone Monitoring",
+    farm2_feat_1_desc: "Aerial insights for crops, livestock and facilities",
+    farm2_feat_2_title: "Smart Management",
+    farm2_feat_2_desc: "Centralized control with Kubi system",
+    farm2_feat_3_title: "Production Optimization",
+    farm2_feat_3_desc: "Track performance, increase productivity",
+    farm2_feat_4_title: "Pest & Disease Control",
+    farm2_feat_4_desc: "Early detection and targeted treatments",
+    farm2_feat_5_title: "Water Management",
+    farm2_feat_5_desc: "Efficient use, quality and recirculation",
+    farm2_feat_6_title: "Sustainable Growth",
+    farm2_feat_6_desc: "Lower costs, higher yields, better future",
+
+    // Our Farm Solutions Section
+    farm_solutions_title: "OUR FARM SOLUTIONS",
+    farm_solutions_subtitle: "Smart technology for every part of your farm. All connected. All optimized. All in one place.",
+    farm_sol_1_title: "DRONE MONITORING & MAPPING",
+    farm_sol_1_desc: "Multispectral analysis, crop health, growth tracking, irrigation checks and terrain mapping.",
+    farm_sol_2_title: "KUBI CENTRALIZED SYSTEM",
+    farm_sol_2_desc: "One platform to control all farm operations, facilities, sensors, alerts and reports in real time.",
+    farm_sol_3_title: "PRODUCTION & INCIDENT MANAGEMENT",
+    farm_sol_3_desc: "Monitor KPIs, detect issues, manage tasks and track everything from anywhere.",
+    farm_sol_4_title: "PEST & DISEASE CONTROL",
+    farm_sol_4_desc: "AI-powered detection, drone scouting and smart alerts for proactive intervention.",
+    farm_sol_5_title: "WATER MANAGEMENT",
+    farm_sol_5_desc: "Monitor usage, quality and pressure. Optimize irrigation and reduce water waste.",
+    farm_sol_6_title: "CLIMATE & GREENHOUSE CONTROL",
+    farm_sol_6_desc: "Temperature, humidity, CO₂ and ventilation control for optimal growing conditions.",
+    farm_sol_7_title: "AQUAPONICS SYSTEMS",
+    farm_sol_7_desc: "Integrated fish + plant ecosystems. Recirculating water, biofiltration and nutrient balance.",
+    farm_sol_8_title: "SHRIMP & FISH FARMING (RAS)",
+    farm_sol_8_desc: "Indoor shrimp and fish production with climate control and strict water quality management.",
+    farm_sol_9_title: "LIVESTOCK MONITORING",
+    farm_sol_9_desc: "Health monitoring, behavior tracking and environment control for animal welfare and productivity.",
+    farm_sol_10_title: "ENERGY MANAGEMENT",
+    farm_sol_10_desc: "Solar power, aerothermal systems and smart energy management to cut costs and improve efficiency.",
+    farm_sol_11_title: "SMART INFRASTRUCTURE",
+    farm_sol_11_desc: "Pumps, sensors, automation and IoT devices for reliable, efficient farm infrastructure.",
+    farm_sol_12_title: "RESOURCE & COST OPTIMIZATION",
+    farm_sol_12_desc: "Data analytics and AI to optimise resources, reduce losses and maximize profitability.",
+
+    // Aquaponics Ecosystem Section
+    aqua_eco_title: "AQUAPONICS ECOSYSTEM",
+    aqua_eco_subtitle: "A closed-loop system where fish and plants grow together.",
+    aqua_eco_desc: "We design and integrate complete aquaponics solutions combining RAS, hydroponics, biofiltration, water treatment, climate control and renewable energy.",
+    aqua_eco_check_1: "High productivity with sustainable resource use",
+    aqua_eco_check_2: "Up to 90% less water consumption",
+    aqua_eco_check_3: "Chemical-free, healthy and natural production",
+    aqua_eco_check_4: "Automated and remote controlled with Kubi",
+
+    aqua_step_1_title: "SOLAR ENERGY",
+    aqua_step_1_desc: "Clean energy for the entire system.",
+    aqua_step_2_title: "AQUAPONICS SYSTEM",
+    aqua_step_2_desc: "Nutrient-rich water feeds plants.",
+    aqua_step_3_title: "WATER CIRCUIT",
+    aqua_step_3_desc: "Filtered water returns to fish tanks in a continuous loop.",
+    aqua_step_4_title: "HEAT EXCHANGERS",
+    aqua_step_4_desc: "Stable temperature throughout the system.",
+    aqua_step_5_title: "AEROTHERMAL HEAT PUMPS",
+    aqua_step_5_desc: "High efficiency to regulate water sustainably.",
+
+    // Impact Stats Banner Section
+    impact_stat_1_val: "+25%",
+    impact_stat_1_lbl: "Higher Yields",
+    impact_stat_2_val: "-35%",
+    impact_stat_2_lbl: "Water Savings",
+    impact_stat_3_val: "-30%",
+    impact_stat_3_lbl: "Energy Savings",
+    impact_stat_4_val: "24/7",
+    impact_stat_4_lbl: "Smart Monitoring",
+    impact_stat_5_val: "100%",
+    impact_stat_5_lbl: "Sustainable Future",
+
+    // Farm Case Study Section
+    cs_aquaponics_tag: "CASE STUDY",
+    cs_aquaponics_title: "Smart Aquaponics Farm",
+    cs_aquaponics_location: "Da Nang, Vietnam",
+    cs_aquaponics_stat_1_val: "+32%",
+    cs_aquaponics_stat_1_lbl: "Increase in Yield",
+    cs_aquaponics_stat_2_val: "-36%",
+    cs_aquaponics_stat_2_lbl: "Water Savings",
+    cs_aquaponics_stat_3_val: "-28%",
+    cs_aquaponics_stat_3_lbl: "Energy Savings",
+    cs_aquaponics_stat_4_val: "18 months",
+    cs_aquaponics_stat_4_lbl: "ROI Period",
+    cs_aquaponics_link: "VIEW CASE STUDY",
+
+    // Trust Badges Section
+    tb_1_title: "20+",
+    tb_1_desc: "Years of Engineering Experience",
+    tb_2_title: "100+",
+    tb_2_desc: "Projects Completed in Vietnam & SEA",
+    tb_3_title: "Expert Team",
+    tb_3_desc: "Agriculture, Aquaculture, Automation & IoT",
+    tb_4_title: "Global Standards",
+    tb_4_desc: "Design & Build with International Quality",
+    tb_5_title: "After-Sales Support",
+    tb_5_desc: "Long term service & optimization",
 
     // Feature Cards
     card_1_title: "AQUAPONICS SYSTEMS",
@@ -1308,6 +1569,7 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   nav_farm: "INDUSTRIAS",
   sol_hotel: "Soluciones para Hoteles",
   sol_farm: "Soluciones para Granjas",
+  sol_farm2: "Soluciones para Granjas (V2)",
   sol_residential: "Casa Residencial",
   sol_factory: "Soluciones para Fábricas",
 

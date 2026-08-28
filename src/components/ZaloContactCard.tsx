@@ -56,15 +56,15 @@ const ZaloContactCard: React.FC<ZaloContactCardProps> = ({ title, description })
         </div>
 
         {/* Right panel: QR Code container (hidden on mobile/tablet, shown on desktop lg) */}
-        <div className="hidden lg:flex flex-shrink-0 flex-col items-center p-3 bg-white/5 border border-white/10 rounded-2xl w-[124px]">
-          <div className="bg-white p-1 rounded-xl shadow-md overflow-hidden">
+        <div className="hidden lg:flex flex-shrink-0 flex-col items-center p-3.5 bg-white/5 border border-white/10 rounded-2xl w-[164px]">
+          <div className="bg-white p-1.5 rounded-xl shadow-md overflow-hidden w-full flex items-center justify-center">
             <img
               src={zaloQrImg}
               alt="Zalo QR"
-              className="w-24 h-24 object-cover select-none pointer-events-none rounded-lg"
+              className="w-32 h-32 sm:w-36 sm:h-36 object-cover select-none pointer-events-none rounded-lg"
             />
           </div>
-          <span className="text-[10px] font-sans font-bold text-slate-300 mt-2 tracking-wide uppercase">
+          <span className="text-[11px] font-sans font-bold text-slate-300 mt-2.5 tracking-wide uppercase text-center">
             {t("cta_card_scan_to_chat")}
           </span>
         </div>

@@ -54,6 +54,7 @@ export const Header: React.FC = () => {
       dropdownItems: [
         { labelKey: 'sol_hotel' as const, href: `${langPrefix}/solutions/hotel` },
         { labelKey: 'sol_farm' as const, href: `${langPrefix}/solutions/farm` },
+        { labelKey: 'sol_farm2' as const, href: `${langPrefix}/solutions/farm2` },
         { labelKey: 'sol_industrie' as const, href: `${langPrefix}/solutions/industrie` },
         { labelKey: 'sol_residential' as const, href: `${langPrefix}/solutions/residential` },
       ]
