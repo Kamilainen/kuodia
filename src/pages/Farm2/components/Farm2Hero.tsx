@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "../../../context/LanguageContext";
 import Container from "../../../components/Container";
-import Button from "../../../components/Button";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import bgFarmImg from "../../../assets/bgfarm.jpg";
 import FarmCommandCenter from "./FarmCommandCenter";
@@ -80,32 +79,30 @@ export const Farm2Hero: React.FC = () => {
               {t("farm2_desc")}
             </motion.p>
 
-            {/* Action Buttons matching project standard */}
+            {/* Action Buttons matching exact design screenshot */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2"
             >
-              <Button
+              <button
                 onClick={handleScrollToSolutions}
-                variant="primary"
-                size="lg"
-                className="group flex items-center justify-center space-x-2 bg-brand-green hover:bg-brand-green/90 border-brand-green shadow-lg shadow-brand-green/20 cursor-pointer"
+                className="inline-flex items-center justify-center space-x-2.5 bg-brand-green hover:bg-brand-green-light active:bg-brand-green text-white font-display font-extrabold text-xs sm:text-sm uppercase px-6 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-brand-green/30 cursor-pointer transform hover:-translate-y-0.5"
               >
-                <span className="font-display font-bold text-xs sm:text-sm">{t("farm2_cta_explore")}</span>
-                <ArrowRight className="h-4.5 w-4.5 transition-transform group-hover:translate-x-1" />
-              </Button>
+                <span>{t("farm2_cta_explore")}</span>
+                <ArrowRight className="w-4 h-4 text-white" />
+              </button>
 
-              <Button
+              <button
                 onClick={handleScrollToContact}
-                variant="outline"
-                size="lg"
-                className="group flex items-center justify-center space-x-2 border-white/60 hover:border-white text-white hover:bg-white/10 shadow-sm cursor-pointer"
+                className="inline-flex items-center justify-center space-x-3 bg-black/40 hover:bg-black/60 border border-white/80 hover:border-white text-white font-display font-extrabold text-xs sm:text-sm uppercase px-5 py-3.5 rounded-xl backdrop-blur-md transition-all duration-300 shadow-sm cursor-pointer"
               >
-                <MessageCircle className="h-4.5 w-4.5 text-brand-green group-hover:scale-110 transition-transform" />
-                <span className="font-display font-bold text-xs sm:text-sm">{t("farm2_cta_expert")}</span>
-              </Button>
+                <span>{t("farm2_cta_expert")}</span>
+                <div className="w-6 h-6 rounded-full border border-white/60 flex items-center justify-center bg-white/10 flex-shrink-0">
+                  <MessageCircle className="w-3.5 h-3.5 text-white" />
+                </div>
+              </button>
             </motion.div>
           </div>
 
