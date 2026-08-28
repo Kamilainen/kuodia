@@ -41,6 +41,37 @@ export interface TranslationType {
   farm_sol_11_desc: string;
   farm_sol_12_title: string;
   farm_sol_12_desc: string;
+
+  // Farm2 Section
+  farm2_eyebrow: string;
+  farm2_title_1: string;
+  farm2_title_2: string;
+  farm2_desc: string;
+  farm2_cta_explore: string;
+  farm2_cta_expert: string;
+  farm2_cmd_title: string;
+  farm2_cmd_yield_val: string;
+  farm2_cmd_yield_lbl: string;
+  farm2_cmd_water_val: string;
+  farm2_cmd_water_lbl: string;
+  farm2_cmd_energy_val: string;
+  farm2_cmd_energy_lbl: string;
+  farm2_cmd_alerts_val: string;
+  farm2_cmd_alerts_lbl: string;
+  farm2_cmd_status_val: string;
+  farm2_cmd_status_lbl: string;
+  farm2_feat_1_title: string;
+  farm2_feat_1_desc: string;
+  farm2_feat_2_title: string;
+  farm2_feat_2_desc: string;
+  farm2_feat_3_title: string;
+  farm2_feat_3_desc: string;
+  farm2_feat_4_title: string;
+  farm2_feat_4_desc: string;
+  farm2_feat_5_title: string;
+  farm2_feat_5_desc: string;
+  farm2_feat_6_title: string;
+  farm2_feat_6_desc: string;
   hero_title: string;
   hero_title_1: string;
   hero_title_2: string;
@@ -2150,6 +2181,65 @@ export const translations: Record<'vi' | 'en' | 'es' ,TranslationType> = {
   farm_stat_4_val: "24/7",
   farm_stat_4_lbl: "Monitoreo Inteligente",
   farm_stat_4_desc: "Información en tiempo real. Control remoto. Tranquilidad total.",
+
+  // farm2 Hero
+  farm2_eyebrow: "GRANJAS INTELIGENTES. FUTURO SOSTENIBLE.",
+  farm2_title_1: "Soluciones Integradas para",
+  farm2_title_2: "Granjas Más Inteligentes y Productivas.",
+  farm2_desc: "Desde la acuaponía hasta los campos de cultivo y la ganadería, Kuodia ofrece tecnología integral, datos y automatización para maximizar la producción, reducir costos y construir un futuro sostenible.",
+  farm2_cta_explore: "EXPLORAR SOLUCIONES PARA GRANJAS",
+  farm2_cta_expert: "CONSULTAR CON UN EXPERTO",
+  farm2_cmd_title: "CENTRO DE CONTROL KUBI FARM",
+  farm2_cmd_yield_val: "+28%",
+  farm2_cmd_yield_lbl: "RENDIMIENTO",
+  farm2_cmd_water_val: "-35%",
+  farm2_cmd_water_lbl: "AHORRO DE AGUA",
+  farm2_cmd_energy_val: "-30%",
+  farm2_cmd_energy_lbl: "AHORRO DE ENERGÍA",
+  farm2_cmd_alerts_val: "3",
+  farm2_cmd_alerts_lbl: "ALERTAS ACTIVAS",
+  farm2_cmd_status_val: "Sistemas en buen estado",
+  farm2_cmd_status_lbl: "ESTADO DEL SISTEMA",
+  farm2_feat_1_title: "Monitoreo con Drones",
+  farm2_feat_1_desc: "Información aérea para cultivos, ganado e instalaciones",
+  farm2_feat_2_title: "Gestión Inteligente",
+  farm2_feat_2_desc: "Control centralizado con el sistema Kubi",
+  farm2_feat_3_title: "Optimización de Producción",
+  farm2_feat_3_desc: "Monitoree el rendimiento, aumente la productividad",
+  farm2_feat_4_title: "Control de Plagas y Enfermedades",
+  farm2_feat_4_desc: "Detección temprana y tratamientos focalizados",
+  farm2_feat_5_title: "Gestión de Agua",
+  farm2_feat_5_desc: "Uso eficiente, calidad y recirculación",
+  farm2_feat_6_title: "Crecimiento Sostenible",
+  farm2_feat_6_desc: "Menores costos, mayores rendimientos, mejor futuro",
+
+  // Our Farm Solutions Section
+  farm_solutions_title: "NUESTRAS SOLUCIONES PARA GRANJAS",
+  farm_solutions_subtitle: "Tecnología inteligente para cada área de su granja. Integrada, optimizada y centralizada.",
+  farm_sol_1_title: "MONITOREO Y MAPEO CON DRONES",
+  farm_sol_1_desc: "Análisis multiespectral, salud de cultivos, seguimiento de crecimiento, verificación de riego y mapas topográficos.",
+  farm_sol_2_title: "SISTEMA CENTRALIZADO KUBI",
+  farm_sol_2_desc: "Supervisión en tiempo real, alertas automatizadas, análisis de datos e integración de sensores en toda la instalación.",
+  farm_sol_3_title: "GESTIÓN VINCULADA A INCIDENTES",
+  farm_sol_3_desc: "Detección temprana de fallas, mantenimiento predictivo, respuesta rápida y reducción del tiempo de inactividad.",
+  farm_sol_4_title: "PREVENCIÓN DE ENFERMEDADES",
+  farm_sol_4_desc: "Monitoreo continuo de bioseguridad, detección rápida de patógenos y protocolos de tratamiento automatizados.",
+  farm_sol_5_title: "GESTIÓN Y TRATAMIENTO DE AGUA",
+  farm_sol_5_desc: "Monitoreo de pH, oxígeno disuelto, salinidad, filtración avanzada y esterilización UV para agua limpia.",
+  farm_sol_6_title: "CONTROL CLIMÁTICO Y DE INVERNADEROS",
+  farm_sol_6_desc: "Temperatura, humedad, ventilación y sombreado optimizados para condiciones de cultivo ideales.",
+  farm_sol_7_title: "ILUMINACIÓN Y ENERGÍA SOLAR",
+  farm_sol_7_desc: "Paneles solares integrados, almacenamiento en baterías e iluminación LED optimizada para granjas.",
+  farm_sol_8_title: "ACUACULTURA Y CAMARONES (RAS)",
+  farm_sol_8_desc: "Sistemas de acuicultura de recirculación de circuito cerrado para producción constante todo el año.",
+  farm_sol_9_title: "SISTEMAS PARA GANADERÍA",
+  farm_sol_9_desc: "Monitoreo de salud, nutrición automatizada, control ambiental y trazabilidad para ganado.",
+  farm_sol_10_title: "GESTIÓN ENERGÉTICA",
+  farm_sol_10_desc: "Energía solar, bombas de calor aerotérmicas y gestión inteligente para reducir costos y aumentar la eficiencia.",
+  farm_sol_11_title: "INFRAESTRUCTURA INTELIGENTE",
+  farm_sol_11_desc: "Bombas, sensores, automatización y dispositivos IoT para una infraestructura de granja confiable.",
+  farm_sol_12_title: "OPTIMIZACIÓN DE RECURSOS Y COSTOS",
+  farm_sol_12_desc: "Análisis de datos e IA para optimizar recursos, reducir pérdidas y maximizar la rentabilidad.",
 
   // Feature Cards
   card_1_title: "SISTEMAS ACUAPÓNICOS",
