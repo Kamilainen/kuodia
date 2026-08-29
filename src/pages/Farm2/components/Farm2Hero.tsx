@@ -29,7 +29,7 @@ export const Farm2Hero: React.FC = () => {
         <img
           src={bgFarmImg}
           alt="Kuodia Smart Farm Background with Drone"
-          className="w-full h-full object-cover object-[80%_top] sm:object-top"
+          className="w-full h-full object-cover object-[85%_top] lg:object-top"
         />
         {/* Soft gradient overlay for text legibility while preserving top-right drone visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark/90 via-brand-navy-dark/60 to-brand-navy-dark/20 md:from-brand-navy-dark/90 md:via-brand-navy-dark/55 md:to-transparent" />
