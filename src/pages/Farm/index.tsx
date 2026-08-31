@@ -205,7 +205,7 @@ export const Farms: React.FC = () => {
       </section>
 
       {/* Feature Cards & Architecture Section */}
-      <section className="py-20 bg-slate-50">
+      <section id="solutions-detail" className="py-20 bg-slate-50">
         <Container className="space-y-8">
           {/* Row 1: Aquaponics & Shrimp Farming */}
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">

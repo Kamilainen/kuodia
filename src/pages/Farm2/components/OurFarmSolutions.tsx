@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "../../../context/LanguageContext";
 import Container from "../../../components/Container";
 
-import solarSystemImg from "../../../assets/solarsystem.png";
+import solarSystemImg from "../../../assets/water_mana.png";
 import centreaLize from "../../../assets/centralized_system.png";
 import incident from "../../../assets/incident_management.jpg";
 import disease from "../../../assets/disease.jpg";
