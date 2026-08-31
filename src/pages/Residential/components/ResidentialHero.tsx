@@ -128,23 +128,36 @@ export const ResidentialHero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="bg-[#06182c] border border-white/10 rounded-2xl sm:rounded-3xl p-3.5 sm:p-4 md:p-5 pr-12 sm:pr-14 md:pr-24 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 shadow-2xl"
+              className="bg-[#06182c] border border-white/10 rounded-2xl sm:rounded-3xl p-3.5 sm:p-4 md:p-5 pr-12 sm:pr-14 md:pr-24 grid grid-cols-2 sm:grid-cols-6 lg:grid-cols-5 gap-3 sm:gap-4 shadow-2xl"
             >
-              {featureBadges.map((badge, idx) => (
-                <div key={idx} className="flex items-center space-x-2.5 p-1">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-brand-green/40 bg-brand-green/10 flex items-center justify-center flex-shrink-0">
-                    {badge.icon}
+              {featureBadges.map((badge, idx) => {
+                let itemClass = "col-span-1 sm:col-span-2 lg:col-span-1";
+                if (idx === 3) {
+                  itemClass =
+                    "col-span-1 sm:col-span-2 sm:col-start-2 lg:col-span-1 lg:col-start-auto";
+                } else if (idx === 4) {
+                  itemClass = "col-span-2 sm:col-span-2 lg:col-span-1";
+                }
+
+                return (
+                  <div
+                    key={idx}
+                    className={`flex items-center space-x-2.5 p-1 ${itemClass}`}
+                  >
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-brand-green/40 bg-brand-green/10 flex items-center justify-center flex-shrink-0">
+                      {badge.icon}
+                    </div>
+                    <div className="min-w-0">
+                      <span className="font-display font-black text-xs sm:text-sm text-white block uppercase tracking-wider leading-none truncate">
+                        {badge.val}
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] font-sans font-medium text-slate-300 leading-tight block mt-1">
+                        {badge.desc}
+                      </span>
+                    </div>
                   </div>
-                  <div className="min-w-0">
-                    <span className="font-display font-black text-xs sm:text-sm text-white block uppercase tracking-wider leading-none truncate">
-                      {badge.val}
-                    </span>
-                    <span className="text-[10px] sm:text-[11px] font-sans font-medium text-slate-300 leading-tight block mt-1">
-                      {badge.desc}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </motion.div>
 
             {/* Kubi Mascot Standing on Right Corner of Feature Bar */}
